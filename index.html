@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Alex AI | Insurance Evolved</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-blue: #009CFF;
+            --brand-purple: #514690;
+            --dark: #0F172A;
+            --danger: #DC2626; /* Rojo seguro */
+            --white: #FFFFFF;
+            --grad-aurora: linear-gradient(135deg, var(--brand-blue), var(--brand-purple));
+            --shadow-card: 0 10px 40px -10px rgba(0,0,0,0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--white); font-family: 'Outfit', sans-serif; color: var(--dark); overflow-x: hidden; }
+
+        /* --- STAGE (The Scroll Container) --- */
+        .stage-track { height: 350vh; position: relative; z-index: 10; }
+        .sticky-view {
+            position: sticky; top: 0; height: 100vh; width: 100%;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            overflow: hidden; text-align: center; padding: 20px; background: #000;
+        }
+
+        /* --- SCENE 1: THE PROBLEM (Red - Financial Pain) --- */
+        .scene-chaos {
+            position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+            background: radial-gradient(circle, #2a0a0a 0%, #000 100%); color: #fff; z-index: 5;
+        }
+        
+        /* Iconos de Dolor (Seguros) */
+        .pain-icon { position: absolute; opacity: 0.3; color: var(--danger); animation: floatPain 4s infinite ease-in-out; }
+        .pi-1 { top: 20%; left: 20%; font-size: 4rem; transform: rotate(-15deg); } /* Money flying */
+        .pi-2 { bottom: 25%; right: 15%; font-size: 5rem; transform: rotate(10deg); animation-delay: 1s; } /* Hourglass */
+        .pi-3 { top: 15%; right: 25%; font-size: 3rem; transform: rotate(20deg); animation-delay: 0.5s; } /* File Warning */
+
+        @keyframes floatPain { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-15px) rotate(5deg); } }
+
+        .chaos-msg h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 900; line-height: 1.1; margin-bottom: 25px;
+            color: #EF4444; letter-spacing: -1px; text-transform: uppercase;
+        }
+        .chaos-msg p {
+            font-family: 'Plus Jakarta Sans'; font-size: 1.3rem; color: #ffadad; max-width: 600px; margin: 0 auto;
+        }
+        .highlight-red { border-bottom: 3px solid var(--danger); }
+
+        /* --- THE CLEANSE (Transition) --- */
+        .white-wave {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 0; height: 0; border-radius: 50%; background: #fff; z-index: 10;
+        }
+
+        /* --- SCENE 2: THE SOLUTION (Blue - Protection) --- */
+        .scene-harmony {
+            position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+            opacity: 0; z-index: 15; pointer-events: none;
+        }
+
+        /* Sistema de Valor */
+        .harmony-system { position: relative; width: 600px; height: 600px; display: flex; align-items: center; justify-content: center; }
+        
+        .core-heart {
+            width: 140px; z-index: 20; position: relative;
+            filter: drop-shadow(0 20px 50px rgba(0, 156, 255, 0.3));
+            animation: pulse 3s infinite ease-in-out;
+        }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+        /* Satellites (Beneficios Reales) */
+        .benefit-card {
+            position: absolute; background: #fff; padding: 15px 25px; border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 156, 255, 0.15); border: 1px solid #E2E8F0;
+            display: flex; align-items: center; gap: 15px; width: max-content;
+            opacity: 0; transform: scale(0.8); transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .bc-icon { font-size: 1.2rem; color: var(--brand-blue); background: #E0F2FE; width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        .bc-text h4 { font-size: 0.9rem; font-weight: 800; color: var(--dark); margin: 0; }
+        .bc-text span { font-family: 'Plus Jakarta Sans'; font-size: 0.8rem; color: #64748B; }
+
+        /* Posiciones */
+        .bc-1 { top: 10%; left: 50%; transform: translateX(-50%) translateY(50px); } /* Fair Price */
+        .bc-2 { bottom: 20%; left: 0; transform: translateX(50px); } /* Instant */
+        .bc-3 { bottom: 20%; right: 0; transform: translateX(-50px); } /* Support */
+
+        .harmony-text { margin-top: -40px; position: relative; z-index: 20; opacity: 0; transform: translateY(20px); transition: 0.8s; }
+        .harmony-text h1 {
+            font-size: clamp(3rem, 6vw, 5rem); font-weight: 900; line-height: 1; margin-bottom: 20px;
+            background: var(--grad-aurora); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .harmony-text p {
+            font-family: 'Plus Jakarta Sans'; font-size: 1.2rem; color: #64748B; max-width: 600px; margin: 0 auto;
+        }
+
+        /* Scroll Hint */
+        .scroll-hint {
+            position: absolute; bottom: 40px; z-index: 30;
+            display: flex; flex-direction: column; align-items: center; gap: 8px;
+            font-size: 0.7rem; font-weight: 700; color: #fff; letter-spacing: 2px;
+            transition: opacity 0.3s;
+        }
+        .line { width: 1px; height: 40px; background: linear-gradient(to bottom, #fff, transparent); }
+
+        /* --- CATALOG SECTION --- */
+        .catalog-section {
+            position: relative; z-index: 40; background: #F8FAFC;
+            min-height: 100vh; border-radius: 60px 60px 0 0;
+            box-shadow: 0 -50px 100px rgba(0,0,0,0.1);
+            padding: 120px 5%; margin-top: -40vh;
+        }
+        
+        .cat-head { text-align: center; margin-bottom: 80px; }
+        .cat-head h2 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: var(--dark); }
+        .cat-head p { color: #64748B; font-family: 'Plus Jakarta Sans'; font-size: 1.2rem; }
+
+        /* GRID */
+        .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; max-width: 1200px; margin: 0 auto; }
+        
+        .card {
+            background: #fff; border-radius: 24px; padding: 0; position: relative; overflow: hidden;
+            display: flex; flex-direction: column; height: 450px; text-decoration: none; color: inherit;
+            box-shadow: var(--shadow-card); border: 1px solid #fff;
+            transition: 0.4s ease-out;
+        }
+        
+        .col-8 { grid-column: span 8; } .col-4 { grid-column: span 4; } .col-6 { grid-column: span 6; height: 380px; } .col-12 { grid-column: span 12; height: 300px; display: flex; flex-direction: row; }
+
+        .card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px -10px rgba(0, 156, 255, 0.15); border-color: rgba(0,156,255,0.2); z-index: 10; }
+        
+        .visual { height: 60%; width: 100%; position: relative; overflow: hidden; }
+        .photo { width: 100%; height: 100%; object-fit: cover; transition: 0.8s; }
+        .card:hover .photo { transform: scale(1.05); }
+        
+        .info { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 2; background: #fff; width: 100%; }
+        
+        .tag { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--brand-blue); background: #E0F2FE; padding: 6px 14px; border-radius: 50px; width: fit-content; margin-bottom: 10px; }
+        .c-title { font-size: 1.8rem; font-weight: 800; line-height: 1; margin-bottom: 5px; }
+        .c-desc { font-family: 'Plus Jakarta Sans'; font-size: 1rem; color: #64748B; }
+        
+        .action-row { border-top: 1px solid #F1F5F9; padding-top: 20px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center; }
+        .price { font-weight: 700; font-size: 1.1rem; }
+        .btn-circle { width: 45px; height: 45px; background: #F8FAFC; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
+        .card:hover .btn-circle { background: var(--brand-blue); color: #fff; transform: rotate(-45deg); }
+
+        /* Other Card Specifics */
+        .other-info { display: flex; flex-direction: column; justify-content: center; height: 100%; width: 50%; padding: 40px; }
+        .other-visual { width: 50%; height: 100%; }
+        .icons-row { display: flex; gap: 20px; margin-top: 20px; color: var(--brand-purple); font-size: 1.5rem; opacity: 0.6; }
+
+        .footer { text-align: center; margin-top: 100px; color: #94A3B8; font-size: 0.8rem; }
+
+        @media (max-width: 900px) { 
+            .col-8, .col-4, .col-6, .col-12 { grid-column: span 12; height: auto; min-height: 400px; } 
+            .col-12 { flex-direction: column; } .other-visual, .other-content { width: 100%; height: 200px; }
+            .harmony-system { transform: scale(0.65); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stage-track">
+        <div class="sticky-view">
+            
+            <div class="scene-chaos" id="s1">
+                <i class="fa-solid fa-money-bill-transfer pain-icon pi-1"></i>
+                <i class="fa-regular fa-clock pain-icon pi-2"></i>
+                <i class="fa-solid fa-file-contract pain-icon pi-3"></i>
+
+                <div class="chaos-msg" id="s1-msg">
+                    <h1>
+                        Why pay for<br>
+                        <span class="highlight-red">someone else's</span><br>
+                        mistakes?
+                    </h1>
+                    <p>The old model is broken. Safe drivers subsidize bad ones. It ends now.</p>
+                </div>
+            </div>
+
+            <div class="white-wave" id="wave"></div>
+
+            <div class="scene-harmony" id="s2">
+                
+                <div class="harmony-system">
+                    <img src="assets/logo-alex-heart.png" class="core-heart">
+                    
+                    <div class="benefit-card bc-1" id="sat1">
+                        <div class="bc-icon"><i class="fa-solid fa-wallet"></i></div>
+                        <div class="bc-text">
+                            <h4>Fair Pricing</h4>
+                            <span>Rates based on YOU.</span>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card bc-2" id="sat2">
+                        <div class="bc-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="bc-text">
+                            <h4>Total Protection</h4>
+                            <span>Gap-free coverage.</span>
+                        </div>
+                    </div>
+
+                    <div class="benefit-card bc-3" id="sat3">
+                        <div class="bc-icon"><i class="fa-solid fa-handshake-simple"></i></div>
+                        <div class="bc-text">
+                            <h4>Human Support</h4>
+                            <span>Real people, 24/7.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="harmony-text" id="s2-text">
+                    <h1>Fair Rates. <br> Zero Drama.</h1>
+                    <p>We use AI to lower your costs, and humans to raise your standards. <br> Experience the Phygital difference.</p>
+                </div>
+
+            </div>
+
+            <div class="scroll-hint" id="prompt">
+                <span>SCROLL</span>
+                <div class="line"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="catalog-section">
+        <div class="cat-head">
+            <img src="assets/Logo-alexai-main.png" style="height: 35px; margin-bottom: 20px;">
+            <h2>Choose your Coverage</h2>
+            <p>Tailored plans for your most valuable assets.</p>
+        </div>
+
+        <div class="grid">
+            <a href="quote/quote.html?type=auto" class="card col-8">
+                <div class="visual"><img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=1500" class="photo"></div>
+                <div class="info">
+                    <div><span class="tag">Most Popular</span><h3 class="c-title">Auto Pilot</h3><p class="c-desc">Rates based on your driving, not your zip code. Save up to 30%.</p></div>
+                    <div class="action-row"><span class="price">Check Price</span><div class="btn-circle"><i class="fa-solid fa-arrow-right"></i></div></div>
+                </div>
+            </a>
+            <a href="quote/quote.html?type=home" class="card col-4">
+                <div class="visual"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000" class="photo"></div>
+                <div class="info">
+                    <div><span class="tag" style="background:#FEF3C7; color:#D97706;">Bundle Save</span><h3 class="c-title">Home</h3><p class="c-desc">Complete protection for your property.</p></div>
+                    <div class="action-row"><span class="price">From $60/mo</span><div class="btn-circle"><i class="fa-solid fa-arrow-right"></i></div></div>
+                </div>
+            </a>
+            <a href="quote/quote.html?type=renters" class="card col-6">
+                <div class="visual"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1000" class="photo"></div>
+                <div class="info">
+                    <h3 class="c-title">Renters</h3><p class="c-desc">Protect your laptop, clothes & gear.</p>
+                    <div class="action-row"><span class="price">From $5/mo</span><div class="btn-circle"><i class="fa-solid fa-arrow-right"></i></div></div>
+                </div>
+            </a>
+            <a href="quote/quote.html?type=delivery" class="card col-6">
+                <div class="visual"><img src="https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?q=80&w=1000" class="photo"></div>
+                <div class="info">
+                    <h3 class="c-title">Gig Force</h3><p class="c-desc">Commercial coverage for Rideshare apps.</p>
+                    <div class="action-row"><span class="price">$0.40 / mile</span><div class="btn-circle"><i class="fa-solid fa-arrow-right"></i></div></div>
+                </div>
+            </a>
+            <a href="quote/quote.html?type=other" class="card col-12">
+                <div class="visual other-visual"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1500" class="photo"></div>
+                <div class="info other-info">
+                    <div>
+                        <span class="tag" style="background:#F3E8FF; color:#9333EA;">More</span>
+                        <h3 class="c-title">Commercial & Adventure</h3>
+                        <p class="c-desc">Custom plans for Business, VR, Boats, ATVs.</p>
+                        <div class="icons-row">
+                            <i class="fa-solid fa-sailboat"></i><i class="fa-solid fa-motorcycle"></i><i class="fa-solid fa-vr-cardboard"></i><i class="fa-solid fa-briefcase"></i>
+                        </div>
+                    </div>
+                    <div class="action-row"><span class="price">Get Quote</span><div class="btn-circle"><i class="fa-solid fa-arrow-right"></i></div></div>
+                </div>
+            </a>
+        </div>
+        <div class="footer">© 2026 Alex AI Inc. Licensed in 50 States.</div>
+    </section>
+
+    <script>
+        const s1Msg = document.getElementById('s1-msg');
+        const wave = document.getElementById('wave');
+        const s2 = document.getElementById('s2');
+        const s2Text = document.getElementById('s2-text');
+        const sat1 = document.getElementById('sat1');
+        const sat2 = document.getElementById('sat2');
+        const sat3 = document.getElementById('sat3');
+        const prompt = document.getElementById('prompt');
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const viewportH = window.innerHeight;
+            const progress = Math.min(scrollY / (viewportH * 0.9), 1);
+
+            // Prompt Control
+            prompt.style.opacity = 1 - (progress * 3);
+            if(progress > 0.3) {
+                prompt.style.color = '#000';
+                prompt.querySelector('.line').style.background = 'linear-gradient(to bottom, #000, transparent)';
+            }
+
+            // PHASE 1: CHAOS EXIT
+            s1Msg.style.transform = `scale(${1 - progress * 0.5}) blur(${progress * 20}px)`;
+            s1Msg.style.opacity = 1 - (progress * 2);
+
+            // PHASE 2: WHITE WAVE (Cleaning)
+            const size = progress * 250;
+            wave.style.width = `${size}vw`;
+            wave.style.height = `${size}vw`;
+
+            // PHASE 3: HARMONY ENTRY
+            if (progress > 0.35) {
+                s2.style.opacity = 1;
+                s2.style.pointerEvents = 'auto';
+
+                const entry = (progress - 0.35) * 1.6;
+
+                // Text Slide Up
+                s2Text.style.opacity = Math.min(entry * 2, 1);
+                s2Text.style.transform = `translateY(${30 - (entry * 30)}px)`;
+
+                // Benefits Orbit Entry
+                if(entry > 0.1) { sat1.style.opacity = 1; sat1.style.transform = 'translateX(-50%) translateY(50px) scale(1)'; }
+                else { sat1.style.opacity = 0; sat1.style.transform = 'translateX(-50%) translateY(100px) scale(0.5)'; }
+
+                if(entry > 0.3) { sat2.style.opacity = 1; sat2.style.transform = 'translateX(50px) scale(1)'; }
+                else { sat2.style.opacity = 0; sat2.style.transform = 'translateX(100px) scale(0.5)'; }
+
+                if(entry > 0.5) { sat3.style.opacity = 1; sat3.style.transform = 'translateX(-50px) scale(1)'; }
+                else { sat3.style.opacity = 0; sat3.style.transform = 'translateX(-100px) scale(0.5)'; }
+
+            } else {
+                s2.style.opacity = 0;
+                s2.style.pointerEvents = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
