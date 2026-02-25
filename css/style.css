@@ -1138,50 +1138,103 @@
         }
 
 
-        /* FOOTER */
-        .footer-aurora {
-            background: var(--brand-grad); color: #FFFFFF; padding-top: 100px; position: relative; overflow: hidden; border-top: none; margin-top: 1%;
-        }
-        .footer-aurora::before {
-            content: ''; position: absolute; top: -100px; left: -100px; width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(0, 156, 255, 0.2), transparent 70%); filter: blur(80px); pointer-events: none; z-index: 0;
-        }
-        .footer-aurora::after {
-            content: ''; position: absolute; bottom: 0; right: 0; width: 500px; height: 500px;
-            background: radial-gradient(circle at 100% 100%, rgba(81, 70, 144, 0.3), transparent 60%); filter: blur(80px); pointer-events: none; z-index: 0;
-        }
-        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 40px; margin-bottom: 80px; position: relative; z-index: 1; }
-        .brand-col { padding-right: 20px; padding-left: 2%; }
-        .footer-logo-img { height: 10vh; width: auto; display: block; }
-        .footer-tagline { font-size: 0.95rem; color: rgba(255, 255, 255, 0.7); line-height: 1.6; margin-bottom: 25px; }
-        .footer-social-mini { display: flex; gap: 15px; }
-        .footer-social-mini a { color: rgba(255, 255, 255, 0.6); font-size: 1.4rem; transition: all 0.3s; display: flex; align-items: center; justify-content: center; }
-        .footer-social-mini a:hover { color: #00e1ff; text-shadow: 0 0 15px rgba(0, 225, 255, 0.5); transform: translateY(-3px); }
-        .footer-heading { font-size: 0.85rem; font-weight: 800; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; }
-        .footer-links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
-        .footer-links li a { text-decoration: none; color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; font-weight: 500; transition: all 0.3s ease; display: inline-block; }
-        .footer-links li a:hover { color: #FFFFFF; transform: translateX(5px); text-shadow: 0 0 10px rgba(0, 156, 255, 0.3); }
-        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
-        .badge-new { font-size: 0.6rem; background: rgba(0, 156, 255, 0.2); color: #00e1ff; padding: 2px 6px; border-radius: 4px; margin-left: 5px; font-weight: 700; text-transform: uppercase; border: 1px solid rgba(0, 156, 255, 0.3); }
-        .contact-list { list-style: none; padding: 0; margin: 0 0 30px 0; display: flex; flex-direction: column; gap: 15px; }
-        .contact-list li { display: flex; align-items: center; gap: 10px; color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
-        .contact-list li i { color: #009cff; width: 20px; text-align: center; }
-        .contact-list li a { color: rgba(255, 255, 255, 0.9); text-decoration: none; font-weight: 600; transition: color 0.3s; }
-        .contact-list li a:hover { color: #00e1ff; }
-        .footer-app-buttons { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
-        .btn-footer-store { display: flex; align-items: center; gap: 12px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); color: white; border-radius: 12px; padding: 10px 18px; cursor: pointer; transition: all 0.3s ease; width: 180px; }
-        .btn-footer-store i { font-size: 1.6rem; }
-        .store-text { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.1; }
-        .store-text span { font-size: 0.65rem; opacity: 0.7; }
-        .store-text strong { font-size: 0.95rem; font-weight: 600; letter-spacing: 0.5px; }
-        .btn-footer-store:hover { background: var(--aurora-indigo); border-color: rgba(0, 156, 255, 0.5); transform: translateY(-3px); box-shadow: 0 10px 20px -5px rgba(0, 156, 255, 0.2); }
-        .footer-bottom { background: rgba(0, 0, 0, 0.2); backdrop-filter: blur(10px); border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 25px 0; position: relative; z-index: 1; }
-        .bottom-flex { display: flex; justify-content: space-between; align-items: center; }
-        .copyright-text { font-size: 0.85rem; color: rgba(255, 255, 255, 0.5); padding-left: 2%; }
-        .legal-links { display: flex; align-items: center; gap: 15px; padding-right: 2%; }
-        .legal-links a { text-decoration: none; color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; transition: color 0.3s; }
-        .legal-links a:hover { color: #FFFFFF; }
-        .legal-links .divider { color: rgba(255, 255, 255, 0.1); }
+/* =========================================
+   FUNNEL PREMIUM FOOTER STYLES
+   ========================================= */
+.funnel-footer {
+    background: var(--brand-grad); /* Usa el azul/morado oscuro de tu paleta */
+    padding: 60px 0 40px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6); /* Color de texto gris claro y sutil */
+    margin-top: 60px; /* Separación de la sección anterior */
+}
+
+/* Efecto de luz superior tipo "Aurora" (Brillo tecnológico) */
+.funnel-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--brand-grad), transparent);
+    box-shadow: 0 0 20px 2px rgba(0, 156, 255, 0.4);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Ajuste del logo para fondos oscuros */
+.footer-logo {
+    height: 40px;
+    width: auto;
+    opacity: 0.8;
+    /* Este filtro convierte mágicamente un logo oscuro en blanco puro */
+    filter: brightness(0) invert(1); 
+    margin-bottom: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-logo:hover {
+    opacity: 1; /* Pequeña interacción al pasar el mouse */
+}
+
+.footer-disclaimer {
+    font-size: 0.8rem;
+    max-width: 650px;
+    line-height: 1.6;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* Contenedor de las políticas sin enlaces */
+.footer-legal-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Para que se adapte bien en móviles */
+    gap: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 10px 0;
+}
+
+/* Punto decorativo para separar los textos legales */
+.dot-separator {
+    color: var(--alex-blue);
+    font-size: 1.2rem;
+    line-height: 0;
+}
+
+.footer-copyright {
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 600px) {
+    .funnel-footer {
+        padding: 50px 20px 30px;
+    }
+    .footer-disclaimer {
+        font-size: 0.75rem;
+    }
+    .footer-legal-text {
+        font-size: 0.8rem;
+        gap: 10px;
+    }
+}
 
                 /* --- RESPONSIVE MEDIA QUERIES (MOBILE FIXES) --- */
         @media (max-width: 992px) {
