@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Alex Insurtech | Premium Homeowners Insurance</title>
+    <meta name="description" content="Expert home insurance advice in Arizona. Tailored coverage, top-rated carriers, and strictly zero broker fees.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-inner">
+            <a href="https://alexai.cloud/" class="logo"><img class="logo-main" src="./assets/logo-alex-main.png" alt="Alex AI"></a>
+            <div class="nav-actions">
+                <button class="btn-nav" onclick="openModal()">Get App</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            
+            <div class="fade-up visible">
+                <div class="hero-badge"><i class="fa-solid fa-house-shield"></i> Fiduciary Home Protection</div>
+                <h1 class="hero-title">Uncompromising <span class="grad-text">Home Insurance.</span></h1>
+                <p class="hero-sub">Protect your greatest asset with dedicated Arizona experts. We build custom policies from top-rated carriers to ensure total coverage, with absolutely zero broker fees.</p>
+                
+                <div class="quote-widget">
+                    <h3>Secure Your Property</h3>
+                    <form id="quoteForm">                        
+                        <button type="submit" class="btn-main">Get a Quote <i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                    <div style="text-align:center; font-size:0.8rem; color:var(--text-secondary); margin-top:15px; display:flex; align-items:center; justify-content:center; gap:6px; font-weight: 500;">
+                        <i class="fa-solid fa-user-tie" style="color:var(--alex-blue); font-size: 1.1rem;"></i> Licensed Arizona Advisors
+                    </div>
+                </div>
+            </div>
+            
+            <div class="visual-wrapper fade-up visible" style="transition-delay: 0.2s;">
+                <div class="visual-bg-circle"></div>
+                
+                <img src="./assets/render-house.png" class="car-model" alt="Modern Home">
+                
+                <div class="premium-scanner-card">
+                    <div class="psc-header">
+                        <span class="psc-title">Property Protection</span>
+                        <i class="fa-solid fa-shield-halved psc-icon"></i>
+                    </div>
+                    <div class="psc-screen">
+                        <div class="psc-scan-line"></div>
+                        Evaluating Replacement Cost...
+                    </div>
+                    <div class="psc-row">
+                        <span class="psc-label">Standard Agency</span>
+                        <span class="psc-strike">$1,850/yr</span>
+                    </div>
+                    <div class="psc-highlight">
+                        <span class="psc-hl-label">Alex Direct</span>
+                        <span class="psc-hl-val">$1,420/yr</span>
+                    </div>
+                </div>
+
+                <div class="float-stat fs-1">
+                    <div class="stat-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="stat-text">
+                        <h4>Fully Covered</h4>
+                        <p>Scottsdale, AZ</p>
+                    </div>
+                </div>
+                
+                <div class="float-stat fs-2">
+                    <div class="stat-icon"><i class="fa-solid fa-piggy-bank"></i></div>
+                    <div class="stat-text">
+                        <h4>$0 Fees</h4>
+                        <p>Direct to Carrier</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+<section class="partners-funnel fade-up">
+        <div class="container text-center">
+            <span class="hero-badge"><i class="fa-solid fa-handshake"></i> Top-Tier Partnerships</span>
+            <h2 class="pf-title">Elite carriers. Expertly matched.</h2>
+            <p class="pf-sub">We partner with the nation's most respected home insurance providers to design a policy that perfectly fits your property and lifestyle.</p>
+        </div>
+
+        <div class="pf-track-container">
+            <div class="pf-track">
+                
+                <div class="pf-group">
+                    
+                    <div class="scout-card">
+                        <div class="scout-header">
+                            <span class="scout-tier tier-gold">High-Value</span>
+                            <i class="fa-solid fa-shield-check verified-icon"></i>
+                        </div>
+                        <div class="scout-logo-box"><img src="./assets/Carrier-chubb.jpg" class="scout-logo" alt="Chubb"></div>
+                        <div class="scout-stats">
+                            <div class="stat-line"><span>AM Best Rating</span> <strong>A++ (Superior)</strong></div>
+                            <div class="stat-line"><span>Superpower</span> <strong>Extended Replacement</strong></div>
+                        </div>
+                    </div>
+                    
+                    <div class="scout-card">
+                        <div class="scout-header">
+                            <span class="scout-tier tier-tech">Smart Tech</span>
+                            <i class="fa-solid fa-shield-check verified-icon"></i>
+                        </div>
+                        <div class="scout-logo-box"><img src="./assets/Carrier-hippo.png" class="scout-logo" alt="Hippo"></div>
+                        <div class="scout-stats">
+                            <div class="stat-line"><span>Coverage Focus</span> <strong>Proactive Protection</strong></div>
+                            <div class="stat-line"><span>Superpower</span> <strong>Smart Home Kits</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="scout-card">
+                        <div class="scout-header">
+                            <span class="scout-tier tier-local">Regional</span>
+                            <i class="fa-solid fa-shield-check verified-icon"></i>
+                        </div>
+                        <div class="scout-logo-box"><img src="./assets/Carrier-commonwealth.jpg" class="scout-logo" alt="Commonwealth Casualty"></div>
+                        <div class="scout-stats">
+                            <div class="stat-line"><span>Focus Area</span> <strong>Southwest US</strong></div>
+                            <div class="stat-line"><span>Superpower</span> <strong>Flexible Payment Plans</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="scout-card">
+                        <div class="scout-header">
+                            <span class="scout-tier tier-blue">Specialty</span>
+                            <i class="fa-solid fa-shield-check verified-icon"></i>
+                        </div>
+                        <div class="scout-logo-box"><img src="./assets/Carrier-foremost.png" class="scout-logo" alt="Foremost"></div>
+                        <div class="scout-stats">
+                            <div class="stat-line"><span>Coverage Type</span> <strong>Unique & Seasonal</strong></div>
+                            <div class="stat-line"><span>Superpower</span> <strong>Mobile/Manufactured</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="scout-card">
+                        <div class="scout-header">
+                            <span class="scout-tier tier-innovator">Investor</span>
+                            <i class="fa-solid fa-shield-check verified-icon"></i>
+                        </div>
+                        <div class="scout-logo-box"><img src="./assets/Carrier-steadily.png" class="scout-logo" alt="Steadily"></div>
+                        <div class="scout-stats">
+                            <div class="stat-line"><span>Market Focus</span> <strong>Rental Properties</strong></div>
+                            <div class="stat-line"><span>Superpower</span> <strong>Fast Landlord Quotes</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="scout-card">
+                        <div class="scout-header">
+                            <span class="scout-tier tier-local">Value Tier</span>
+                            <i class="fa-solid fa-shield-check verified-icon"></i>
+                        </div>
+                        <div class="scout-logo-box"><img src="./assets/carrier-homeowners.png" class="scout-logo" alt="Homeowners of America"></div>
+                        <div class="scout-stats">
+                            <div class="stat-line"><span>Focus Area</span> <strong>Standard Home</strong></div>
+                            <div class="stat-line"><span>Superpower</span> <strong>Accessible Premiums</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="scout-card">
+                        <div class="scout-header">
+                            <span class="scout-tier tier-blue">Specialty</span>
+                            <i class="fa-solid fa-shield-check verified-icon"></i>
+                        </div>
+                        <div class="scout-logo-box"><img src="./assets/Carrier-aegis.png" class="scout-logo" alt="Aegis Specialty"></div>
+                        <div class="scout-stats">
+                            <div class="stat-line"><span>Market Focus</span> <strong>Hard-to-Place Risk</strong></div>
+                            <div class="stat-line"><span>Superpower</span> <strong>Older Home Experts</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="scout-card">
+                        <div class="scout-header">
+                            <span class="scout-tier tier-tech">Innovator</span>
+                            <i class="fa-solid fa-shield-check verified-icon"></i>
+                        </div>
+                        <div class="scout-logo-box"><img src="./assets/Carrier-annex.png" class="scout-logo" alt="Annex Risk"></div>
+                        <div class="scout-stats">
+                            <div class="stat-line"><span>Market Focus</span> <strong>Property Focused</strong></div>
+                            <div class="stat-line"><span>Superpower</span> <strong>Streamlined Approvals</strong></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="pf-group" aria-hidden="true">
+                    
+                    <div class="scout-card">
+                        <div class="scout-header">
+                            <span class="scout-tier tier-gold">High-Value</span>
+                            <i class="fa-solid fa-shield-check verified-icon"></i>
+                        </div>
+                        <div class="scout-logo-box"><img src="./assets/Carrier-chubb.jpg" class="scout-logo" alt="Chubb"></div>
+                        <div class="scout-stats">
+                            <div class="stat-line"><span>AM Best Rating</span> <strong>A++ (Superior)</strong></div>
+                            <div class="stat-line"><span>Superpower</span> <strong>Extended Replacement</strong></div>
+                        </div>
+                    </div>
+                    
+                    <div class="scout-card">
+                        <div class="scout-header">
+                            <span class="scout-tier tier-tech">Smart Tech</span>
+                            <i class="fa-solid fa-shield-check verified-icon"></i>
+                        </div>
+                        <div class="scout-logo-box"><img src="./assets/Carrier-hippo.png" class="scout-logo" alt="Hippo"></div>
+                        <div class="scout-stats">
+                            <div class="stat-line"><span>Coverage Focus</span> <strong>Proactive Protection</strong></div>
+                            <div class="stat-line"><span>Superpower</span> <strong>Smart Home Kits</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="scout-card">
+                        <div class="scout-header">
+                            <span class="scout-tier tier-local">Regional</span>
+                            <i class="fa-solid fa-shield-check verified-icon"></i>
+                        </div>
+                        <div class="scout-logo-box"><img src="./assets/Carrier-commonwealth.jpg" class="scout-logo" alt="Commonwealth Casualty"></div>
+                        <div class="scout-stats">
+                            <div class="stat-line"><span>Focus Area</span> <strong>Southwest US</strong></div>
+                            <div class="stat-line"><span>Superpower</span> <strong>Flexible Payment Plans</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="scout-card">
+                        <div class="scout-header">
+                            <span class="scout-tier tier-blue">Specialty</span>
+                            <i class="fa-solid fa-shield-check verified-icon"></i>
+                        </div>
+                        <div class="scout-logo-box"><img src="./assets/Carrier-foremost.png" class="scout-logo" alt="Foremost"></div>
+                        <div class="scout-stats">
+                            <div class="stat-line"><span>Coverage Type</span> <strong>Unique & Seasonal</strong></div>
+                            <div class="stat-line"><span>Superpower</span> <strong>Mobile/Manufactured</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="scout-card">
+                        <div class="scout-header">
+                            <span class="scout-tier tier-innovator">Investor</span>
+                            <i class="fa-solid fa-shield-check verified-icon"></i>
+                        </div>
+                        <div class="scout-logo-box"><img src="./assets/carrier-steadily.png" class="scout-logo" alt="Steadily"></div>
+                        <div class="scout-stats">
+                            <div class="stat-line"><span>Market Focus</span> <strong>Rental Properties</strong></div>
+                            <div class="stat-line"><span>Superpower</span> <strong>Fast Landlord Quotes</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="scout-card">
+                        <div class="scout-header">
+                            <span class="scout-tier tier-local">Value Tier</span>
+                            <i class="fa-solid fa-shield-check verified-icon"></i>
+                        </div>
+                        <div class="scout-logo-box"><img src="./assets/carrier-homeowners.png" class="scout-logo" alt="Homeowners of America"></div>
+                        <div class="scout-stats">
+                            <div class="stat-line"><span>Focus Area</span> <strong>Standard Home</strong></div>
+                            <div class="stat-line"><span>Superpower</span> <strong>Accessible Premiums</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="scout-card">
+                        <div class="scout-header">
+                            <span class="scout-tier tier-blue">Specialty</span>
+                            <i class="fa-solid fa-shield-check verified-icon"></i>
+                        </div>
+                        <div class="scout-logo-box"><img src="./assets/Carrier-aegis.png" class="scout-logo" alt="Aegis Specialty"></div>
+                        <div class="scout-stats">
+                            <div class="stat-line"><span>Market Focus</span> <strong>Hard-to-Place Risk</strong></div>
+                            <div class="stat-line"><span>Superpower</span> <strong>Older Home Experts</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="scout-card">
+                        <div class="scout-header">
+                            <span class="scout-tier tier-tech">Innovator</span>
+                            <i class="fa-solid fa-shield-check verified-icon"></i>
+                        </div>
+                        <div class="scout-logo-box"><img src="./assets/Carrier-annex.png" class="scout-logo" alt="Annex Risk"></div>
+                        <div class="scout-stats">
+                            <div class="stat-line"><span>Market Focus</span> <strong>Property Focused</strong></div>
+                            <div class="stat-line"><span>Superpower</span> <strong>Streamlined Approvals</strong></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-py container fade-up">
+        <span class="hero-badge"><i class="fa-solid fa-champagne-glasses"></i> Out With The Old, In With The New</span>
+
+        <h2 style="text-align:center; font-size:3.5rem; font-weight:900; margin-bottom:60px; color:var(--alex-mid);">From Chaos to Clarity</h2>
+        <div class="evo-grid">
+            
+            <div class="evo-old">
+                <div class="dirt-overlay"></div>
+                <div class="cracks-overlay"></div>
+                <div class="floating-dust"></div>
+                <div class="cobweb cobweb-left"></div>
+                <div class="cobweb cobweb-right"></div>
+                <div class="hanging-spider"><i class="fa-solid fa-spider"></i></div>
+
+                <div class="dino-visual-container">
+                    <i class="fa-solid fa-folder-open trash-item t-folder"></i>
+                    <i class="fa-solid fa-file-contract trash-item t-contract"></i>
+                    <i class="fa-solid fa-house-chimney-crack trash-item t-floppy"></i> <i class="fa-solid fa-scroll trash-item t-scroll"></i>
+                    <i class="fa-solid fa-bone trash-item t-bone-1"></i>
+                    <i class="fa-solid fa-bone trash-item t-bone-2"></i>
+
+                    <svg class="retro-dino-fossil" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12 0h8v2h2v4h2v2h-2v2h-2v2h-4v-2h-2v2H8v-2H6v2H2v-2H0V6h2V4h2V2h8V0zm4 4h-2v2h2V4z M9 14h6v2H9v-2zm1 2h4v2h-4v-2zm-2 2h8v2H8v-2zm2 2h4v2h-4v-2z"/>
+                        <rect x="14" y="4" width="2" height="2" fill="rgba(0,0,0,0.4)"/>
+                        <rect x="20" y="8" width="2" height="2" fill="rgba(0,0,0,0.4)"/>
+                    </svg>
+
+                    <i class="fa-solid fa-box-archive trash-item t-archive"></i>
+                    <i class="fa-solid fa-fax trash-item t-fax"></i>
+                    <i class="fa-solid fa-hourglass-end trash-item t-clock"></i>
+                    <i class="fa-solid fa-pencil trash-item t-pencil"></i>
+                    <i class="fa-solid fa-paperclip trash-item t-clip"></i>
+                </div>
+                
+                <div style="position: relative; z-index: 5;">
+                    <h3 class="dino-title">The "Dinosaur" Way</h3>
+                    <ul class="dino-list">
+                        <li><i class="fa-solid fa-xmark"></i> Generic 15-Minute Quotes</li>
+                        <li><i class="fa-solid fa-xmark"></i> $150+ Broker Fees</li>
+                        <li><i class="fa-solid fa-xmark"></i> Missed Coverage Gaps</li>
+                        <li><i class="fa-solid fa-xmark"></i> Pushing Commission Sales</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="evo-new">
+                <div class="pro-glow"></div>
+                <div class="app-mockup-pro">
+                    <div class="mockup-screen">
+                        <div class="screen-header">
+                            <div class="screen-notch"></div>
+                            <div class="screen-signal"><i class="fa-solid fa-wifi"></i> 5G</div>
+                        </div>
+                        <div class="screen-content">
+                            <div class="success-icon"><i class="fa-solid fa-handshake-angle"></i></div> <div style="font-size:1.2rem; font-weight:800; margin-bottom: 5px;">Custom Plan</div>
+                            <div class="success-price">$0 Fees</div>
+                            <div class="screen-mini-row">
+                                <span><i class="fa-solid fa-user-shield"></i> Fiduciary</span>
+                                <span><i class="fa-solid fa-house-circle-check"></i> Covered</span>
+                            </div>
+                            <div class="screen-btn">View My Plan</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="position: relative; z-index: 2;">
+                    <h3 style="font-size:2.2rem; font-weight:900; margin-bottom:20px; text-shadow: 0 5px 15px rgba(0,0,0,0.2);">The Alex Standard</h3>
+                    <ul class="alex-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Tailored Property Analysis</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Zero Agency Fees Forever</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Dedicated Local Advisor</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Painless Claims Advocacy</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="neuro-section fade-up">
+        <div class="neuro-glow"></div>
+        
+        <div class="container" style="position: relative; z-index: 10;">
+            <div class="neuro-header text-center">
+            <span class="hero-badge"><i class="fa-solid fa-crown"></i> The Elite Advantage</span>
+                <h2 class="neuro-title" style="text-align:center">Not just an agency.<br>Your Fiduciary Partner.</h2>
+                <p class="neuro-sub">We blend sophisticated technology with uncompromising human expertise to protect your greatest asset properly.</p>
+            </div>
+
+            <div class="neuro-grid">
+                
+                <div class="n-card">
+                    <div class="n-card-visual">
+                        <div class="radar-container">
+                            <div class="radar-grid"></div>
+                            <div class="radar-laser"></div>
+                            <div class="radar-dot d-1"></div>
+                            <div class="radar-dot d-2"></div>
+                            <div class="radar-dot d-3"></div>
+                        </div>
+                    </div>
+                    <div class="n-card-body">
+                        <h3>Comprehensive Market Search</h3>
+                        <p>We don't sell just one brand. Our team evaluates your home's unique needs and scans 15+ premium carriers to find the perfect overlap of superior coverage and price.</p>
+                    </div>
+                </div>
+
+                <div class="n-card n-card-tall">
+                    <div class="n-card-visual visual-graph">
+                        <div class="graph-box">
+                            <div class="bar-group">
+                                <div class="bar-label">Them</div>
+                                <div class="bar bar-old">
+                                    <div class="fee-chunk">Hidden Fees</div>
+                                </div>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar-label" style="color: var(--alex-blue);">Alex</div>
+                                <div class="bar bar-new"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="n-card-body">
+                        <h3>Direct Wholesale Pricing</h3>
+                        <p>Traditional brokers inflate your premium to cover their rent and 15% commissions. We operate an efficient infrastructure, surgically removing the middleman markup to give you a pure, wholesale rate.</p>
+                    </div>
+                </div>
+
+                <div class="n-card">
+                    <div class="n-card-visual visual-pulse">
+                        <div class="pulse-ring pr-1"></div>
+                        <div class="pulse-ring pr-2"></div>
+                        <div class="pulse-core"><i class="fa-solid fa-cloud-bolt"></i></div>
+                    </div>
+                    <div class="n-card-body">
+                        <h3>Arizona Climate Defense</h3>
+                        <p>Generic policies fail when Haboobs or Monsoon flash floods hit. We engineer your policy specifically for Arizona's extreme weather, ensuring your roof, AC, and foundation are fully backed.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-py container fade-up">
+        <div style="text-align:center; max-width: 700px; margin: 0 auto 60px;">
+            <span class="hero-badge"><i class="fa-solid fa-code-compare"></i> The New Standard</span>
+            <h2 style="font-size:3.5rem; font-weight:900; margin-bottom:20px; color:var(--alex-mid); letter-spacing:-1px;">Night and Day.</h2>
+            <p style="font-size:1.1rem; color:var(--text-secondary); line-height:1.6; font-weight:500;">See exactly why homeowners across Arizona are upgrading their protection with Alex.</p>
+        </div>
+
+        <div class="matrix-container">
+            
+            <div class="matrix-header">
+                <div class="m-head-old">Traditional Broker</div>
+                <div class="m-head-new"><i class="fa-solid fa-shield-heart"></i> Alex Insurtech</div>
+            </div>
+
+            <div class="matrix-row">
+                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-money-bill-wave"></i></div> Agency Fees</div>
+                <div class="matrix-content">
+                    <div class="matrix-old">$150 - $300</div>
+                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> $0.00 Forever*</div>
+                </div>
+            </div>
+
+            <div class="matrix-row">
+                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-user-check"></i></div> Advice Approach</div>
+                <div class="matrix-content">
+                    <div class="matrix-old">Sales Pitch</div>
+                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Fiduciary Duty</div>
+                </div>
+            </div>
+
+            <div class="matrix-row">
+                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-building-columns"></i></div> Carrier Network</div>
+                <div class="matrix-content">
+                    <div class="matrix-old">Captive (1 Option)</div>
+                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> 15+ Top Rated</div>
+                </div>
+            </div>
+
+            <div class="matrix-row">
+                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-file-contract"></i></div> Mortgage Escrow</div>
+                <div class="matrix-content">
+                    <div class="matrix-old">You do the paperwork</div>
+                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> We Handle It All</div>
+                </div>
+            </div>
+
+            <div class="matrix-row">
+                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-headset"></i></div> Claims Advocacy</div>
+                <div class="matrix-content">
+                    <div class="matrix-old">Call an 800 number</div>
+                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> We Fight For You</div>
+                </div>
+            </div>
+
+            <div class="matrix-cta-row">
+                <div class="matrix-label hide-mobile"></div>
+                <div class="matrix-content" style="background: transparent; border: none; box-shadow: none;">
+                    <div class="matrix-old hide-mobile" style="background: transparent; border: none;"></div>
+                    <div style="flex: 1.3; text-align: center; padding-top: 15px;">
+                        <button class="btn-main" onclick="document.getElementById('quoteForm').scrollIntoView({behavior:'smooth'})">Upgrade My Coverage <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="matrix-disclaimer">
+                <p><strong>* The Self-Managed Guarantee:</strong> As long as you generate, manage, and purchase your policy digitally through the Alex platform, you will never pay an agency or broker fee. If you choose to finalize your policy through one of our licensed human partners for personalized assistance, a standard broker fee may apply. We believe in radical transparency: any fee will always be clearly itemized on your final receipt.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-py container fade-up">
+        <span class="hero-badge"><i class="fa-solid fa-circle-question"></i> FAQ</span>
+        <h2 style="text-align:center; font-size:3.5rem; font-weight:900; margin-bottom:60px; color:var(--alex-mid);">Questions?</h2>
+        <div class="faq-box">
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-q">Can I bundle my home and auto insurance? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-a">Absolutely. In fact, bundling is one of the easiest ways to save. Our advisors will compare rates to see if bundling with one carrier, or splitting them between two specialists, gives you the better overall value.</div>
+            </div>
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-q">My current insurance is paid through my mortgage escrow. Is switching hard? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-a">Not at all. We handle 100% of the heavy lifting. We will contact your lender, send them the new policy declarations, request the payment from your escrow account, and even help cancel your old policy. You don't have to lift a finger.</div>
+            </div>
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-q">Are your advisors actually real people? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-a">Yes! While we use advanced technology to speed up the quoting process, home insurance is too important to leave purely to a bot. You will have a dedicated, licensed Arizona advisor to review your assets and answer your calls.</div>
+            </div>
+            <div class="faq-item" onclick="this.classList.toggle('active')">
+                <div class="faq-q">How are you able to charge $0 in agency fees? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-a">We removed the expensive overhead of traditional agencies (strip-mall offices, paper files, outdated legacy software). By running a highly efficient digital infrastructure, we can afford to pass those savings directly to you.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="funnel-footer fade-up">
+        <div class="container footer-content">
+            <img src="./assets/logo-alex-main.png" alt="Alex AI Insurtech" class="footer-logo">
+            
+            <p class="footer-disclaimer">
+                Alex Insurtech is a licensed property & casualty agency. Coverage and discounts vary by property profile, claims history, and local regulations in the state of Arizona.
+            </p>
+            
+            <div class="footer-legal-text">
+                <a href="https://alexai.cloud/privacy-policy/">Privacy Policy</a>
+                <span class="dot-separator">•</span>
+                <a href="https://alexai.cloud/terms-conditions/">Terms of Service</a>
+            </div>
+            
+            <p class="footer-copyright">&copy; 2026 Alex Insurtech. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="appModal" onclick="if(event.target===this)this.classList.remove('open')">
+        <div class="modal-content">
+            <div class="close-btn" onclick="document.getElementById('appModal').classList.remove('open')"><i class="fa-solid fa-xmark"></i></div>
+            <div style="width:100px; height:100px; background:var(--brand-grad); border-radius:30px; margin:0 auto 25px; display:flex; align-items:center; justify-content:center; font-size:3rem; color:white; box-shadow:var(--shadow-glow);">
+                <img src="./assets/logo-alex-heart-white.png" class="logo-heart" alt="Alex AI Logo">
+            </div>
+            <h3 style="font-size:2.2rem; font-weight:900; color:var(--alex-deep); margin-bottom:10px;">Download Alex</h3>
+            <p style="color:var(--text-secondary); margin-bottom:40px; font-weight:600; font-size:1.1rem;">Your home policy in your pocket. 24/7 Support.</p>
+            <div class="store-grid">
+                <a href="#" class="store-btn"><i class="fa-brands fa-apple"></i> <span>App Store</span></a>
+                <a href="#" class="store-btn"><i class="fa-brands fa-google-play"></i> <span>Google Play</span></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() { document.getElementById('appModal').classList.add('open'); }
+        
+        // Quote Simulation (Más "humana" y menos de IA bot)
+        document.getElementById('quoteForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            let btn = document.querySelector('.btn-main');
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Connecting...';
+            btn.style.background = 'var(--alex-mid)';
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fa-solid fa-check"></i> Connected...';
+                btn.style.background = '#10B981';
+                window.location.href = "https://alexai.cloud/form-homeowners/"; // O donde vaya tu formulario de Home
+            }, 1800);
+        });
+
+        // Scroll Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // =========================================
+        // SOCIAL PROOF: AURORA TECH EDITION (HOME FOCUSED)
+        // =========================================
+        function initSocialProof() {
+            if (document.getElementById('social-proof-container')) return;
+
+            const container = document.createElement('div');
+            container.id = 'social-proof-container';
+            document.body.appendChild(container);
+
+            const cities = ["Phoenix", "Scottsdale", "Mesa", "Chandler", "Gilbert", "Tucson", "Flagstaff", "Paradise Valley"];
+            
+            // Foco en propiedades
+            const actions = [
+                { type: 'home', icon: 'fa-house-chimney', color: 'linear-gradient(135deg, #10b981, #059669)', label: 'Home Policy Bound' },
+                { type: 'bundle', icon: 'fa-layer-group', color: 'linear-gradient(135deg, #3b82f6, #06b6d4)', label: 'Home + Auto Bundle' },
+                { type: 'condo', icon: 'fa-building', color: 'linear-gradient(135deg, #8b5cf6, #6d28d9)', label: 'Condo Insured' }
+            ];
+
+            function getRandom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+            function getNum(min, max) { return Math.floor(Math.random() * (max - min + 1) + min); }
+
+            function createNotification() {
+                const item = getRandom(actions);
+                const city = getRandom(cities);
+                const savings = getNum(450, 1200); // Ahorros suelen ser mayores en Home/Bundle
+                const time = getNum(2, 12);
+
+                const toast = document.createElement('div');
+                toast.className = 'sp-card-tech';
+                
+                toast.innerHTML = `
+                    <div class="sp-aurora-border"></div>
+                    <div class="sp-shimmer-effect"></div>
+                    <div class="sp-glass-content">
+                        <div class="sp-icon-box" style="background: ${item.color}">
+                            <i class="fa-solid ${item.icon}"></i>
+                        </div>
+                        <div class="sp-info">
+                            <div class="sp-top-row">
+                                <span class="sp-type">${item.label}</span>
+                                <span class="sp-ago">${time}m ago</span>
+                            </div>
+                            <div class="sp-details">
+                                Protected in <strong>${city}, AZ</strong>
+                            </div>
+                            <div class="sp-saving-badge">
+                                <i class="fa-solid fa-arrow-trend-down"></i> Saved $${savings}/yr
+                            </div>
+                        </div>
+                        <button class="sp-close-btn" onclick="this.closest('.sp-card-tech').remove()"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                `;
+
+                container.appendChild(toast);
+
+                requestAnimationFrame(() => {
+                    toast.classList.add('visible');
+                });
+
+                setTimeout(() => {
+                    toast.classList.remove('visible');
+                    setTimeout(() => toast.remove(), 600);
+                }, 6000);
+            }
+
+            function loop() {
+                setTimeout(() => {
+                    createNotification();
+                    loop();
+                }, getNum(8000, 15000));
+            }
+            
+            setTimeout(loop, 4000);
+        }
+
+        document.addEventListener('DOMContentLoaded', initSocialProof);
+    </script>
+</body>
+</html>
