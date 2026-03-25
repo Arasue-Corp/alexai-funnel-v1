@@ -3,596 +3,598 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <title>Alex AI Insurtech | Insurance For Modern Life</title>
+    <title>Alex AI Insurtech | Intelligent Auto Insurance for Arizona</title>
     <meta name="description" content="The world's most advanced auto insurance agency. Exclusive to Arizona. Save 30% in 90 seconds.">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-
     <link rel="stylesheet" href="./css/style.css">
-
+    <link rel="stylesheet" href="./css/improvements.css">
 </head>
 <body>
 
-    <nav>
-        <div class="container nav-inner">
-            <a href="https://alexai.cloud/" class="logo"><img class="logo-main" src="./assets/logo-alex-main.png" alt="Alex AI"></a>
-            <div class="nav-actions">
-                <button class="btn-nav" onclick="openModal()">Get App</button>
+<!-- ===== NAV ===== -->
+<nav>
+    <div class="container nav-inner">
+        <a href="https://alexai.cloud/" class="logo"><img class="logo-main" src="./assets/logo-alex-main.png" alt="Alex AI"></a>
+        <div class="nav-actions">
+            <a href="tel:4806309630" class="nav-phone"><i class="fa-solid fa-phone"></i> 480-630-9630</a>
+            <button class="btn-nav" onclick="openModal()">Get App</button>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <div class="container hero-grid hero-grid-reversed">
+        <div class="visual-wrapper fade-up visible">
+            <div class="visual-bg-circle"></div>
+            <img src="./assets/mock-up-1.png" class="car-model" alt="Car">
+            <div class="premium-scanner-card">
+                <div class="psc-header"><span class="psc-title">Alex AI Insurtech</span><i class="fa-solid fa-wifi psc-icon"></i></div>
+                <div class="psc-screen"><div class="psc-scan-line"></div>Analyzing Driver Profile...</div>
+                <div class="psc-row"><span class="psc-label">Market Rate</span><span class="psc-strike">$180/mo</span></div>
+                <div class="psc-highlight"><span class="psc-hl-label">Alex Rate</span><span class="psc-hl-val">$125/mo</span></div>
+            </div>
+            <div class="float-stat fs-1"><div class="stat-icon"><i class="fa-solid fa-check"></i></div><div class="stat-text"><h4>Policy Active</h4><p>Scottsdale, AZ</p></div></div>
+            <div class="float-stat fs-2"><div class="stat-icon"><i class="fa-solid fa-wallet"></i></div><div class="stat-text"><h4>Saved $420</h4><p>Annual Avg</p></div></div>
+        </div>
+
+        <div class="fade-up visible" style="transition-delay:0.2s;">
+            <div class="hero-badge"><i class="fa-solid fa-location-dot"></i> Arizona Exclusive</div>
+            <h1 class="hero-title">Intelligent <span class="grad-text">Auto Insurance.</span></h1>
+            <p class="hero-sub">The world's most advanced auto insurance agency. We use AI to compare 10+ top carriers instantly, finding you the lowest possible rate in Arizona — no broker fees, ever.</p>
+            
+            <div class="trust-pills">
+                <div class="trust-pill"><i class="fa-solid fa-shield-halved"></i> Licensed in AZ</div>
+                <div class="trust-pill"><i class="fa-solid fa-bolt"></i> 90-sec quotes</div>
+                <div class="trust-pill"><i class="fa-solid fa-star"></i> 4.9/5 rating</div>
+            </div>
+            
+            <div class="quote-widget">
+                <h3>Start Your Free Quote</h3>
+                <p class="widget-sub">No spam. No commitments. Just savings.</p>
+                <form id="quoteForm">
+                    <button type="submit" class="btn-main">See My Rate Now <i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+                <div class="widget-security"><i class="fa-solid fa-lock"></i> 256-Bit Bank-Level Encryption · No Credit Card Required</div>
             </div>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <section class="hero">
-        <div class="container hero-grid">
-            
-            <div class="fade-up visible">
-                <div class="hero-badge"><i class="fa-solid fa-location-dot"></i> Arizona Exclusive</div>
-                <h1 class="hero-title">Intelligent <span class="grad-text">Auto Insurance.</span></h1>
-                <p class="hero-sub">The world's most advanced auto insurance agency. We use AI to compare 10+ top carriers instantly, finding you the lowest possible rate in Arizona without the broker fees.</p>
-                
-                <div class="quote-widget">
-                    <h3>Start Your Savings</h3>
-                    <form id="quoteForm">                        
-                        <button type="submit" class="btn-main">Launch Quote Experience <i class="fa-solid fa-rocket"></i></button>
-                    </form>
-                    <div style="text-align:center; font-size:0.8rem; color:var(--text-secondary); margin-top:15px; display:flex; align-items:center; justify-content:center; gap:6px; font-weight: 500;">
-                        <i class="fa-solid fa-shield-halved" style="color:var(--alex-blue); font-size: 1.1rem;"></i> 256-Bit Bank-Level Encryption
-                    </div>
-                </div>
-            </div>
-            
-            <div class="visual-wrapper fade-up visible" style="transition-delay: 0.2s;">
-                <div class="visual-bg-circle"></div>
-                
-                <img src="./assets/mock-up-1.png" class="car-model" alt="Car">
-                
-                <div class="premium-scanner-card">
-                    <div class="psc-header">
-                        <span class="psc-title">Alex AI Insurtech</span>
-                        <i class="fa-solid fa-wifi psc-icon"></i>
-                    </div>
-                    <div class="psc-screen">
-                        <div class="psc-scan-line"></div>
-                        Analyzing Driver Profile...
-                    </div>
-                    <div class="psc-row">
-                        <span class="psc-label">Market Rate</span>
-                        <span class="psc-strike">$180/mo</span>
-                    </div>
-                    <div class="psc-highlight">
-                        <span class="psc-hl-label">Alex Rate</span>
-                        <span class="psc-hl-val">$125/mo</span>
-                    </div>
-                </div>
-
-                <div class="float-stat fs-1">
-                    <div class="stat-icon"><i class="fa-solid fa-check"></i></div>
-                    <div class="stat-text">
-                        <h4>Policy Active</h4>
-                        <p>Scottsdale, AZ</p>
-                    </div>
-                </div>
-                
-                <div class="float-stat fs-2">
-                    <div class="stat-icon"><i class="fa-solid fa-wallet"></i></div>
-                    <div class="stat-text">
-                        <h4>Saved $420</h4>
-                        <p>Annual Avg</p>
-                    </div>
-                </div>
-            </div>
-            
+<!-- ===== TRUST BAR ===== -->
+<section class="trust-bar fade-up">
+    <div class="container trust-bar-inner">
+        <div class="trust-stat">
+            <div class="ts-number">12,400+</div>
+            <div class="ts-label">AZ drivers insured</div>
         </div>
-    </section>
+        <div class="trust-divider"></div>
+        <div class="trust-stat">
+            <div class="ts-number">$420</div>
+            <div class="ts-label">Average annual savings</div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-stat">
+            <div class="ts-number">90 sec</div>
+            <div class="ts-label">To get your quote</div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-stat">
+            <div class="ts-number">4.9 ★</div>
+            <div class="ts-label">Customer rating</div>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-stat">
+            <div class="ts-number">10+</div>
+            <div class="ts-label">Top-rated carriers</div>
+        </div>
+    </div>
+</section>
 
+<!-- ===== HOW IT WORKS ===== -->
+<section class="section-py how-it-works fade-up">
+    <div class="container">
+        <div class="section-header">
+            <span class="hero-badge"><i class="fa-solid fa-map-signs"></i> Simple Process</span>
+            <h2 class="section-title">Coverage in 3 Easy Steps</h2>
+            <p class="section-sub">From zero to covered in under 5 minutes. No paperwork, no phone calls, no stress.</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-num">01</div>
+                <div class="step-icon-wrap">
+                    <svg viewBox="0 0 80 80" class="step-svg">
+                        <circle cx="40" cy="40" r="36" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+                        <rect x="22" y="28" width="36" height="26" rx="4" fill="#6366F1" opacity="0.15"/>
+                        <rect x="22" y="28" width="36" height="26" rx="4" fill="none" stroke="#6366F1" stroke-width="2"/>
+                        <rect x="28" y="34" width="10" height="2.5" rx="1.2" fill="#6366F1"/>
+                        <rect x="28" y="39" width="18" height="2.5" rx="1.2" fill="#6366F1" opacity="0.6"/>
+                        <rect x="28" y="44" width="14" height="2.5" rx="1.2" fill="#6366F1" opacity="0.4"/>
+                        <circle cx="52" cy="22" r="8" fill="#009CFF"/>
+                        <path d="M48.5 22 L51 24.5 L55.5 20" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Tell Us About You</h3>
+                <p>Share your basic info in 90 seconds. No SSN, no hard pulls, no commitment — just a zip code and your car details.</p>
+                <div class="step-cta-pill">~90 seconds</div>
+            </div>
+            <div class="step-connector"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="step-card featured">
+                <div class="step-num">02</div>
+                <div class="step-icon-wrap">
+                    <svg viewBox="0 0 80 80" class="step-svg">
+                        <circle cx="40" cy="40" r="36" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5"/>
+                        <path d="M24 40 L36 52 L56 28" stroke="#10B981" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="24" cy="40" r="4" fill="#10B981" opacity="0.3"/>
+                        <circle cx="36" cy="52" r="4" fill="#10B981" opacity="0.5"/>
+                        <circle cx="56" cy="28" r="4" fill="#10B981"/>
+                        <circle cx="40" cy="22" r="6" fill="#009CFF" opacity="0.2"/>
+                        <circle cx="40" cy="22" r="3" fill="#009CFF"/>
+                    </svg>
+                </div>
+                <div class="featured-badge"><i class="fa-solid fa-bolt"></i> AI-Powered</div>
+                <h3>AI Finds Your Best Rate</h3>
+                <p>Our engine scans 10+ top AZ carriers in real-time, crunching thousands of data points to find your lowest possible premium.</p>
+                <div class="step-cta-pill" style="background: linear-gradient(135deg, #10B981, #059669); color:white;">Instant comparison</div>
+            </div>
+            <div class="step-connector"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="step-card">
+                <div class="step-num">03</div>
+                <div class="step-icon-wrap">
+                    <svg viewBox="0 0 80 80" class="step-svg">
+                        <circle cx="40" cy="40" r="36" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1.5"/>
+                        <path d="M30 42 L40 22 L50 42 L55 38 L40 58 L25 38 Z" fill="#F97316" opacity="0.15"/>
+                        <path d="M30 42 L40 22 L50 42 L55 38 L40 58 L25 38 Z" fill="none" stroke="#F97316" stroke-width="2" stroke-linejoin="round"/>
+                        <circle cx="40" cy="40" r="4" fill="#F97316"/>
+                    </svg>
+                </div>
+                <h3>Get Covered Instantly</h3>
+                <p>Pick your plan, bind your policy digitally, and get your proof of insurance in seconds. No waiting, no callbacks.</p>
+                <div class="step-cta-pill">100% digital</div>
+            </div>
+        </div>
+        <div class="steps-cta">
+            <button class="btn-main btn-wide" onclick="window.location.href='https://rater.alexai.cloud/quote-tool'">Start My Free Quote <i class="fa-solid fa-rocket"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COVERAGE: WHAT'S IN / OUT (LEMONADE STYLE) ===== -->
+<section class="coverage-section fade-up">
+    <div class="container">
+        <div class="section-header">
+            <span class="hero-badge"><i class="fa-solid fa-shield-halved"></i> What You're Getting</span>
+            <h2 class="section-title">What's Covered — and What's Not</h2>
+            <p class="section-sub">No surprises. We believe you should know exactly what protects you before you commit.</p>
+        </div>
+
+        <div class="coverage-tabs">
+            <button class="cov-tab active" data-tab="covered">
+                <i class="fa-solid fa-circle-check"></i> What's Covered
+            </button>
+            <button class="cov-tab" data-tab="notcovered">
+                <i class="fa-solid fa-circle-xmark"></i> What's Not Covered
+            </button>
+        </div>
+
+        <div class="coverage-panel active" id="panel-covered">
+            <div class="coverage-grid">
+                <div class="cov-card in">
+                    <div class="cov-illustration">
+                        <svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="30" width="60" height="35" rx="6" fill="#DBEAFE"/>
+                            <rect x="10" y="30" width="60" height="35" rx="6" stroke="#3B82F6" stroke-width="2"/>
+                            <circle cx="25" cy="65" r="7" fill="#3B82F6"/>
+                            <circle cx="55" cy="65" r="7" fill="#3B82F6"/>
+                            <path d="M10 44 L70 44" stroke="#3B82F6" stroke-width="1.5"/>
+                            <path d="M18 37 L18 30 Q18 25 23 25 L57 25 Q62 25 62 30 L62 37" stroke="#3B82F6" stroke-width="2" fill="none"/>
+                            <circle cx="78" cy="28" r="14" fill="#10B981"/>
+                            <path d="M72 28 L76 32 L84 24" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cov-check"><i class="fa-solid fa-check"></i></div>
+                    <h4>Collision Coverage</h4>
+                    <p>Damage to your car from accidents — whether it's your fault or not. Fender bender, total loss, we've got it.</p>
+                </div>
+                <div class="cov-card in">
+                    <div class="cov-illustration">
+                        <svg viewBox="0 0 100 80" fill="none">
+                            <ellipse cx="50" cy="55" rx="35" ry="16" fill="#FEF3C7"/>
+                            <path d="M25 55 Q35 20 50 18 Q65 20 75 55" fill="#FDE68A" stroke="#F59E0B" stroke-width="1.5"/>
+                            <path d="M35 55 Q40 35 50 33 Q60 35 65 55" fill="#FCD34D" stroke="#F59E0B" stroke-width="1"/>
+                            <circle cx="50" cy="28" r="10" fill="#F59E0B" opacity="0.3"/>
+                            <circle cx="78" cy="18" r="14" fill="#10B981"/>
+                            <path d="M72 18 L76 22 L84 14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cov-check"><i class="fa-solid fa-check"></i></div>
+                    <h4>Comprehensive Coverage</h4>
+                    <p>Theft, vandalism, fire, flooding, hailstorms, and even hitting an animal. Arizona weather is covered.</p>
+                </div>
+                <div class="cov-card in">
+                    <div class="cov-illustration">
+                        <svg viewBox="0 0 100 80" fill="none">
+                            <circle cx="38" cy="50" r="22" fill="#EDE9FE"/>
+                            <circle cx="38" cy="50" r="22" stroke="#7C3AED" stroke-width="2"/>
+                            <path d="M28 48 L35 55 L50 40" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="72" cy="30" r="20" fill="#DDD6FE"/>
+                            <circle cx="72" cy="30" r="20" stroke="#7C3AED" stroke-width="1.5" stroke-dasharray="4 3"/>
+                            <path d="M63 28 L70 35 L81 22" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cov-check"><i class="fa-solid fa-check"></i></div>
+                    <h4>Bodily Injury & Liability</h4>
+                    <p>Covers medical and legal costs if you injure someone. Required by Arizona law — and we make sure you're fully compliant.</p>
+                </div>
+                <div class="cov-card in">
+                    <div class="cov-illustration">
+                        <svg viewBox="0 0 100 80" fill="none">
+                            <rect x="15" y="25" width="55" height="40" rx="8" fill="#ECFDF5"/>
+                            <rect x="15" y="25" width="55" height="40" rx="8" stroke="#10B981" stroke-width="2"/>
+                            <path d="M25 45 L35 35 L45 42 L55 30 L65 38" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                            <circle cx="78" cy="20" r="14" fill="#10B981"/>
+                            <path d="M72 20 L76 24 L84 16" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cov-check"><i class="fa-solid fa-check"></i></div>
+                    <h4>Uninsured Motorist</h4>
+                    <p>1 in 5 Arizona drivers has no insurance. We make sure you're protected when they're not.</p>
+                </div>
+                <div class="cov-card in">
+                    <div class="cov-illustration">
+                        <svg viewBox="0 0 100 80" fill="none">
+                            <rect x="20" y="35" width="60" height="32" rx="6" fill="#FFF7ED"/>
+                            <rect x="20" y="35" width="60" height="32" rx="6" stroke="#F97316" stroke-width="2"/>
+                            <path d="M35 51 L45 41 M55 41 L65 51" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="50" cy="22" r="12" fill="#FED7AA"/>
+                            <path d="M50 16 L50 22 L54 26" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cov-check"><i class="fa-solid fa-check"></i></div>
+                    <h4>Roadside Assistance</h4>
+                    <p>Flat tire, dead battery, lockout, or you're out of gas — we dispatch help anywhere in Arizona, 24/7.</p>
+                </div>
+                <div class="cov-card in">
+                    <div class="cov-illustration">
+                        <svg viewBox="0 0 100 80" fill="none">
+                            <rect x="30" y="20" width="40" height="48" rx="8" fill="#EFF6FF"/>
+                            <rect x="30" y="20" width="40" height="48" rx="8" stroke="#3B82F6" stroke-width="2"/>
+                            <rect x="38" y="30" width="24" height="16" rx="4" fill="#BFDBFE"/>
+                            <rect x="38" y="50" width="10" height="3" rx="1.5" fill="#3B82F6"/>
+                            <rect x="52" y="50" width="10" height="3" rx="1.5" fill="#3B82F6" opacity="0.5"/>
+                            <circle cx="78" cy="18" r="14" fill="#10B981"/>
+                            <path d="M72 18 L76 22 L84 14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cov-check"><i class="fa-solid fa-check"></i></div>
+                    <h4>Rental Car Reimbursement</h4>
+                    <p>Your car is in the shop? We cover your rental so you're never stranded without wheels.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="coverage-panel" id="panel-notcovered">
+            <div class="coverage-grid">
+                <div class="cov-card out">
+                    <div class="cov-illustration">
+                        <svg viewBox="0 0 100 80" fill="none">
+                            <rect x="15" y="30" width="50" height="35" rx="6" fill="#FEF2F2"/>
+                            <rect x="15" y="30" width="50" height="35" rx="6" stroke="#EF4444" stroke-width="2" stroke-dasharray="5 3"/>
+                            <path d="M25 42 L55 42" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M40 35 L40 55" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="74" cy="22" r="14" fill="#FEE2E2"/>
+                            <path d="M68 22 L80 22 M74 16 L74 28" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cov-x"><i class="fa-solid fa-xmark"></i></div>
+                    <h4>Intentional Damage</h4>
+                    <p>If you deliberately damage your own vehicle or someone else's property, your policy won't cover it.</p>
+                </div>
+                <div class="cov-card out">
+                    <div class="cov-illustration">
+                        <svg viewBox="0 0 100 80" fill="none">
+                            <rect x="20" y="28" width="55" height="35" rx="6" fill="#FEF2F2"/>
+                            <rect x="20" y="28" width="55" height="35" rx="6" stroke="#EF4444" stroke-width="2" stroke-dasharray="5 3"/>
+                            <path d="M30 40 L50 25 L70 40" fill="#FECACA" stroke="#EF4444" stroke-width="1.5"/>
+                            <path d="M40 62 L40 40 L60 40 L60 62" fill="#FECACA" stroke="#EF4444" stroke-width="1.5"/>
+                            <circle cx="82" cy="20" r="10" fill="#FEE2E2"/>
+                            <path d="M77 20 L87 20 M82 15 L82 25" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cov-x"><i class="fa-solid fa-xmark"></i></div>
+                    <h4>Racing or Stunts</h4>
+                    <p>Using your car in speed contests, drag racing, or stunt driving voids your coverage during that activity.</p>
+                </div>
+                <div class="cov-card out">
+                    <div class="cov-illustration">
+                        <svg viewBox="0 0 100 80" fill="none">
+                            <circle cx="45" cy="45" r="28" fill="#FEF2F2"/>
+                            <circle cx="45" cy="45" r="28" stroke="#EF4444" stroke-width="2" stroke-dasharray="5 3"/>
+                            <path d="M38 38 L52 52 M52 38 L38 52" stroke="#EF4444" stroke-width="3" stroke-linecap="round"/>
+                            <rect x="65" y="15" width="20" height="28" rx="4" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5"/>
+                            <path d="M70 25 L80 25 M70 30 L77 30" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cov-x"><i class="fa-solid fa-xmark"></i></div>
+                    <h4>Business / Rideshare Use</h4>
+                    <p>Driving for Uber, Lyft, or commercial purposes requires commercial coverage — standard personal policies don't cover this.</p>
+                </div>
+                <div class="cov-card out">
+                    <div class="cov-illustration">
+                        <svg viewBox="0 0 100 80" fill="none">
+                            <path d="M20 65 Q35 30 50 28 Q65 30 80 65" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" stroke-dasharray="4 3"/>
+                            <path d="M30 65 Q40 45 50 43 Q60 45 70 65" fill="#FEE2E2"/>
+                            <line x1="20" y1="65" x2="80" y2="65" stroke="#EF4444" stroke-width="2"/>
+                            <path d="M45 28 L45 18 M50 28 L52 18 M55 28 L58 19" stroke="#F97316" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+                            <circle cx="75" cy="18" r="10" fill="#FEE2E2"/>
+                            <path d="M70 18 L80 18 M75 13 L75 23" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cov-x"><i class="fa-solid fa-xmark"></i></div>
+                    <h4>Mechanical Breakdown</h4>
+                    <p>Normal wear & tear, engine failure, or manufacturer defects aren't covered. That's what warranties are for.</p>
+                </div>
+                <div class="cov-card out">
+                    <div class="cov-illustration">
+                        <svg viewBox="0 0 100 80" fill="none">
+                            <rect x="20" y="30" width="55" height="35" rx="6" fill="#FEF2F2"/>
+                            <rect x="20" y="30" width="55" height="35" rx="6" stroke="#EF4444" stroke-width="2" stroke-dasharray="4 3"/>
+                            <circle cx="35" cy="65" r="6" fill="#FCA5A5"/>
+                            <circle cx="60" cy="65" r="6" fill="#FCA5A5"/>
+                            <path d="M20 44 L75 44" stroke="#EF4444" stroke-width="1.5"/>
+                            <path d="M30 37 L30 30 Q30 26 34 26 L61 26 Q65 26 65 30 L65 37" stroke="#EF4444" stroke-width="1.5" fill="none"/>
+                            <path d="M36 38 L36 44 M47 38 L47 44 M58 38 L58 44" stroke="#EF4444" stroke-width="1.2" opacity="0.5"/>
+                            <circle cx="80" cy="20" r="10" fill="#FEE2E2"/>
+                            <path d="M75 20 L85 20 M80 15 L80 25" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cov-x"><i class="fa-solid fa-xmark"></i></div>
+                    <h4>Unlisted Vehicles</h4>
+                    <p>Coverage only applies to vehicles explicitly listed on your policy. Drive a second car? Add it first.</p>
+                </div>
+                <div class="cov-card out">
+                    <div class="cov-illustration">
+                        <svg viewBox="0 0 100 80" fill="none">
+                            <circle cx="45" cy="42" r="26" fill="#FEF2F2"/>
+                            <circle cx="45" cy="42" r="26" stroke="#EF4444" stroke-width="2" stroke-dasharray="4 3"/>
+                            <path d="M35 42 Q45 30 55 42 Q45 54 35 42Z" fill="#FCA5A5" stroke="#EF4444" stroke-width="1.5"/>
+                            <circle cx="45" cy="42" r="5" fill="#EF4444"/>
+                            <line x1="25" y1="22" x2="65" y2="62" stroke="#EF4444" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cov-x"><i class="fa-solid fa-xmark"></i></div>
+                    <h4>DUI / Impaired Driving</h4>
+                    <p>Claims arising from driving under the influence of alcohol or drugs can be denied under your policy terms.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="coverage-disclaimer">
+            <i class="fa-solid fa-circle-info"></i>
+            Coverage details vary by policy, carrier, and add-ons selected. During your quote, we'll show you exactly what each plan covers.
+            <a href="https://rater.alexai.cloud/quote-tool">See your personalized coverage options →</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PARTNERS CAROUSEL ===== -->
 <section class="partners-funnel fade-up">
     <div class="container text-center">
         <span class="hero-badge"><i class="fa-solid fa-chart-simple"></i> Data-Driven Partnerships</span>
         <h2 class="pf-title">We scout the market. You get the best draft.</h2>
         <p class="pf-sub">Our AI analyzes real-time stats from Arizona's top-rated carriers so you don't have to guess who offers the best value.</p>
     </div>
-
     <div class="pf-track-container">
         <div class="pf-track">
-            
             <div class="pf-group">
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-gold">Premium Tier</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-chubb.jpg" class="scout-logo" alt="Chubb"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>AM Best Rating</span> <strong>A++ (Superior)</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>OEM Parts Guarantee</strong></div>
-                    </div>
-                </div>
-                
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-tech">Tech First</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-clearcover.png" class="scout-logo" alt="Clearcover"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>AM Best Rating</span> <strong>A- (Excellent)</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>Lightning-Fast Claims</strong></div>
-                    </div>
-                </div>
-
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-tech">Tech First</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-covercube-2.jpg" class="scout-logo" alt="Covercube"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>Pricing Model</span> <strong>Smart Telematics</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>Safe Driver Rewards</strong></div>
-                    </div>
-                </div>
-
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-innovator">Innovator</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-just.jpg" class="scout-logo" alt="Just"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>Pricing Model</span> <strong>Pay-Per-Mile App</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>No Credit Check</strong></div>
-                    </div>
-                </div>
-
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-blue">Accessible</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-kemper.jpg" class="scout-logo" alt="Kemper"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>AM Best Rating</span> <strong>A- (Excellent)</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>Forgiving Underwriting</strong></div>
-                    </div>
-                </div>
-
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-blue">Accessible</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-assurance-america.png" class="scout-logo" alt="Assurance America"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>Market Focus</span> <strong>Non-Standard Auto</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>Instant SR-22 Filings</strong></div>
-                    </div>
-                </div>
-
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-local">Regional</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-aspire.jpg" class="scout-logo" alt="Aspire"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>Focus Area</span> <strong>Southwest Drivers</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>Aggressive AZ Discounts</strong></div>
-                    </div>
-                </div>
-                
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-local">Regional</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-commonwealth.jpg" class="scout-logo" alt="Commonwealth Casualty"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>Focus Area</span> <strong>Southwest US</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>Flexible Payment Plans</strong></div>
-                    </div>
-                </div>
-
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-blue">Value Tier</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-warrior.png" class="scout-logo" alt="Warrior"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>Specialty</span> <strong>Second Chances</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>Low Down Payments</strong></div>
-                    </div>
-                </div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-gold">Premium Tier</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/Carrier-chubb.jpg" class="scout-logo" alt="Chubb"></div><div class="scout-stats"><div class="stat-line"><span>AM Best Rating</span><strong>A++ (Superior)</strong></div><div class="stat-line"><span>Superpower</span><strong>OEM Parts Guarantee</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-tech">Tech First</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/Carrier-clearcover.png" class="scout-logo" alt="Clearcover"></div><div class="scout-stats"><div class="stat-line"><span>AM Best Rating</span><strong>A- (Excellent)</strong></div><div class="stat-line"><span>Superpower</span><strong>Lightning-Fast Claims</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-tech">Tech First</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/Carrier-covercube-2.jpg" class="scout-logo" alt="Covercube"></div><div class="scout-stats"><div class="stat-line"><span>Pricing Model</span><strong>Smart Telematics</strong></div><div class="stat-line"><span>Superpower</span><strong>Safe Driver Rewards</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-blue">Nationwide</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/carrier-nationwide.png" class="scout-logo" alt="Nationwide"></div><div class="scout-stats"><div class="stat-line"><span>AM Best Rating</span><strong>A+ (Superior)</strong></div><div class="stat-line"><span>Superpower</span><strong>Vanishing Deductible</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-innovator">Innovator</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/carrier-mile-auto.jpeg" class="scout-logo" alt="Mile Auto"></div><div class="scout-stats"><div class="stat-line"><span>Model</span><strong>Pay-Per-Mile</strong></div><div class="stat-line"><span>Superpower</span><strong>Best for Low Mileage</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-local">Local Expert</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/carrier-bristol-west.jpg" class="scout-logo" alt="Bristol West"></div><div class="scout-stats"><div class="stat-line"><span>Specialty</span><strong>Non-Standard Risk</strong></div><div class="stat-line"><span>Superpower</span><strong>High-Risk Accepted</strong></div></div></div>
             </div>
-
             <div class="pf-group" aria-hidden="true">
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-gold">Premium Tier</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-chubb.jpg" class="scout-logo" alt="Chubb"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>AM Best Rating</span> <strong>A++ (Superior)</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>OEM Parts Guarantee</strong></div>
-                    </div>
-                </div>
-                
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-tech">Tech First</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-clearcover.png" class="scout-logo" alt="Clearcover"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>AM Best Rating</span> <strong>A- (Excellent)</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>Lightning-Fast Claims</strong></div>
-                    </div>
-                </div>
-
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-tech">Tech First</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-covercube-2.jpg" class="scout-logo" alt="Covercube"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>Pricing Model</span> <strong>Smart Telematics</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>Safe Driver Rewards</strong></div>
-                    </div>
-                </div>
-
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-innovator">Innovator</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-just.jpg" class="scout-logo" alt="Just"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>Pricing Model</span> <strong>Pay-Per-Mile App</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>No Credit Check</strong></div>
-                    </div>
-                </div>
-
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-blue">Accessible</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-kemper.jpg" class="scout-logo" alt="Kemper"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>AM Best Rating</span> <strong>A- (Excellent)</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>Forgiving Underwriting</strong></div>
-                    </div>
-                </div>
-
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-blue">Accessible</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-assurance-america.png" class="scout-logo" alt="Assurance America"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>Market Focus</span> <strong>Non-Standard Auto</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>Instant SR-22 Filings</strong></div>
-                    </div>
-                </div>
-
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-local">Regional</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-aspire.jpg" class="scout-logo" alt="Aspire"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>Focus Area</span> <strong>Southwest Drivers</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>Aggressive AZ Discounts</strong></div>
-                    </div>
-                </div>
-
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-local">Regional</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-commonwealth.jpg" class="scout-logo" alt="Commonwealth Casualty"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>Focus Area</span> <strong>Southwest US</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>Flexible Payment Plans</strong></div>
-                    </div>
-                </div>
-
-                <div class="scout-card">
-                    <div class="scout-header">
-                        <span class="scout-tier tier-blue">Value Tier</span>
-                        <i class="fa-solid fa-shield-check verified-icon"></i>
-                    </div>
-                    <div class="scout-logo-box"><img src="./assets/Carrier-warrior.png" class="scout-logo" alt="Warrior"></div>
-                    <div class="scout-stats">
-                        <div class="stat-line"><span>Specialty</span> <strong>Second Chances</strong></div>
-                        <div class="stat-line"><span>Superpower</span> <strong>Low Down Payments</strong></div>
-                    </div>
-                </div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-gold">Premium Tier</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/Carrier-chubb.jpg" class="scout-logo" alt="Chubb"></div><div class="scout-stats"><div class="stat-line"><span>AM Best Rating</span><strong>A++ (Superior)</strong></div><div class="stat-line"><span>Superpower</span><strong>OEM Parts Guarantee</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-tech">Tech First</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/Carrier-clearcover.png" class="scout-logo" alt="Clearcover"></div><div class="scout-stats"><div class="stat-line"><span>AM Best Rating</span><strong>A- (Excellent)</strong></div><div class="stat-line"><span>Superpower</span><strong>Lightning-Fast Claims</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-tech">Tech First</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/Carrier-covercube-2.jpg" class="scout-logo" alt="Covercube"></div><div class="scout-stats"><div class="stat-line"><span>Pricing Model</span><strong>Smart Telematics</strong></div><div class="stat-line"><span>Superpower</span><strong>Safe Driver Rewards</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-blue">Nationwide</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/carrier-nationwide.png" class="scout-logo" alt="Nationwide"></div><div class="scout-stats"><div class="stat-line"><span>AM Best Rating</span><strong>A+ (Superior)</strong></div><div class="stat-line"><span>Superpower</span><strong>Vanishing Deductible</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-innovator">Innovator</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/carrier-mile-auto.jpeg" class="scout-logo" alt="Mile Auto"></div><div class="scout-stats"><div class="stat-line"><span>Model</span><strong>Pay-Per-Mile</strong></div><div class="stat-line"><span>Superpower</span><strong>Best for Low Mileage</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-local">Local Expert</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/carrier-bristol-west.jpg" class="scout-logo" alt="Bristol West"></div><div class="scout-stats"><div class="stat-line"><span>Specialty</span><strong>Non-Standard Risk</strong></div><div class="stat-line"><span>Superpower</span><strong>High-Risk Accepted</strong></div></div></div>
             </div>
-
         </div>
     </div>
 </section>
 
-<section class="section-py container fade-up">
-    <span class="hero-badge"><i class="fa-solid fa-champagne-glasses"></i> Out With The Old, In With The New</span>
-
-    <h2 style="text-align:center; font-size:3.5rem; font-weight:900; margin-bottom:60px; color:var(--alex-mid);">From Chaos to Clarity</h2>
-    <div class="evo-grid">
-        
-        <div class="evo-old">
-            <div class="dirt-overlay"></div>
-            <div class="cracks-overlay"></div>
-            <div class="floating-dust"></div>
-            <div class="cobweb cobweb-left"></div>
-            <div class="cobweb cobweb-right"></div>
-            <div class="hanging-spider"><i class="fa-solid fa-spider"></i></div>
-
-            <div class="dino-visual-container">
-                
-                <i class="fa-solid fa-folder-open trash-item t-folder"></i>
-                <i class="fa-solid fa-file-contract trash-item t-contract"></i>
-                <i class="fa-solid fa-floppy-disk trash-item t-floppy"></i>
-                <i class="fa-solid fa-scroll trash-item t-scroll"></i>
-                <i class="fa-solid fa-bone trash-item t-bone-1"></i>
-                <i class="fa-solid fa-bone trash-item t-bone-2"></i>
-
-                <svg class="retro-dino-fossil" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M12 0h8v2h2v4h2v2h-2v2h-2v2h-4v-2h-2v2H8v-2H6v2H2v-2H0V6h2V4h2V2h8V0zm4 4h-2v2h2V4z M9 14h6v2H9v-2zm1 2h4v2h-4v-2zm-2 2h8v2H8v-2zm2 2h4v2h-4v-2z"/>
-                    <rect x="14" y="4" width="2" height="2" fill="rgba(0,0,0,0.4)"/>
-                    <rect x="20" y="8" width="2" height="2" fill="rgba(0,0,0,0.4)"/>
-                </svg>
-
-                <i class="fa-solid fa-box-archive trash-item t-archive"></i>
-                <i class="fa-solid fa-fax trash-item t-fax"></i>
-                <i class="fa-solid fa-hourglass-end trash-item t-clock"></i>
-                <i class="fa-solid fa-pencil trash-item t-pencil"></i>
-                <i class="fa-solid fa-paperclip trash-item t-clip"></i>
-            </div>
-            
-            <div style="position: relative; z-index: 5;">
-                <h3 class="dino-title">The "Dinosaur" Way</h3>
-                <ul class="dino-list">
-                    <li><i class="fa-solid fa-xmark"></i> 48 Hour Wait Times</li>
-                    <li><i class="fa-solid fa-xmark"></i> $150+ Broker Fees</li>
-                    <li><i class="fa-solid fa-xmark"></i> Faxing & Paperwork</li>
-                    <li><i class="fa-solid fa-xmark"></i> Pushy Sales Calls</li>
-                </ul>
-            </div>
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials-section section-py fade-up">
+    <div class="container">
+        <div class="section-header">
+            <span class="hero-badge"><i class="fa-solid fa-heart"></i> Real Arizona Drivers</span>
+            <h2 class="section-title">People Love Alex AI</h2>
+            <p class="section-sub">Don't take our word for it. Here's what our customers are saying.</p>
         </div>
-
-        <div class="evo-new">
-            <div class="pro-glow"></div>
-            
-            <div class="image-container-pro">
-                <img src="./assets/mock-up-2.png" alt="Alex APP" class="full-mockup-img">
-            </div>
-
-            <div style="position: relative; z-index: 2;">
-                <h3 style="font-size:2.2rem; font-weight:900; margin-bottom:20px; text-shadow: 0 5px 15px rgba(0,0,0,0.2);">The Alex Era</h3>
-                <ul class="alex-list">
-                    <li><i class="fa-solid fa-circle-check"></i> 90 Second Instant Quote</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Zero Agency Fees Forever</li>
-                    <li><i class="fa-solid fa-circle-check"></i> 100% In-App Control</li>
-                    <li><i class="fa-solid fa-circle-check"></i> AI Precision Assistance</li>
-                </ul>
-            </div>
-        </div>
-        
-    </div>
-</section>
-
-<section class="neuro-section fade-up">
-    <div class="neuro-glow"></div>
-    
-    <div class="container" style="position: relative; z-index: 10;">
-        <div class="neuro-header text-center">
-        <span class="hero-badge"><i class="fa-solid fa-crown"></i> The Unfair Advantage</span>
-            <h2 class="neuro-title" style="text-align:center">Not a broker.<br>An Intelligence.</h2>
-            <p class="neuro-sub">We bypassed the outdated agency model. Alex AI is a neural network directly wired into the pricing algorithms of Arizona's top carriers.</p>
-        </div>
-
-        <div class="neuro-grid">
-            
-            <div class="n-card">
-                <div class="n-card-visual">
-                    <div class="radar-container">
-                        <div class="radar-grid"></div>
-                        <div class="radar-laser"></div>
-                        <div class="radar-dot d-1"></div>
-                        <div class="radar-dot d-2"></div>
-                        <div class="radar-dot d-3"></div>
+        <div class="testimonials-grid">
+            <div class="testi-card featured-testi">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-quote">"I was paying $217/month with my old agent. Alex AI got me covered for $142/month with better coverage. I literally saved $900 this year doing nothing but answering a few questions on my phone."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar" style="background: linear-gradient(135deg, #6366F1, #009CFF);">M</div>
+                    <div>
+                        <strong>Miguel R.</strong>
+                        <span>Phoenix, AZ · Auto + Home</span>
                     </div>
                 </div>
-                <div class="n-card-body">
-                    <h3>Simultaneous Market Radar</h3>
-                    <p>Instead of calling agents one by one, our AI sends parallel API requests to 10+ carriers instantly. We force them into a silent bidding war for your policy in exactly 90 seconds.</p>
-                </div>
+                <div class="testi-badge"><i class="fa-solid fa-shield-halved"></i> Verified Customer</div>
             </div>
-
-            <div class="n-card n-card-tall">
-                <div class="n-card-visual visual-graph">
-                    <div class="graph-box">
-                        <div class="bar-group">
-                            <div class="bar-label">Them</div>
-                            <div class="bar bar-old">
-                                <div class="fee-chunk">Hidden Fees</div>
-                            </div>
-                        </div>
-                        <div class="bar-group">
-                            <div class="bar-label" style="color: var(--alex-blue);">Alex AI</div>
-                            <div class="bar bar-new"></div>
-                        </div>
+            <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-quote">"Got into a fender bender last month. Filed my claim from the app in like 3 minutes. Check arrived in 4 days. This is how insurance should work."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar" style="background: linear-gradient(135deg, #10B981, #059669);">S</div>
+                    <div>
+                        <strong>Sarah K.</strong>
+                        <span>Scottsdale, AZ · Auto</span>
                     </div>
                 </div>
-                <div class="n-card-body">
-                    <h3>Deflationary Pricing Model</h3>
-                    <p>Traditional brokers inflate your premium to cover their rent, overhead, and 15% commissions. We are a digital-first infrastructure. We surgically remove the middleman markup, giving you a mathematically perfect, wholesale rate.</p>
-                </div>
+                <div class="testi-badge"><i class="fa-solid fa-shield-halved"></i> Verified Customer</div>
             </div>
-
-            <div class="n-card">
-                <div class="n-card-visual visual-pulse">
-                    <div class="pulse-ring pr-1"></div>
-                    <div class="pulse-ring pr-2"></div>
-                    <div class="pulse-core"><i class="fa-solid fa-location-crosshairs"></i></div>
+            <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-quote">"As a new driver I was getting crazy quotes everywhere. Alex AI found me an A-rated carrier at a price I could actually afford. The whole process took less time than my lunch break."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar" style="background: linear-gradient(135deg, #F97316, #EF4444);">J</div>
+                    <div>
+                        <strong>Jordan T.</strong>
+                        <span>Tempe, AZ · Auto</span>
+                    </div>
                 </div>
-                <div class="n-card-body">
-                    <h3>Hyper-Local Risk Algorithms</h3>
-                    <p>National carriers use generic data. Alex AI’s models are trained exclusively on Arizona telemetry—from monsoon flash flood risks to Route 101 traffic patterns—unlocking aggressive discounts standard agents miss.</p>
-                </div>
+                <div class="testi-badge"><i class="fa-solid fa-shield-halved"></i> Verified Customer</div>
             </div>
-
+            <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p class="testi-quote">"Switched from a big-name company and saved $380/year. The app is beautiful, customer service is instant, and I actually understand my policy now. 10/10 recommend."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED);">A</div>
+                    <div>
+                        <strong>Alejandra M.</strong>
+                        <span>Mesa, AZ · Auto</span>
+                    </div>
+                </div>
+                <div class="testi-badge"><i class="fa-solid fa-shield-halved"></i> Verified Customer</div>
+            </div>
+        </div>
+        <div class="testi-aggregate">
+            <div class="testi-agg-score">4.9</div>
+            <div>
+                <div class="testi-agg-stars">★★★★★</div>
+                <div class="testi-agg-label">Based on 2,300+ verified reviews</div>
+            </div>
+            <div class="testi-agg-logos">
+                <span><i class="fa-brands fa-google"></i> Google</span>
+                <span><i class="fa-brands fa-apple"></i> App Store</span>
+                <span><i class="fa-brands fa-google-play"></i> Google Play</span>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- ===== COMPARISON MATRIX ===== -->
 <section class="section-py container fade-up">
     <div style="text-align:center; max-width: 700px; margin: 0 auto 60px;">
         <span class="hero-badge"><i class="fa-solid fa-code-compare"></i> The New Standard</span>
         <h2 style="font-size:3.5rem; font-weight:900; margin-bottom:20px; color:var(--alex-mid); letter-spacing:-1px;">Night and Day.</h2>
         <p style="font-size:1.1rem; color:var(--text-secondary); line-height:1.6; font-weight:500;">See exactly why thousands of Arizona drivers are abandoning traditional agencies for our AI infrastructure.</p>
     </div>
-
     <div class="matrix-container">
-        
         <div class="matrix-header">
             <div class="m-head-old">Traditional Broker</div>
             <div class="m-head-new"><i class="fa-solid fa-bolt"></i> Alex AI</div>
         </div>
-
-        <div class="matrix-row">
-            <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-money-bill-wave"></i></div> Agency Fees</div>
-            <div class="matrix-content">
-                <div class="matrix-old">$150 - $300</div>
-                <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> $0.00 Forever*</div>
-            </div>
-        </div>
-
-        <div class="matrix-row">
-            <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-stopwatch"></i></div> Quote Speed</div>
-            <div class="matrix-content">
-                <div class="matrix-old">24-48 Hours</div>
-                <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> 90 Seconds</div>
-            </div>
-        </div>
-
-        <div class="matrix-row">
-            <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-building-columns"></i></div> Carrier Network</div>
-            <div class="matrix-content">
-                <div class="matrix-old">Limited (2-3)</div>
-                <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> 10+ Top Rated</div>
-            </div>
-        </div>
-
-        <div class="matrix-row">
-            <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-mobile-screen"></i></div> Policy Control</div>
-            <div class="matrix-content">
-                <div class="matrix-old">Phone & Fax</div>
-                <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> 100% In-App</div>
-            </div>
-        </div>
-
-        <div class="matrix-row">
-            <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-headset"></i></div> Support & Advocacy</div>
-            <div class="matrix-content">
-                <div class="matrix-old">9-5 / Carrier-First</div>
-                <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> 24/7 On Your Side</div>
-            </div>
-        </div>
-
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-money-bill-wave"></i></div> Agency Fees</div><div class="matrix-content"><div class="matrix-old">$150 - $300</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> $0.00 Forever*</div></div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-stopwatch"></i></div> Quote Speed</div><div class="matrix-content"><div class="matrix-old">24-48 Hours</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> 90 Seconds</div></div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-building-columns"></i></div> Carrier Network</div><div class="matrix-content"><div class="matrix-old">Limited (2-3)</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> 10+ Top Rated</div></div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-mobile-screen"></i></div> Policy Control</div><div class="matrix-content"><div class="matrix-old">Phone & Fax</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> 100% In-App</div></div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-headset"></i></div> Support & Advocacy</div><div class="matrix-content"><div class="matrix-old">9-5 / Carrier-First</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> 24/7 On Your Side</div></div></div>
         <div class="matrix-cta-row">
             <div class="matrix-label hide-mobile"></div>
-            <div class="matrix-content" style="background: transparent; border: none; box-shadow: none;">
-                <div class="matrix-old hide-mobile" style="background: transparent; border: none;"></div>
-                <div style="flex: 1.3; text-align: center; padding-top: 15px;">
+            <div class="matrix-content" style="background:transparent;border:none;box-shadow:none;">
+                <div class="matrix-old hide-mobile" style="background:transparent;border:none;"></div>
+                <div style="flex:1.3;text-align:center;padding-top:15px;">
                     <button class="btn-main" onclick="window.location.href='https://rater.alexai.cloud/quote-tool'">Switch to the Future <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
-
         <div class="matrix-disclaimer">
             <p><strong>* The Self-Managed Guarantee:</strong> As long as you generate, manage, and purchase your policy digitally through the Alex AI platform, you will never pay an agency or broker fee. If you choose to finalize your policy through one of our licensed human partners for personalized assistance, a standard broker fee may apply. We believe in radical transparency: any fee will always be clearly itemized on your final receipt.</p>
         </div>
-
     </div>
 </section>
 
-    <section class="section-py container fade-up">
-        <span class="hero-badge"><i class="fa-solid fa-circle-question"></i> FAQ</span>
-        <h2 style="text-align:center; font-size:3.5rem; font-weight:900; margin-bottom:60px; color:var(--alex-mid);">Questions?</h2>
-        <div class="faq-box">
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">Do you really cover all of Arizona? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-a">Yes. From Phoenix to Flagstaff, Tucson to Yuma. Our AI understands the specific driving risks and road conditions of Arizona perfectly to get you the best local rates.</div>
-            </div>
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">How are you cheaper than my current agent? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-a">We removed the expensive overhead: no physical offices, no commission-hungry agents, no paper. We are digital-first, passing those operational savings directly to you in lower premiums.</div>
-            </div>
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">Can I switch if I already have insurance? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-a">Absolutely. You can cancel your current policy at any time and receive a pro-rated refund. We even help handle the switch so there's no lapse in coverage.</div>
-            </div>
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">Is it just a bot, or can I talk to a human? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-a">Get the best of both: AI-driven speed and pricing, backed by a team of licensed, non-commissioned Arizona experts. We're available 24/7 via chat or at 480-630-9630 whenever you need help.</div>
-            </div>
-        </div>
-    </section>
+<!-- ===== FAQ ===== -->
+<section class="section-py container fade-up">
+    <span class="hero-badge" style="display:table; margin: 0 auto 15px;"><i class="fa-solid fa-circle-question"></i> FAQ</span>
+    <h2 style="text-align:center; font-size:3.5rem; font-weight:900; margin-bottom:60px; color:var(--alex-mid);">Questions?</h2>
+    <div class="faq-box">
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">Do you really cover all of Arizona? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Yes. From Phoenix to Flagstaff, Tucson to Yuma. Our AI understands the specific driving risks and road conditions of Arizona perfectly to get you the best local rates.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">How are you cheaper than my current agent? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">We removed the expensive overhead: no physical offices, no commission-hungry agents, no paper. We are digital-first, passing those operational savings directly to you in lower premiums.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">Can I switch if I already have insurance? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Absolutely. You can cancel your current policy at any time and receive a pro-rated refund. We even help handle the switch so there's no lapse in coverage.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">Is it just a bot, or can I talk to a human? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Get the best of both: AI-driven speed and pricing, backed by a team of licensed, non-commissioned Arizona experts. We're available 24/7 via chat or at 480-630-9630 whenever you need help.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">What if I have a bad driving record? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">We work with carriers that specialize in non-standard risk. Even with tickets, accidents, or DUIs on your record, our AI finds your best available rate — no judgment, no lectures.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">How do I file a claim? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Through the app in minutes — upload photos, describe the incident, and we handle the rest. Most claims are processed in under 72 hours. You can also call us 24/7 at 480-630-9630.</div></div>
+    </div>
+</section>
 
-    <footer class="funnel-footer fade-up">
-        <div class="container footer-content">
-            <img src="./assets/logo-alex-main.png" alt="Alex AI Insurtech" class="footer-logo">
-            
-            <p class="footer-disclaimer">
-                Alex AI Insurtech is a licensed technology platform. Coverage and discounts vary by driver profile, driving history, and local regulations in the state of Arizona.
-            </p>
-            
-            <div class="footer-legal-text">
-                <a href="https://alexai.cloud/privacy-policy/">Privacy Policy</a>
-                <span class="dot-separator">•</span>
-                <a></a>
-                <a href="https://alexai.cloud/terms-conditions/">Terms of Service</a>
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta-section fade-up">
+    <div class="container">
+        <div class="final-cta-card">
+            <div class="fcta-glow"></div>
+            <div class="fcta-content">
+                <div class="fcta-badge"><i class="fa-solid fa-bolt"></i> Limited Time</div>
+                <h2>Stop Overpaying for Insurance.</h2>
+                <p>Join 12,400+ Arizona drivers who switched to smarter coverage. Your quote takes 90 seconds and costs nothing.</p>
+                <div class="fcta-features">
+                    <span><i class="fa-solid fa-check"></i> No credit card</span>
+                    <span><i class="fa-solid fa-check"></i> No phone calls</span>
+                    <span><i class="fa-solid fa-check"></i> No obligations</span>
+                    <span><i class="fa-solid fa-check"></i> Instant results</span>
+                </div>
+                <button class="btn-main btn-large" onclick="window.location.href='https://rater.alexai.cloud/quote-tool'">
+                    Get My Free Quote <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <div class="fcta-security">
+                    <i class="fa-solid fa-shield-halved"></i> 256-bit encrypted &nbsp;·&nbsp; 
+                    <i class="fa-solid fa-star"></i> 4.9/5 rated &nbsp;·&nbsp; 
+                    <i class="fa-solid fa-phone"></i> 480-630-9630
+                </div>
             </div>
-            
-            <p class="footer-copyright">&copy; 2026 Alex AI Insurtech. All rights reserved.</p>
-        </div>
-    </footer>
-
-
-    <div class="modal-overlay" id="appModal" onclick="if(event.target===this)this.classList.remove('open')">
-        <div class="modal-content">
-            <div class="close-btn" onclick="document.getElementById('appModal').classList.remove('open')"><i class="fa-solid fa-xmark"></i></div>
-            <div style="width:100px; height:100px; background:var(--brand-grad); border-radius:30px; margin:0 auto 25px; display:flex; align-items:center; justify-content:center; font-size:3rem; color:white; box-shadow:var(--shadow-glow);">
-                <img src="./assets/logo-alex-heart-white.png" class="logo-heart" alt="Alex AI Logo">
-            </div>
-            <h3 style="font-size:2.2rem; font-weight:900; color:var(--alex-deep); margin-bottom:10px;">Download Alex AI</h3>
-            <p style="color:var(--text-secondary); margin-bottom:40px; font-weight:600; font-size:1.1rem;">Your entire policy in your pocket. 24/7 Support.</p>
-            <div class="store-grid">
-                <a href="#" class="store-btn"><i class="fa-brands fa-apple"></i> <span>App Store</span></a>
-                <a href="#" class="store-btn"><i class="fa-brands fa-google-play"></i> <span>Google Play</span></a>
+            <div class="fcta-visual">
+                <div class="fcta-stat-ring">
+                    <div class="ring-label">Average</div>
+                    <div class="ring-number">$420</div>
+                    <div class="ring-sub">saved per year</div>
+                </div>
             </div>
         </div>
     </div>
+</section>
 
-    <div class="fomo-toast" id="fomo">
-        <div class="fomo-icon"><i class="fa-solid fa-car-side"></i></div>
-        <div>
-            <div style="font-weight:900; font-size:1rem; color:var(--alex-deep);">Policy Issued Successfully</div>
-            <div style="font-size:0.9rem; font-weight:600; color:var(--text-secondary);" id="fomo-text">Loading...</div>
+<!-- ===== FOOTER ===== -->
+<footer class="funnel-footer fade-up">
+    <div class="container footer-content">
+        <img src="./assets/logo-alex-main.png" alt="Alex AI Insurtech" class="footer-logo">
+        <div class="footer-links">
+            <a href="tel:4806309630"><i class="fa-solid fa-phone"></i> 480-630-9630</a>
+            <a href="https://alexai.cloud/privacy-policy/">Privacy Policy</a>
+            <span class="dot-separator">•</span>
+            <a href="https://alexai.cloud/terms-conditions/">Terms of Service</a>
+        </div>
+        <p class="footer-disclaimer">Alex AI Insurtech is a licensed technology platform. Coverage and discounts vary by driver profile, driving history, and local regulations in the state of Arizona.</p>
+        <p class="footer-copyright">© 2026 Alex AI Insurtech. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- ===== MODALS & TOASTS ===== -->
+<div class="modal-overlay" id="appModal" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="modal-content">
+        <div class="close-btn" onclick="document.getElementById('appModal').classList.remove('open')"><i class="fa-solid fa-xmark"></i></div>
+        <div style="width:100px;height:100px;background:var(--brand-grad);border-radius:30px;margin:0 auto 25px;display:flex;align-items:center;justify-content:center;font-size:3rem;color:white;box-shadow:var(--shadow-glow);">
+            <img src="./assets/logo-alex-heart-white.png" class="logo-heart" alt="Alex AI Logo">
+        </div>
+        <h3 style="font-size:2.2rem;font-weight:900;color:var(--alex-deep);margin-bottom:10px;">Download Alex AI</h3>
+        <p style="color:var(--text-secondary);margin-bottom:40px;font-weight:600;font-size:1.1rem;">Your entire policy in your pocket. 24/7 Support.</p>
+        <div class="store-grid">
+            <a href="#" class="store-btn"><i class="fa-brands fa-apple"></i> <span>App Store</span></a>
+            <a href="#" class="store-btn"><i class="fa-brands fa-google-play"></i> <span>Google Play</span></a>
         </div>
     </div>
+</div>
 
-    <script src="./js/script.js"></script>
+<div id="social-proof-container"></div>
+
+<script src="./js/script.js"></script>
+<script src="./js/improvements.js"></script>
 </body>
 </html>
