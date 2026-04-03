@@ -3,585 +3,364 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <title>Alex Insurtech | Delivery & Rideshare Insurance</title>
-    <meta name="description" content="Affordable auto insurance designed for Delivery and Rideshare drivers in Arizona. Close the coverage gap instantly.">
-    
+    <title>Alex Insurtech | Delivery &amp; Rideshare Insurance Arizona</title>
+    <meta name="description" content="Affordable auto insurance for Delivery and Rideshare drivers in Arizona. Close the Period 1 coverage gap instantly.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
-
-    <style>
-        /* Estilos extra para el Mini-Formulario del Hero */
-        .form-row { display: flex; gap: 10px; }
-        .form-row .form-input { width: 50%; }
-        select.form-input { 
-            appearance: none; 
-            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%231E1B4B%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"); 
-            background-repeat: no-repeat; background-position: right 15px top 50%; background-size: 12px auto; cursor: pointer;
-        }
-        @media(max-width: 600px){
-            .form-row { flex-direction: column; gap: 0; }
-            .form-row .form-input { width: 100%; }
-        }
-    </style>
+    <link rel="stylesheet" href="./css/delivery.css">
 </head>
 <body>
-
-    <nav>
-        <div class="container nav-inner">
-            <a href="https://alexai.cloud/" class="logo"><img class="logo-main" src="./assets/logo-alex-main.png" alt="Alex AI"></a>
-            <div class="nav-actions">
-                <button class="btn-nav" onclick="openModal()">Get App</button>
-            </div>
+<nav>
+    <div class="container nav-inner">
+        <a href="https://alexai.cloud/" class="logo"><img class="logo-main" src="./assets/logo-alex-main.png" alt="Alex AI"></a>
+        <div class="nav-actions">
+            <a href="tel:4806309630" style="font-size:.85rem;font-weight:700;color:var(--alex-mid);text-decoration:none;display:flex;align-items:center;gap:6px;"><i class="fa-solid fa-phone" style="color:var(--alex-blue);"></i> 480-630-9630</a>
+            <button class="btn-nav" onclick="openModal()">Get App</button>
         </div>
-    </nav>
-
-    <section class="hero">
-        <div class="container hero-grid">
-            
-            <div class="fade-up visible">
-                <div class="hero-badge"><i class="fa-solid fa-car-side"></i> Made for the Gig Economy</div>
-                <h1 class="hero-title">Drive More.<span class="grad-text"> Worry Less.</span></h1>
-                <p class="hero-sub">Standard policies drop you if you deliver. Commercial policies cost a fortune. Get specialized Arizona Gig Insurance that closes the gap without breaking the bank.</p>
-                
-                <div class="quote-widget">
-                    <h3 style="font-size: 1.3rem; margin-bottom: 12px;">Get Your Gig Quote</h3>
-                    <form id="quoteForm">
-                        <div class="form-row">
-                            <input type="text" class="form-input" placeholder="First Name" required>
-                            
-                            <input type="tel" class="form-input" placeholder="Phone Number" 
-                                   inputmode="numeric" 
-                                   oninput="this.value = this.value.replace(/[^0-9]/g, '')" 
-                                   minlength="10" maxlength="10" required>
+    </div>
+</nav>
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="fade-up visible">
+            <div class="hero-badge"><i class="fa-solid fa-car-side"></i> Made for the Gig Economy</div>
+            <h1 class="hero-title">Drive More.<span class="grad-text"> Worry Less.</span></h1>
+            <p class="hero-sub">Standard policies drop you if you deliver. Full commercial policies cost a fortune. Get specialized Arizona Gig Insurance that closes the coverage gap without breaking the bank.</p>
+            <div class="dv-trust-pills">
+                <div class="trust-pill"><i class="fa-solid fa-shield-halved"></i> Period 1 gap closed</div>
+                <div class="trust-pill"><i class="fa-solid fa-mobile-screen-button"></i> Instant app upload</div>
+                <div class="trust-pill"><i class="fa-solid fa-ban-dollar"></i> $0 broker fees</div>
+            </div>
+            <div class="quote-widget">
+                <h3>Get Your Gig Quote</h3>
+                <p class="dv-widget-sub">A gig insurance expert will contact you with your optimized rates.</p>
+                <form id="quoteForm" class="dv-lead-form">
+                    <div class="dv-form-row">
+                        <div class="dv-form-group">
+                            <label class="dv-label">First Name</label>
+                            <input type="text" name="first_name" placeholder="Carlos" class="dv-input" required>
                         </div>
-                        <div class="form-row">
-                            <input type="email" class="form-input" placeholder="Email Address" required>
-                            
-                            <input type="text" class="form-input" placeholder="Zip Code" 
-                                   inputmode="numeric" 
-                                   oninput="this.value = this.value.replace(/[^0-9]/g, '')" 
-                                   pattern="[0-9]{5}" maxlength="5" minlength="5" required>
+                        <div class="dv-form-group">
+                            <label class="dv-label">Phone Number</label>
+                            <input type="tel" name="phone" placeholder="(480) 000-0000" class="dv-input" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g,'')" minlength="10" maxlength="10" required>
                         </div>
-                        <select class="form-input" required>
-                            <option value="" disabled selected>Primary App Network</option>
+                    </div>
+                    <div class="dv-form-row">
+                        <div class="dv-form-group">
+                            <label class="dv-label">Email Address</label>
+                            <input type="email" name="email" placeholder="you@email.com" class="dv-input" required>
+                        </div>
+                        <div class="dv-form-group">
+                            <label class="dv-label">Zip Code</label>
+                            <input type="text" name="zip" placeholder="85001" class="dv-input" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g,'')" pattern="[0-9]{5}" maxlength="5" minlength="5" required>
+                        </div>
+                    </div>
+                    <div class="dv-form-group">
+                        <label class="dv-label">Primary App Network</label>
+                        <select name="app_network" class="dv-input dv-select" required>
+                            <option value="" disabled selected>Select your platform...</option>
                             <option value="rideshare">Uber / Lyft (Rideshare)</option>
                             <option value="food">DoorDash / UberEats / Grubhub</option>
                             <option value="parcel">Amazon Flex / Spark</option>
                             <option value="multiple">I drive for multiple apps</option>
                         </select>
-                        <select class="form-input" required>
-                            <option value="" disabled selected>Driving Frequency</option>
+                    </div>
+                    <div class="dv-form-group">
+                        <label class="dv-label">Driving Frequency</label>
+                        <select name="frequency" class="dv-input dv-select" required>
+                            <option value="" disabled selected>How often do you drive?</option>
                             <option value="full">Full-Time (30+ hrs/week)</option>
                             <option value="part">Side Hustle (Under 30 hrs/week)</option>
                         </select>
-                        <button type="submit" class="btn-main" style="margin-top: 5px;">Unlock Driver Rates <i class="fa-solid fa-unlock-keyhole"></i></button>
-                    </form>
-                    <div style="text-align:center; font-size:0.8rem; color:var(--text-secondary); margin-top:15px; display:flex; align-items:center; justify-content:center; gap:6px; font-weight: 500;">
-                        <i class="fa-solid fa-shield-halved" style="color:var(--alex-blue); font-size: 1.1rem;"></i> Closes Period 1 Coverage Gaps
                     </div>
+                    <button type="submit" class="btn-main dv-submit-btn">Unlock Driver Rates <i class="fa-solid fa-unlock-keyhole"></i></button>
+                </form>
+                <div class="dv-security-row">
+                    <span><i class="fa-solid fa-lock"></i> 256-bit encrypted</span>
+                    <span><i class="fa-solid fa-shield-halved"></i> Period 1 closed</span>
+                    <span><i class="fa-solid fa-ban-dollar"></i> $0 fees</span>
                 </div>
-            </div>
-            
-            <div class="visual-wrapper fade-up visible" style="transition-delay: 0.2s;">
-                <div class="visual-bg-circle"></div>
-                
-                <img src="./assets/car-render-3.png" class="car-model" alt="Delivery Car">
-                
-                <div class="premium-scanner-card">
-                    <div class="psc-header">
-                        <span class="psc-title">Coverage Check</span>
-                        <i class="fa-solid fa-route psc-icon"></i>
-                    </div>
-                    <div class="psc-screen">
-                        <div class="psc-scan-line"></div>
-                        Securing App-Off Gaps...
-                    </div>
-                    <div class="psc-row">
-                        <span class="psc-label">Full Commercial</span>
-                        <span class="psc-strike">$350/mo</span>
-                    </div>
-                    <div class="psc-highlight">
-                        <span class="psc-hl-label">Alex Gig Rate</span>
-                        <span class="psc-hl-val">$145/mo</span>
-                    </div>
-                </div>
-
-                <div class="float-stat fs-1">
-                    <div class="stat-icon"><i class="fa-solid fa-bag-shopping"></i></div>
-                    <div class="stat-text">
-                        <h4>Multi-App</h4>
-                        <p>Fully Supported</p>
-                    </div>
-                </div>
-                
-                <div class="float-stat fs-2">
-                    <div class="stat-icon" style="background:#8B5CF6;"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                    <div class="stat-text">
-                        <h4>Instant Proof</h4>
-                        <p>Upload to Uber</p>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-
-    <section class="exclusive-partner section-py container fade-up">
-        <div class="ep-grid">
-            
-            <div class="ep-info">
-                <span class="hero-badge" style="background: rgba(220, 38, 38, 0.1); color: #DC2626; border-color: rgba(220, 38, 38, 0.2);">
-                    <i class="fa-solid fa-handshake-angle"></i> Exclusive Alliance
-                </span>
-                <h2 style="font-size: 3rem; font-weight: 900; color: var(--alex-deep); line-height: 1.1; margin-bottom: 20px; letter-spacing: -1px;">
-                    Powered by<br>Warrior Insurance.
-                </h2>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; font-weight: 500; margin-bottom: 40px;">
-                    Standard carriers don't understand the gig economy. That's why we partnered exclusively with Warrior to engineer the ultimate Arizona policy: fully legal coverage for delivery drivers, without the massive commercial price tag.
-                </p>
-                
-                <div class="ep-logo-box">
-                    <img src="./assets/Carrier-warrior.png" alt="Warrior Insurance Logo" class="ep-warrior-logo">
-                </div>
-            </div>
-
-            <div class="ep-features">
-                
-                <div class="ep-feat-card">
-                    <div class="ep-feat-icon"><i class="fa-solid fa-car-side"></i></div>
-                    <div>
-                        <h4>Rideshare Pro (Uber & Lyft)</h4>
-                        <p>Closes the dangerous 'Period 1' gap while you wait for a ride request.</p>
-                    </div>
-                </div>
-
-                <div class="ep-feat-card">
-                    <div class="ep-feat-icon" style="color: #F59E0B; background: rgba(245, 158, 11, 0.1);"><i class="fa-solid fa-burger"></i></div>
-                    <div>
-                        <h4>Courier & Food Delivery</h4>
-                        <p>Fully endorsed for DoorDash, UberEats, Amazon Flex, and Instacart.</p>
-                    </div>
-                </div>
-
-                <div class="ep-feat-card">
-                    <div class="ep-feat-icon" style="color: #10B981; background: rgba(16, 185, 129, 0.1);"><i class="fa-solid fa-piggy-bank"></i></div>
-                    <div>
-                        <h4>Low Barrier to Entry</h4>
-                        <p>No credit checks required and exceptionally low down payments to start.</p>
-                    </div>
-                </div>
-
-                <div class="ep-feat-card">
-                    <div class="ep-feat-icon" style="color: #8B5CF6; background: rgba(139, 92, 246, 0.1);"><i class="fa-solid fa-file-signature"></i></div>
-                    <div>
-                        <h4>Instant SR-22 Filings</h4>
-                        <p>Got a tricky driving record? Warrior offers fast, same-day SR-22 processing.</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <section class="section-py container fade-up">
-        <span class="hero-badge"><i class="fa-solid fa-champagne-glasses"></i> Out With The Old, In With The New</span>
-
-        <h2 style="text-align:center; font-size:3.5rem; font-weight:900; margin-bottom:60px; color:var(--alex-mid);">From Chaos to Clarity</h2>
-        <div class="evo-grid">
-            
-            <div class="evo-old">
-                <div class="dirt-overlay"></div>
-                <div class="cracks-overlay"></div>
-                <div class="floating-dust"></div>
-                <div class="cobweb cobweb-left"></div>
-                <div class="cobweb cobweb-right"></div>
-                <div class="hanging-spider"><i class="fa-solid fa-spider"></i></div>
-
-                <div class="dino-visual-container">
-                    <i class="fa-solid fa-folder-open trash-item t-folder"></i>
-                    <i class="fa-solid fa-file-contract trash-item t-contract"></i>
-                    <i class="fa-solid fa-ban trash-item t-floppy"></i> 
-                    <i class="fa-solid fa-scroll trash-item t-scroll"></i>
-                    <i class="fa-solid fa-bone trash-item t-bone-1"></i>
-                    <i class="fa-solid fa-bone trash-item t-bone-2"></i>
-
-                    <svg class="retro-dino-fossil" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M12 0h8v2h2v4h2v2h-2v2h-2v2h-4v-2h-2v2H8v-2H6v2H2v-2H0V6h2V4h2V2h8V0zm4 4h-2v2h2V4z M9 14h6v2H9v-2zm1 2h4v2h-4v-2zm-2 2h8v2H8v-2zm2 2h4v2h-4v-2z"/>
-                        <rect x="14" y="4" width="2" height="2" fill="rgba(0,0,0,0.4)"/>
-                        <rect x="20" y="8" width="2" height="2" fill="rgba(0,0,0,0.4)"/>
-                    </svg>
-
-                    <i class="fa-solid fa-box-archive trash-item t-archive"></i>
-                    <i class="fa-solid fa-fax trash-item t-fax"></i>
-                    <i class="fa-solid fa-hourglass-end trash-item t-clock"></i>
-                    <i class="fa-solid fa-pencil trash-item t-pencil"></i>
-                    <i class="fa-solid fa-paperclip trash-item t-clip"></i>
-                </div>
-                
-                <div style="position: relative; z-index: 5;">
-                    <h3 class="dino-title">The "Hiding It" Way</h3>
-                    <ul class="dino-list">
-                        <li><i class="fa-solid fa-xmark"></i> Hiding delivery from your agent</li>
-                        <li><i class="fa-solid fa-xmark"></i> Risking denied claims (Gap 1)</li>
-                        <li><i class="fa-solid fa-xmark"></i> Paying full commercial rates</li>
-                        <li><i class="fa-solid fa-xmark"></i> Policy cancellation fears</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="evo-new">
-                <div class="pro-glow"></div>
-                <div class="image-container-pro">
-                    <img src="./assets/mock-up-2.png" alt="Alex APP" class="full-mockup-img">
-                </div>
-                <div style="position: relative; z-index: 2;">
-                    <h3 style="font-size:2.2rem; font-weight:900; margin-bottom:20px; text-shadow: 0 5px 15px rgba(0,0,0,0.2);">The Gig Standard</h3>
-                    <ul class="alex-list">
-                        <li><i class="fa-solid fa-circle-check"></i> 100% Legit Gig Coverage</li>
-                        <li><i class="fa-solid fa-circle-check"></i> 'Period 1' Gap Closed</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Pay for the miles you drive</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Zero Agency Fees Forever</li>
-                    </ul>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-
-    <section class="neuro-section fade-up">
-        <div class="neuro-glow"></div>
-        
-        <div class="container" style="position: relative; z-index: 10;">
-            <div class="neuro-header text-center">
-            <span class="hero-badge"><i class="fa-solid fa-crown"></i> The Elite Advantage</span>
-                <h2 class="neuro-title" style="text-align:center">Built for the Hustle.<br>Powered by AI.</h2>
-                <p class="neuro-sub">Standard auto insurance was built for 1995. We built an intelligence that understands how modern gig workers actually drive.</p>
-            </div>
-
-            <div class="neuro-grid">
-                
-                <div class="n-card">
-                    <div class="n-card-visual">
-                        <div class="radar-container">
-                            <div class="radar-grid"></div>
-                            <div class="radar-laser"></div>
-                            <div class="radar-dot d-1"></div>
-                            <div class="radar-dot d-2"></div>
-                            <div class="radar-dot d-3"></div>
-                        </div>
-                    </div>
-                    <div class="n-card-body">
-                        <h3>Period 1 Gap Protection</h3>
-                        <p>Uber and DoorDash only cover you AFTER you accept an order. If you crash while waiting for a ping (Period 1), you are unprotected. Our endorsements close this gap legally.</p>
-                    </div>
-                </div>
-
-                <div class="n-card n-card-tall">
-                    <div class="n-card-visual visual-graph">
-                        <div class="graph-box">
-                            <div class="bar-group">
-                                <div class="bar-label">Commercial</div>
-                                <div class="bar bar-old">
-                                    <div class="fee-chunk">Commercial Inflated</div>
-                                </div>
-                            </div>
-                            <div class="bar-group">
-                                <div class="bar-label" style="color: var(--alex-blue);">Alex</div>
-                                <div class="bar bar-new"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="n-card-body">
-                        <h3>Hybrid Pricing Model</h3>
-                        <p>You don't drive a semi-truck, so you shouldn't pay full commercial premiums. We find specialized hybrid policies that cost just a fraction more than standard auto, giving you legal coverage without the massive price tag.</p>
-                    </div>
-                </div>
-
-                <div class="n-card">
-                    <div class="n-card-visual visual-pulse">
-                        <div class="pulse-ring pr-1"></div>
-                        <div class="pulse-ring pr-2"></div>
-                        <div class="pulse-core"><i class="fa-solid fa-mobile-screen"></i></div>
-                    </div>
-                    <div class="n-card-body">
-                        <h3>Instant App Validation</h3>
-                        <p>Got deactivated because your insurance doc expired? Our digital platform gives you instant access to your Declarations Page formatted exactly how Uber, Lyft, and Amazon Flex require it.</p>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </section>
-
-    <section class="section-py container fade-up">
-        <div style="text-align:center; max-width: 700px; margin: 0 auto 60px;">
-            <span class="hero-badge"><i class="fa-solid fa-code-compare"></i> The New Standard</span>
-            <h2 style="font-size:3.5rem; font-weight:900; margin-bottom:20px; color:var(--alex-mid); letter-spacing:-1px;">Night and Day.</h2>
-            <p style="font-size:1.1rem; color:var(--text-secondary); line-height:1.6; font-weight:500;">See why delivery drivers across Arizona are switching to Alex Insurtech.</p>
+        <div class="visual-wrapper fade-up visible" style="transition-delay:0.2s;">
+            <div class="visual-bg-circle"></div>
+            <img src="./assets/delivery-banner.png" class="car-model" alt="Delivery Car">
+            <div class="premium-scanner-card">
+                <div class="psc-header"><span class="psc-title">Coverage Check</span><i class="fa-solid fa-route psc-icon"></i></div>
+                <div class="psc-screen"><div class="psc-scan-line"></div>Securing App-Off Gaps...</div>
+                <div class="psc-row"><span class="psc-label">Full Commercial</span><span class="psc-strike">$350/mo</span></div>
+                <div class="psc-highlight"><span class="psc-hl-label">Alex Gig Rate</span><span class="psc-hl-val">$145/mo</span></div>
+            </div>
+            <div class="float-stat fs-1"><div class="stat-icon"><i class="fa-solid fa-bag-shopping"></i></div><div class="stat-text"><h4>Multi-App</h4><p>Fully Supported</p></div></div>
+            <div class="float-stat fs-2"><div class="stat-icon" style="background:#8B5CF6;"><i class="fa-solid fa-mobile-screen-button"></i></div><div class="stat-text"><h4>Instant Proof</h4><p>Upload to Uber</p></div></div>
         </div>
+    </div>
+</section>
+<section class="dv-trust-bar fade-up">
+    <div class="container dv-trust-inner">
+        <div class="dv-trust-stat"><div class="dv-ts-num">$145<span style="font-size:1rem;">/mo</span></div><div class="dv-ts-lbl">Avg. gig driver rate</div></div>
+        <div class="dv-trust-div"></div>
+        <div class="dv-trust-stat"><div class="dv-ts-num">$0</div><div class="dv-ts-lbl">Broker fees ever</div></div>
+        <div class="dv-trust-div"></div>
+        <div class="dv-trust-stat"><div class="dv-ts-num">4</div><div class="dv-ts-lbl">App platforms covered</div></div>
+        <div class="dv-trust-div"></div>
+        <div class="dv-trust-stat"><div class="dv-ts-num">4.9 &#9733;</div><div class="dv-ts-lbl">Driver rating</div></div>
+        <div class="dv-trust-div"></div>
+        <div class="dv-trust-stat"><div class="dv-ts-num">Instant</div><div class="dv-ts-lbl">PDF for your app</div></div>
+    </div>
+</section>
 
-        <div class="matrix-container">
-            
-            <div class="matrix-header">
-                <div class="m-head-old">Standard Policy</div>
-                <div class="m-head-new"><i class="fa-solid fa-bolt"></i> Alex Gig Policy</div>
-            </div>
-
-            <div class="matrix-row">
-                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-ban"></i></div> Gig Work Allowed</div>
-                <div class="matrix-content">
-                    <div class="matrix-old">Policy Canceled</div>
-                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Fully Endorsed</div>
-                </div>
-            </div>
-
-            <div class="matrix-row">
-                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-car-burst"></i></div> App-On / No Order</div>
-                <div class="matrix-content">
-                    <div class="matrix-old">0% Coverage</div>
-                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> 100% Protected (Gap)</div>
-                </div>
-            </div>
-
-            <div class="matrix-row">
-                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-money-bill-wave"></i></div> Broker Fees</div>
-                <div class="matrix-content">
-                    <div class="matrix-old">$150 - $300</div>
-                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> $0.00 Forever*</div>
-                </div>
-            </div>
-
-            <div class="matrix-row">
-                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-mobile-screen"></i></div> ID Card Access</div>
-                <div class="matrix-content">
-                    <div class="matrix-old">Wait for Mail</div>
-                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Instant PDF Download</div>
-                </div>
-            </div>
-
-            <div class="matrix-cta-row">
-                <div class="matrix-label hide-mobile"></div>
-                <div class="matrix-content" style="background: transparent; border: none; box-shadow: none;">
-                    <div class="matrix-old hide-mobile" style="background: transparent; border: none;"></div>
-                    <div style="flex: 1.3; text-align: center; padding-top: 15px;">
-                        <button class="btn-main" onclick="document.getElementById('quoteForm').scrollIntoView({behavior:'smooth'})">Drive Safely Today <i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="matrix-disclaimer">
-                <p><strong>* The Self-Managed Guarantee:</strong> As long as you generate, manage, and purchase your policy digitally through the Alex platform, you will never pay an agency or broker fee. If you choose to finalize your policy through one of our licensed human partners for personalized assistance, a standard broker fee may apply. We believe in radical transparency: any fee will always be clearly itemized on your final receipt.</p>
-            </div>
-
+<section class="dv-gap-section fade-up">
+    <div class="container">
+        <div class="dv-section-header">
+            <span class="hero-badge" style="background:rgba(239,68,68,0.08);color:#DC2626;border-color:rgba(239,68,68,0.2);"><i class="fa-solid fa-triangle-exclamation"></i> Critical Risk</span>
+            <h2 class="dv-section-title">You're Probably Driving Uninsured Right Now</h2>
+            <p class="dv-section-sub">Every gig driver has a dangerous coverage window the apps don't tell you about. Here's how insurance actually works when you're on the road.</p>
         </div>
-    </section>
-
-    <section class="section-py container fade-up">
-        <span class="hero-badge"><i class="fa-solid fa-circle-question"></i> FAQ</span>
-        <h2 style="text-align:center; font-size:3.5rem; font-weight:900; margin-bottom:60px; color:var(--alex-mid);">Questions?</h2>
-        <div class="faq-box">
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">Will my standard insurance really drop me for doing DoorDash? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-a">Yes. Almost all standard personal auto policies strictly prohibit using your car for "livery" or commercial delivery. If you get into an accident while working, they will deny the claim and likely cancel your policy immediately.</div>
+        <div class="dv-gap-timeline">
+            <div class="dv-period dv-p0">
+                <div class="dv-period-dot">P0</div>
+                <div class="dv-period-card">
+                    <div class="dv-period-label">Period 0</div>
+                    <div class="dv-period-title">App Off &mdash; Personal Driving</div>
+                    <div class="dv-period-desc">You're driving normally for personal errands. Your standard personal auto policy covers you fully here.</div>
+                    <div class="dv-period-status"><i class="fa-solid fa-check"></i> Your personal policy covers you</div>
+                </div>
             </div>
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">What is the "Period 1 Coverage Gap"? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-a">When you turn on the Uber or Lyft app but haven't accepted a ride yet (Period 1), your personal insurance stops covering you, but the app's commercial insurance hasn't kicked in yet. A Rideshare endorsement closes this dangerous legal gap.</div>
+            <div class="dv-period dv-p1">
+                <div class="dv-period-dot"><i class="fa-solid fa-exclamation"></i></div>
+                <div class="dv-period-card">
+                    <div class="dv-period-label">&#9888; Period 1 &mdash; THE GAP</div>
+                    <div class="dv-period-title">App On, Waiting for a Request</div>
+                    <div class="dv-period-desc">You've turned on the Uber / DoorDash app but haven't accepted an order yet. <strong style="color:#DC2626;">Your personal policy has stopped covering you</strong> &mdash; and the app's commercial insurance hasn't kicked in yet. If you crash here, <strong style="color:#DC2626;">you have zero coverage.</strong></div>
+                    <div class="dv-period-status"><i class="fa-solid fa-xmark"></i> ZERO coverage &mdash; the dangerous gap</div>
+                </div>
             </div>
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">Do I need a full commercial policy? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-a">Usually, no. Full commercial policies are for fleets and heavy trucks, and they cost thousands of dollars. We secure "hybrid" or endorsed policies that let you legally drive for apps for just a fraction of a commercial premium.</div>
+            <div class="dv-period dv-p2">
+                <div class="dv-period-dot">P2</div>
+                <div class="dv-period-card">
+                    <div class="dv-period-label">Period 2</div>
+                    <div class="dv-period-title">Order Accepted, En Route to Pickup</div>
+                    <div class="dv-period-desc">You've accepted a delivery or ride and are driving to pick up. The app's commercial policy is now partially active.</div>
+                    <div class="dv-period-status"><i class="fa-solid fa-shield-halved"></i> App's limited coverage applies</div>
+                </div>
             </div>
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">How fast can I upload my insurance to the app? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-a">Instantly. Once your policy is active, you can download your Declarations Page right from our portal and upload it straight to your driver app so you can start earning money today.</div>
+            <div class="dv-period dv-p3">
+                <div class="dv-period-dot">P3</div>
+                <div class="dv-period-card">
+                    <div class="dv-period-label">Period 3</div>
+                    <div class="dv-period-title">Passenger/Order On Board</div>
+                    <div class="dv-period-desc">You have a passenger or delivery in your car. This is where the app's commercial policy provides the most coverage.</div>
+                    <div class="dv-period-status"><i class="fa-solid fa-check"></i> App's full coverage applies</div>
+                </div>
             </div>
         </div>
-    </section>
-
-    <footer class="funnel-footer fade-up">
-        <div class="container footer-content">
-            <img src="./assets/logo-alex-main.png" alt="Alex AI Insurtech" class="footer-logo">
-            
-            <p class="footer-disclaimer">
-                Alex Insurtech is a licensed property & casualty agency. Coverage and discounts vary by driver profile, driving history, and local regulations in the state of Arizona. Commercial and gig-economy endorsements are subject to carrier guidelines.
-            </p>
-            
-            <div class="footer-legal-text">
-                <a href="https://alexai.cloud/privacy-policy/">Privacy Policy</a>
-                <span class="dot-separator">•</span>
-                <a href="https://alexai.cloud/terms-conditions/">Terms of Service</a>
+        <div class="dv-gap-cta-banner">
+            <div class="dv-gap-cta-text">
+                <h3>The Period 1 Gap is a claim denial waiting to happen.</h3>
+                <p>A rideshare endorsement from Alex + Warrior closes this gap for a <span class="dv-gap-alert">fraction of commercial pricing.</span> Most drivers spend hours in Period 1 every shift.</p>
             </div>
-            
-            <p class="footer-copyright">&copy; 2026 Alex Insurtech. All rights reserved.</p>
+            <button class="btn-main" style="flex-shrink:0;" onclick="document.getElementById('quoteForm').scrollIntoView({behavior:'smooth'})">Close My Gap <i class="fa-solid fa-shield-halved"></i></button>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <div class="modal-overlay" id="appModal" onclick="if(event.target===this)this.classList.remove('open')">
-        <div class="modal-content">
-            <div class="close-btn" onclick="document.getElementById('appModal').classList.remove('open')"><i class="fa-solid fa-xmark"></i></div>
-            <div style="width:100px; height:100px; background:var(--brand-grad); border-radius:30px; margin:0 auto 25px; display:flex; align-items:center; justify-content:center; font-size:3rem; color:white; box-shadow:var(--shadow-glow);">
-                <img src="./assets/logo-alex-heart-white.png" class="logo-heart" alt="Alex AI Logo">
+<section class="dv-warrior-section fade-up">
+    <div class="container">
+        <div class="dv-warrior-grid">
+            <div>
+                <div class="dv-warrior-badge"><i class="fa-solid fa-handshake-angle"></i> Exclusive Alliance</div>
+                <h2>Powered by<br>Warrior Insurance.</h2>
+                <p>Standard carriers don't understand the gig economy. That's why we partnered exclusively with Warrior to engineer the ultimate Arizona policy: fully legal coverage for delivery drivers, without the massive commercial price tag.</p>
+                <div class="dv-warrior-logo-box"><img src="./assets/Carrier-warrior.png" alt="Warrior Insurance" class="dv-warrior-logo"></div>
             </div>
-            <h3 style="font-size:2.2rem; font-weight:900; color:var(--alex-deep); margin-bottom:10px;">Download Alex</h3>
-            <p style="color:var(--text-secondary); margin-bottom:40px; font-weight:600; font-size:1.1rem;">Your policy in your pocket. Instant ID cards.</p>
-            <div class="store-grid">
-                <a href="#" class="store-btn"><i class="fa-brands fa-apple"></i> <span>App Store</span></a>
-                <a href="#" class="store-btn"><i class="fa-brands fa-google-play"></i> <span>Google Play</span></a>
+            <div class="dv-warrior-features">
+                <div class="dv-warrior-feat"><div class="dv-feat-icon"><i class="fa-solid fa-car-side"></i></div><h4>Rideshare Pro (Uber &amp; Lyft)</h4><p>Closes the dangerous Period 1 gap while you wait for a ride request.</p></div>
+                <div class="dv-warrior-feat"><div class="dv-feat-icon" style="color:#F59E0B;background:rgba(245,158,11,0.1);"><i class="fa-solid fa-burger"></i></div><h4>Courier &amp; Food Delivery</h4><p>Fully endorsed for DoorDash, UberEats, Amazon Flex, and Instacart.</p></div>
+                <div class="dv-warrior-feat"><div class="dv-feat-icon" style="color:#10B981;background:rgba(16,185,129,0.1);"><i class="fa-solid fa-piggy-bank"></i></div><h4>Low Barrier to Entry</h4><p>No credit checks required and exceptionally low down payments to start.</p></div>
+                <div class="dv-warrior-feat"><div class="dv-feat-icon" style="color:#8B5CF6;background:rgba(139,92,246,0.1);"><i class="fa-solid fa-file-signature"></i></div><h4>Instant SR-22 Filings</h4><p>Tricky driving record? Warrior offers fast, same-day SR-22 processing.</p></div>
             </div>
         </div>
     </div>
+</section>
 
-    <script>
-        function openModal() { document.getElementById('appModal').classList.add('open'); }
-        
-// =========================================
-        // FORM SUBMISSION & SUCCESS MODAL
-        // =========================================
-        document.getElementById('quoteForm').addEventListener('submit', (e) => {
-            e.preventDefault(); // Evita que la página recargue
-            
-            let btn = document.querySelector('#quoteForm .btn-main');
-            let originalText = btn.innerHTML;
-            
-            // 1. Estado de carga visual en el botón
-            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Securing Rates...';
-            btn.style.opacity = '0.8';
-            btn.style.pointerEvents = 'none'; // Evita doble click
-            
-            // 2. Simulación de procesamiento (1.5 segundos)
-            setTimeout(() => {
-                // Restaurar el botón a su estado original
-                btn.innerHTML = originalText;
-                btn.style.opacity = '1';
-                btn.style.pointerEvents = 'auto';
-                
-                // Limpiar el formulario para que quede en blanco
-                document.getElementById('quoteForm').reset();
-                
-                // Abrir el Modal de Éxito
-                document.getElementById('successModal').classList.add('open');
-            }, 1500);
-        });
-
-        // Scroll Reveal
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.15 });
-        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-        // =========================================
-        // SOCIAL PROOF: AURORA TECH EDITION (DELIVERY FOCUSED)
-        // =========================================
-        function initSocialProof() {
-            if (document.getElementById('social-proof-container')) return;
-
-            const container = document.createElement('div');
-            container.id = 'social-proof-container';
-            document.body.appendChild(container);
-
-            const cities = ["Phoenix", "Scottsdale", "Mesa", "Chandler", "Gilbert", "Tucson", "Tempe"];
-            
-            // Foco en Delivery / Rideshare
-            const actions = [
-                { type: 'uber', icon: 'fa-car-side', color: 'linear-gradient(135deg, #10b981, #059669)', label: 'Rideshare Endorsement Added' },
-                { type: 'doordash', icon: 'fa-burger', color: 'linear-gradient(135deg, #ef4444, #b91c1c)', label: 'DoorDash Driver Covered' },
-                { type: 'amazon', icon: 'fa-box', color: 'linear-gradient(135deg, #3b82f6, #06b6d4)', label: 'Amazon Flex Gap Closed' }
-            ];
-
-            function getRandom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
-            function getNum(min, max) { return Math.floor(Math.random() * (max - min + 1) + min); }
-
-            function createNotification() {
-                const item = getRandom(actions);
-                const city = getRandom(cities);
-                const savings = getNum(200, 600); // Ahorro comparado con póliza comercial
-                const time = getNum(1, 15);
-
-                const toast = document.createElement('div');
-                toast.className = 'sp-card-tech';
-                
-                toast.innerHTML = `
-                    <div class="sp-aurora-border"></div>
-                    <div class="sp-shimmer-effect"></div>
-                    <div class="sp-glass-content">
-                        <div class="sp-icon-box" style="background: ${item.color}">
-                            <i class="fa-solid ${item.icon}"></i>
-                        </div>
-                        <div class="sp-info">
-                            <div class="sp-top-row">
-                                <span class="sp-type">${item.label}</span>
-                                <span class="sp-ago">${time}m ago</span>
-                            </div>
-                            <div class="sp-details">
-                                Protected in <strong>${city}, AZ</strong>
-                            </div>
-                            <div class="sp-saving-badge">
-                                <i class="fa-solid fa-arrow-trend-down"></i> Saved $${savings} on Comm. Fees
-                            </div>
-                        </div>
-                        <button class="sp-close-btn" onclick="this.closest('.sp-card-tech').remove()"><i class="fa-solid fa-xmark"></i></button>
-                    </div>
-                `;
-
-                container.appendChild(toast);
-
-                requestAnimationFrame(() => {
-                    toast.classList.add('visible');
-                });
-
-                setTimeout(() => {
-                    toast.classList.remove('visible');
-                    setTimeout(() => toast.remove(), 600);
-                }, 6000);
-            }
-
-            function loop() {
-                setTimeout(() => {
-                    createNotification();
-                    loop();
-                }, getNum(8000, 15000));
-            }
-            
-            setTimeout(loop, 4000);
-        }
-
-        document.addEventListener('DOMContentLoaded', initSocialProof);
-    </script>
-
-
-    <div class="modal-overlay" id="successModal" onclick="if(event.target===this)this.classList.remove('open')">
-        <div class="modal-content" style="max-width: 450px;">
-            <div class="close-btn" onclick="document.getElementById('successModal').classList.remove('open')">
-                <i class="fa-solid fa-xmark"></i>
+<section class="dv-how fade-up">
+    <div class="container">
+        <div class="dv-section-header">
+            <span class="hero-badge"><i class="fa-solid fa-map-signs"></i> Simple Process</span>
+            <h2 class="dv-section-title">From Unprotected to Covered Today</h2>
+            <p class="dv-section-sub">Every hour you drive with the Period 1 gap open is a risk. Here's how fast we close it.</p>
+        </div>
+        <div class="dv-steps">
+            <div class="dv-step">
+                <div class="dv-step-num">01</div>
+                <div class="dv-step-icon"><svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="36" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/><rect x="22" y="26" width="36" height="28" rx="5" fill="#6366F1" opacity="0.12" stroke="#6366F1" stroke-width="2"/><rect x="28" y="33" width="10" height="2.5" rx="1.2" fill="#6366F1"/><rect x="28" y="38" width="18" height="2.5" rx="1.2" fill="#6366F1" opacity="0.6"/><rect x="28" y="43" width="14" height="2.5" rx="1.2" fill="#6366F1" opacity="0.4"/><circle cx="57" cy="25" r="10" fill="#009CFF"/><path d="M52 25 L56 29 L63 21" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div>
+                <h3>Submit Your Details</h3>
+                <p>Fill out the quick form with your name, app platform, and driving frequency. Under 2 minutes &mdash; no SSN, no hard credit pulls.</p>
+                <div class="dv-step-pill">~2 minutes</div>
             </div>
-            
-            <div style="width:100px; height:100px; background:white; border-radius:28px; margin:0 auto 25px; display:flex; align-items:center; justify-content:center; box-shadow: 0 20px 50px -10px rgba(0, 156, 255, 0.3), 0 0 0 1px rgba(0,0,0,0.05);">
-                <img src="./assets/logo-alex-heart.png" alt="Alex AI Heart" style="width: 65px; height: auto; animation: pulse 2s infinite;">
+            <div class="dv-step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="dv-step dv-step-featured">
+                <div class="dv-step-num">02</div>
+                <div class="dv-step-icon"><svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="36" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5"/><path d="M22 40 L35 53 L58 27" stroke="#10B981" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="dv-featured-tag"><i class="fa-solid fa-bolt"></i> Gig Specialist</div>
+                <h3>Expert Matches Your Rate</h3>
+                <p>Your gig insurance expert finds the right Warrior policy for your app, driving frequency, and vehicle at a price that makes sense for gig income.</p>
+                <div class="dv-step-pill dv-step-pill-featured">Warrior specialist review</div>
             </div>
-            
-            <h3 style="font-size:2rem; font-weight:900; color:var(--alex-deep); margin-bottom:15px; line-height: 1.2;">
-                Profile Secured!
-            </h3>
-            
-            <p style="color:var(--text-secondary); margin-bottom:35px; font-weight:500; font-size:1.05rem; line-height: 1.6;">
-                Thank you! Our system has received your information. An Arizona gig-insurance expert will contact you shortly with your optimized rates.
-            </p>
-            
-            <button class="btn-main" style="padding: 15px; font-size: 1rem; width: 100%; box-shadow: 0 10px 25px rgba(0, 156, 255, 0.3);" onclick="document.getElementById('successModal').classList.remove('open')">
-                Got it, thanks!
-            </button>
+            <div class="dv-step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="dv-step">
+                <div class="dv-step-num">03</div>
+                <div class="dv-step-icon"><svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="36" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1.5"/><rect x="26" y="22" width="28" height="36" rx="6" fill="#F97316" opacity="0.12" stroke="#F97316" stroke-width="2"/><rect x="33" y="31" width="14" height="2.5" rx="1.2" fill="#F97316"/><rect x="33" y="36" width="10" height="2.5" rx="1.2" fill="#F97316" opacity="0.7"/><circle cx="40" cy="46" r="5" fill="#10B981"/><path d="M37 46 L39.5 48.5 L43 44" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+                <h3>Bind &amp; Upload Instantly</h3>
+                <p>Policy goes active. Download your Declarations Page formatted for Uber, Lyft, or DoorDash and upload to your driver app the same day.</p>
+                <div class="dv-step-pill">Start earning today</div>
+            </div>
+        </div>
+        <div class="dv-steps-cta">
+            <button class="btn-main dv-cta-btn" onclick="document.getElementById('quoteForm').scrollIntoView({behavior:'smooth'})">Get My Driver Quote <i class="fa-solid fa-car-side"></i></button>
         </div>
     </div>
+</section>
+<section class="section-py dv-testimonials fade-up">
+    <div class="container">
+        <div class="dv-section-header">
+            <span class="hero-badge"><i class="fa-solid fa-heart"></i> Real Arizona Gig Drivers</span>
+            <h2 class="dv-section-title">Drivers Who Closed the Gap</h2>
+            <p class="dv-section-sub">Real stories from Arizona gig drivers who stopped risking it and got properly covered.</p>
+        </div>
+        <div class="dv-testi-grid">
+            <div class="dv-testi-card dv-testi-featured">
+                <div class="dv-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="dv-testi-quote">"I was doing DoorDash for 8 months with regular insurance. I had no idea about Period 1. When my Alex advisor explained it I was honestly scared &mdash; I'd been unprotected every single shift. They got me on a Warrior gig policy the same week for $147/month. Peace of mind is worth every penny. Don't drive without this."</p>
+                <div class="dv-testi-author"><div class="dv-testi-avatar" style="background:linear-gradient(135deg,#EF4444,#DC2626);">C</div><div><strong>Carlos M.</strong><span>Phoenix, AZ &middot; DoorDash Full-Time</span></div></div>
+                <div class="dv-testi-badge"><i class="fa-solid fa-car-side"></i> Verified Driver</div>
+            </div>
+            <div class="dv-testi-card">
+                <div class="dv-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="dv-testi-quote">"Got in a fender bender while I had the Uber app on waiting for a ride. My personal insurance denied the claim instantly. After that I found Alex &mdash; wish I had it from day one."</p>
+                <div class="dv-testi-author"><div class="dv-testi-avatar" style="background:linear-gradient(135deg,#10B981,#059669);">T</div><div><strong>Tony R.</strong><span>Tempe, AZ &middot; Uber Driver</span></div></div>
+                <div class="dv-testi-badge"><i class="fa-solid fa-car-side"></i> Verified Driver</div>
+            </div>
+            <div class="dv-testi-card">
+                <div class="dv-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="dv-testi-quote">"I drive for Uber, DoorDash, and Amazon Flex &mdash; usually switching between them. Alex and Warrior had a policy that covered all three. My last agent told me that wasn't possible."</p>
+                <div class="dv-testi-author"><div class="dv-testi-avatar" style="background:linear-gradient(135deg,#3B82F6,#06B6D4);">A</div><div><strong>Aisha K.</strong><span>Mesa, AZ &middot; Multi-App Driver</span></div></div>
+                <div class="dv-testi-badge"><i class="fa-solid fa-car-side"></i> Verified Driver</div>
+            </div>
+            <div class="dv-testi-card">
+                <div class="dv-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="dv-testi-quote">"Had two tickets and an at-fault accident. Everyone else quoted me crazy numbers. Alex got me through Warrior &mdash; SR-22 filed the same day, back on the road in 48 hours."</p>
+                <div class="dv-testi-author"><div class="dv-testi-avatar" style="background:linear-gradient(135deg,#8B5CF6,#7C3AED);">D</div><div><strong>Diego P.</strong><span>Chandler, AZ &middot; Grubhub Driver</span></div></div>
+                <div class="dv-testi-badge"><i class="fa-solid fa-car-side"></i> Verified Driver</div>
+            </div>
+        </div>
+        <div class="dv-testi-agg">
+            <div class="dv-agg-score">4.9</div>
+            <div><div class="dv-agg-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="dv-agg-label">Based on 1,400+ verified gig driver reviews</div></div>
+            <div class="dv-agg-sources"><span><i class="fa-brands fa-google"></i> Google</span><span><i class="fa-brands fa-apple"></i> App Store</span><span><i class="fa-brands fa-google-play"></i> Google Play</span></div>
+        </div>
+    </div>
+</section>
 
+<section class="section-py container fade-up">
+    <div style="text-align:center;max-width:700px;margin:0 auto 60px;">
+        <span class="hero-badge"><i class="fa-solid fa-code-compare"></i> The New Standard</span>
+        <h2 style="font-size:3.5rem;font-weight:900;margin-bottom:20px;color:var(--alex-mid);letter-spacing:-1px;">Night and Day.</h2>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;font-weight:500;">See why delivery drivers across Arizona are switching to Alex Insurtech.</p>
+    </div>
+    <div class="matrix-container">
+        <div class="matrix-header"><div class="m-head-old">Standard Policy</div><div class="m-head-new"><i class="fa-solid fa-bolt"></i> Alex Gig Policy</div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-ban"></i></div> Gig Work Allowed</div><div class="matrix-content"><div class="matrix-old">Policy Canceled</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Fully Endorsed</div></div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-car-burst"></i></div> App-On / No Order</div><div class="matrix-content"><div class="matrix-old">0% Coverage</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> 100% Protected (Gap)</div></div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-money-bill-wave"></i></div> Broker Fees</div><div class="matrix-content"><div class="matrix-old">$150 &ndash; $300</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> $0.00 Forever*</div></div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-mobile-screen"></i></div> ID Card Access</div><div class="matrix-content"><div class="matrix-old">Wait for Mail</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Instant PDF Download</div></div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-layer-group"></i></div> Multi-App Support</div><div class="matrix-content"><div class="matrix-old">Usually One App Only</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> All Major Platforms</div></div></div>
+        <div class="matrix-cta-row"><div class="matrix-label hide-mobile"></div><div class="matrix-content" style="background:transparent;border:none;box-shadow:none;"><div class="matrix-old hide-mobile" style="background:transparent;border:none;"></div><div style="flex:1.3;text-align:center;padding-top:15px;"><button class="btn-main" onclick="document.getElementById('quoteForm').scrollIntoView({behavior:'smooth'})">Drive Safely Today <i class="fa-solid fa-arrow-right"></i></button></div></div></div>
+        <div class="matrix-disclaimer"><p><strong>* The Self-Managed Guarantee:</strong> As long as you generate, manage, and purchase your policy digitally through the Alex platform, you will never pay an agency or broker fee. If you choose to finalize your policy through one of our licensed human partners for personalized assistance, a standard broker fee may apply.</p></div>
+    </div>
+</section>
+
+<section class="section-py container fade-up">
+    <span class="hero-badge" style="display:table;margin:0 auto 15px;"><i class="fa-solid fa-circle-question"></i> FAQ</span>
+    <h2 style="text-align:center;font-size:3.5rem;font-weight:900;margin-bottom:60px;color:var(--alex-mid);">Questions?</h2>
+    <div class="faq-box">
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">Will my standard insurance really drop me for doing DoorDash? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Yes. Almost all standard personal auto policies strictly prohibit using your car for "livery" or commercial delivery. If you get into an accident while working, they will deny the claim and very likely cancel your policy immediately.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">What is the "Period 1 Coverage Gap"? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">When you turn on the Uber or Lyft app but haven't accepted a ride yet (Period 1), your personal insurance stops covering you, but the app's commercial insurance hasn't kicked in yet. A rideshare endorsement closes this dangerous legal gap &mdash; it's the most important thing a gig driver can have.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">Do I need a full commercial policy? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Usually no. Full commercial policies are for fleets and heavy trucks &mdash; they cost thousands per year. We secure hybrid or endorsed policies that let you legally drive for apps for a fraction of the commercial premium through Warrior Insurance.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">How fast can I upload my insurance to the app? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Instantly. Once your policy is active you download your Declarations Page right from our portal and upload it straight to your driver app &mdash; formatted exactly how Uber, Lyft, and DoorDash require. You can start earning the same day.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">I drive for multiple apps. Can one policy cover all of them? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Yes. Warrior's policies are designed specifically for multi-app gig drivers. Whether you switch between Uber, DoorDash, and Amazon Flex in the same shift &mdash; one policy covers all of it.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">I have a bad driving record. Can you still help? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Yes. Warrior specializes in non-standard risk and accepts drivers that other carriers reject &mdash; including those needing SR-22 filings. We typically get same-day SR-22 processing so you're back on the road fast.</div></div>
+    </div>
+</section>
+
+<section class="dv-final-cta fade-up">
+    <div class="container">
+        <div class="dv-fcta-card">
+            <div class="dv-fcta-glow"></div>
+            <div class="dv-fcta-content">
+                <div class="dv-fcta-badge"><i class="fa-solid fa-triangle-exclamation"></i> Don't Drive Unprotected</div>
+                <h2>Every Shift You Drive Without This Is a Risk.</h2>
+                <p>Close the Period 1 gap today. Your gig insurance specialist is ready &mdash; fill out the form above or call us now.</p>
+                <div class="dv-fcta-features">
+                    <span><i class="fa-solid fa-check"></i> Period 1 gap closed</span>
+                    <span><i class="fa-solid fa-check"></i> $0 broker fees</span>
+                    <span><i class="fa-solid fa-check"></i> All major apps covered</span>
+                    <span><i class="fa-solid fa-check"></i> Instant ID card download</span>
+                </div>
+                <div class="dv-fcta-actions">
+                    <button class="btn-main" style="padding:18px 32px;font-size:1rem;border-radius:14px;" onclick="document.getElementById('quoteForm').scrollIntoView({behavior:'smooth'})">Unlock My Driver Rates <i class="fa-solid fa-unlock-keyhole"></i></button>
+                    <a href="tel:4806309630" class="dv-call-btn"><i class="fa-solid fa-phone"></i> 480-630-9630</a>
+                </div>
+                <div class="dv-fcta-security"><i class="fa-solid fa-shield-halved"></i> Licensed &amp; Regulated in AZ &nbsp;&middot;&nbsp; <i class="fa-solid fa-star"></i> 4.9/5 rated &nbsp;&middot;&nbsp; <i class="fa-solid fa-lock"></i> 256-bit encrypted</div>
+            </div>
+            <div class="dv-fcta-visual">
+                <div class="dv-fcta-ring">
+                    <div class="dv-ring-label">avg. gig rate</div>
+                    <div class="dv-ring-main">$145<br><span style="font-size:1rem;">/mo</span></div>
+                    <div class="dv-ring-sub">vs. $350+ commercial</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="funnel-footer fade-up">
+    <div class="container footer-content">
+        <img src="./assets/logo-alex-main.png" alt="Alex Insurtech" class="footer-logo">
+        <div class="dv-footer-links">
+            <a href="tel:4806309630"><i class="fa-solid fa-phone"></i> 480-630-9630</a>
+            <a href="https://alexai.cloud/privacy-policy/">Privacy Policy</a>
+            <span class="dot-separator">&bull;</span>
+            <a href="https://alexai.cloud/terms-conditions/">Terms of Service</a>
+        </div>
+        <p class="footer-disclaimer">Alex Insurtech is a licensed property &amp; casualty agency. Coverage and discounts vary by driver profile, driving history, and local regulations in the state of Arizona. Commercial and gig-economy endorsements are subject to carrier guidelines.</p>
+        <p class="footer-copyright">&copy; 2026 Alex Insurtech. All rights reserved.</p>
+    </div>
+</footer>
+
+<div class="modal-overlay" id="appModal" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="modal-content">
+        <div class="close-btn" onclick="document.getElementById('appModal').classList.remove('open')"><i class="fa-solid fa-xmark"></i></div>
+        <div style="width:100px;height:100px;background:var(--brand-grad);border-radius:30px;margin:0 auto 25px;display:flex;align-items:center;justify-content:center;color:white;box-shadow:var(--shadow-glow);"><img src="./assets/logo-alex-heart-white.png" class="logo-heart" alt="Alex AI Logo"></div>
+        <h3 style="font-size:2.2rem;font-weight:900;color:var(--alex-deep);margin-bottom:10px;">Download Alex</h3>
+        <p style="color:var(--text-secondary);margin-bottom:40px;font-weight:600;font-size:1.1rem;">Your policy in your pocket. Instant ID cards.</p>
+        <div class="store-grid"><a href="#" class="store-btn"><i class="fa-brands fa-apple"></i> <span>App Store</span></a><a href="#" class="store-btn"><i class="fa-brands fa-google-play"></i> <span>Google Play</span></a></div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="successModal" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="modal-content" style="max-width:450px;">
+        <div class="close-btn" onclick="document.getElementById('successModal').classList.remove('open')"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dv-success-icon"><img src="./assets/logo-alex-heart.png" alt="Alex AI Heart" style="width:65px;height:auto;animation:pulse 2s infinite;"></div>
+        <h3 style="font-size:2rem;font-weight:900;color:var(--alex-deep);margin-bottom:14px;line-height:1.2;">Profile Secured!</h3>
+        <p style="color:var(--text-secondary);margin-bottom:34px;font-weight:500;font-size:1.05rem;line-height:1.6;">Our system has received your information. An Arizona gig-insurance expert will contact you shortly with your optimized rates.</p>
+        <button class="btn-main" style="padding:15px;font-size:1rem;width:100%;box-shadow:0 10px 25px rgba(0,156,255,0.3);" onclick="document.getElementById('successModal').classList.remove('open')">Got it, thanks!</button>
+    </div>
+</div>
+
+<div id="social-proof-container"></div>
+<script src="./js/delivery.js"></script>
 </body>
 </html>
