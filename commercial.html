@@ -3,613 +3,539 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <title>Alex Insurtech | Modern Commercial Insurance</title>
+    <title>Alex Insurtech | Modern Commercial Insurance Arizona</title>
     <meta name="description" content="Commercial insurance for modern Arizona businesses. BOP, Workers Comp, Liability, and Cyber. Instant COIs, zero broker fees.">
-    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
-
-    <style>
-        /* =========================================
-           HERO B2B FORM STYLES
-           ========================================= */
-        .form-row { display: flex; gap: 10px; margin-bottom: 10px; }
-        .form-row .form-input { width: 50%; margin-bottom: 0; }
-        select.form-input { 
-            appearance: none; 
-            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%231E1B4B%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"); 
-            background-repeat: no-repeat; background-position: right 15px top 50%; background-size: 12px auto; cursor: pointer;
-        }
-        @media(max-width: 600px){
-            .form-row { flex-direction: column; gap: 10px; }
-            .form-row .form-input { width: 100%; }
-        }
-
-        /* =========================================
-           COMMERCIAL LOGO WALL (GREYSCALE TO COLOR)
-           ========================================= */
-        .commercial-logo-wall {
-            background-color: #FFFFFF;
-            border-top: 1px solid rgba(0,0,0,0.03);
-            border-bottom: 1px solid rgba(0,0,0,0.03);
-        }
-        .logo-wall-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 20px;
-            align-items: center;
-            justify-content: center;
-        }
-        .logo-item {
-            display: flex; align-items: center; justify-content: center;
-            height: 80px; padding: 15px; background: #FFFFFF;
-            border: 1px solid transparent; border-radius: 16px;
-            transition: all 0.4s ease; 
-        }
-        .carrier-logo-img {
-            max-height: 40px; max-width: 100%; object-fit: contain; 
-            filter: grayscale(100%); opacity: 0.5; transition: all 0.4s ease; 
-        }
-        .logo-item:hover {
-            background: #F8FAFC; border-color: #E2E8F0; 
-            transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
-        }
-        .logo-item:hover .carrier-logo-img { filter: grayscale(0%); opacity: 1; }
-
-        @media (max-width: 992px) {
-            .logo-wall-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 15px; }
-            .logo-item { height: 75px; }
-            .carrier-logo-img { max-height: 35px; }
-        }
-        @media (max-width: 600px) {
-            .logo-wall-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; }
-            .logo-item { height: 65px; padding: 10px; border-radius: 12px; }
-            .carrier-logo-img { max-height: 30px; }
-        }
-    </style>
+    <link rel="stylesheet" href="./css/commercial.css">
 </head>
 <body>
 
-    <nav>
-        <div class="container nav-inner">
-            <a href="https://alexai.cloud/" class="logo"><img class="logo-main" src="./assets/logo-alex-main.png" alt="Alex AI"></a>
-            <div class="nav-actions">
-                <button class="btn-nav" onclick="openModal()">Get App</button>
+<!-- ===== NAV ===== -->
+<nav>
+    <div class="container nav-inner">
+        <a href="https://alexai.cloud/" class="logo"><img class="logo-main" src="./assets/logo-alex-main.png" alt="Alex AI"></a>
+        <div class="nav-actions">
+            <a href="tel:4806309630" class="cm-nav-phone"><i class="fa-solid fa-phone"></i> 480-630-9630</a>
+            <button class="btn-nav" onclick="openModal()">Get App</button>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <div class="container hero-grid cm-hero-reversed">
+
+        <!-- VISUAL LEFT -->
+        <div class="visual-wrapper fade-up visible">
+            <div class="visual-bg-circle"></div>
+            <img src="./assets/render-foodtruck-1.png" class="car-model" alt="Commercial Business">
+            <div class="premium-scanner-card cm-scanner-flip">
+                <div class="psc-header">
+                    <span class="psc-title">Risk Assessment</span>
+                    <i class="fa-solid fa-chart-pie psc-icon"></i>
+                </div>
+                <div class="psc-screen"><div class="psc-scan-line"></div>Scanning Commercial Markets...</div>
+                <div class="psc-row"><span class="psc-label">General Liability</span><span class="psc-strike">Optimizing</span></div>
+                <div class="psc-highlight"><span class="psc-hl-label">BOP Coverage</span><span class="psc-hl-val">Secured</span></div>
+            </div>
+            <div class="float-stat fs-1 cm-fs1">
+                <div class="stat-icon"><i class="fa-solid fa-file-contract"></i></div>
+                <div class="stat-text"><h4>Instant COI</h4><p>Sent to Client</p></div>
+            </div>
+            <div class="float-stat fs-2 cm-fs2">
+                <div class="stat-icon" style="background:#1E1B4B;"><i class="fa-solid fa-hard-hat"></i></div>
+                <div class="stat-text"><h4>Workers Comp</h4><p>Fully Compliant</p></div>
             </div>
         </div>
-    </nav>
 
-    <section class="hero">
-        <div class="container hero-grid">
-            
-            <div class="fade-up visible">
-                <div class="hero-badge"><i class="fa-solid fa-building"></i> Commercial & Enterprise</div>
-                <h1 class="hero-title">Enterprise Coverage.<span class="grad-text"> Startup Speed.</span></h1>
-                <p class="hero-sub">Protect your Arizona business with a fiduciary partner. Access 42+ commercial carriers, generate instant COIs, and eliminate broker fees forever.</p>
-                
-                <div class="quote-widget">
-                    <h3 style="font-size: 1.3rem; margin-bottom: 12px;">Request Commercial Quote</h3>
-                    <form id="quoteForm">
-                        <div class="form-row">
-                            <input type="text" class="form-input" placeholder="Business Name" required>
-                            <input type="text" class="form-input" placeholder="Contact Name" required>
+        <!-- CTA RIGHT -->
+        <div class="fade-up visible" style="transition-delay:0.15s;">
+            <div class="hero-badge"><i class="fa-solid fa-building"></i> Commercial &amp; Enterprise</div>
+            <h1 class="hero-title">Enterprise Coverage.<span class="grad-text"> Startup Speed.</span></h1>
+            <p class="hero-sub">Protect your Arizona business with a fiduciary partner. Access 42+ commercial carriers, generate instant COIs, and eliminate broker fees forever.</p>
+
+            <div class="cm-trust-pills">
+                <div class="trust-pill"><i class="fa-solid fa-certificate"></i> Instant COIs</div>
+                <div class="trust-pill"><i class="fa-solid fa-layer-group"></i> 42+ carriers</div>
+                <div class="trust-pill"><i class="fa-solid fa-user-tie"></i> Dedicated advisor</div>
+            </div>
+
+            <div class="quote-widget">
+                <h3>Request Commercial Quote</h3>
+                <p class="cm-widget-sub">A dedicated commercial advisor responds within 2 business hours.</p>
+                <form id="quoteForm" class="cm-lead-form">
+                    <div class="cm-form-row">
+                        <div class="cm-form-group">
+                            <label class="cm-label">Business Name</label>
+                            <input type="text" name="business_name" placeholder="Acme Contracting LLC" class="cm-input" required>
                         </div>
-                        <div class="form-row">
-                            <input type="email" class="form-input" placeholder="Work Email" required>
-                            <input type="tel" class="form-input" placeholder="Phone Number" 
-                                   inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" 
-                                   minlength="10" maxlength="10" required>
+                        <div class="cm-form-group">
+                            <label class="cm-label">Contact Name</label>
+                            <input type="text" name="contact_name" placeholder="Jane Smith" class="cm-input" required>
                         </div>
-                        <select class="form-input" style="margin-bottom: 10px;" required>
-                            <option value="" disabled selected>Primary Coverage Needed</option>
+                    </div>
+                    <div class="cm-form-row">
+                        <div class="cm-form-group">
+                            <label class="cm-label">Work Email</label>
+                            <input type="email" name="email" placeholder="jane@business.com" class="cm-input" required>
+                        </div>
+                        <div class="cm-form-group">
+                            <label class="cm-label">Phone Number</label>
+                            <input type="tel" name="phone" placeholder="(480) 000-0000" class="cm-input" required>
+                        </div>
+                    </div>
+                    <div class="cm-form-group">
+                        <label class="cm-label">Primary Coverage Needed</label>
+                        <select name="coverage_type" class="cm-input cm-select" required>
+                            <option value="" disabled selected>Select coverage type...</option>
                             <option value="bop">Business Owner's Policy (BOP)</option>
                             <option value="gl">General Liability</option>
                             <option value="wc">Workers Compensation</option>
                             <option value="auto">Commercial Auto / Fleet</option>
                             <option value="cyber">Cyber Liability</option>
-                            <option value="prof">Professional Liability (E&O)</option>
+                            <option value="prof">Professional Liability (E&amp;O)</option>
                             <option value="umbrella">Commercial Umbrella</option>
                             <option value="bond">Surety Bond</option>
                             <option value="flood">Commercial Flood</option>
                             <option value="property">Commercial Property</option>
                         </select>
-                        <button type="submit" class="btn-main" style="margin-top: 5px;">Build My Policy <i class="fa-solid fa-briefcase"></i></button>
-                    </form>
-                    <div style="text-align:center; font-size:0.8rem; color:var(--text-secondary); margin-top:15px; display:flex; align-items:center; justify-content:center; gap:6px; font-weight: 500;">
-                        <i class="fa-solid fa-certificate" style="color:var(--alex-blue); font-size: 1.1rem;"></i> Instant COIs Available
                     </div>
+                    <div class="cm-form-group">
+                        <label class="cm-label">Number of Employees</label>
+                        <select name="employees" class="cm-input cm-select">
+                            <option value="" disabled selected>Select range...</option>
+                            <option value="1">Just me (solo / freelancer)</option>
+                            <option value="2-5">2 - 5 employees</option>
+                            <option value="6-20">6 - 20 employees</option>
+                            <option value="21-50">21 - 50 employees</option>
+                            <option value="51+">51+ employees</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-main cm-submit-btn">
+                        Build My Policy <i class="fa-solid fa-briefcase"></i>
+                    </button>
+                </form>
+                <div class="cm-security-row">
+                    <span><i class="fa-solid fa-lock"></i> 256-bit encrypted</span>
+                    <span><i class="fa-solid fa-certificate"></i> Instant COIs available</span>
+                    <span><i class="fa-solid fa-ban-dollar"></i> $0 broker fees</span>
                 </div>
             </div>
-            
-            <div class="visual-wrapper fade-up visible" style="transition-delay: 0.2s;">
-                <div class="visual-bg-circle"></div>
-                <img src="./assets/render-foodtruck-1.png" class="car-model" alt="Commercial Building">
-                
-                <div class="premium-scanner-card">
-                    <div class="psc-header">
-                        <span class="psc-title">Risk Assessment</span>
-                        <i class="fa-solid fa-chart-pie psc-icon"></i>
-                    </div>
-                    <div class="psc-screen">
-                        <div class="psc-scan-line"></div>
-                        Scanning Commercial Markets...
-                    </div>
-                    <div class="psc-row">
-                        <span class="psc-label">General Liability</span>
-                        <span class="psc-strike">Optimizing</span>
-                    </div>
-                    <div class="psc-highlight">
-                        <span class="psc-hl-label">BOP Coverage</span>
-                        <span class="psc-hl-val">Secured</span>
-                    </div>
-                </div>
-
-                <div class="float-stat fs-1">
-                    <div class="stat-icon"><i class="fa-solid fa-file-contract"></i></div>
-                    <div class="stat-text">
-                        <h4>Instant COI</h4>
-                        <p>Sent to Client</p>
-                    </div>
-                </div>
-                
-                <div class="float-stat fs-2">
-                    <div class="stat-icon" style="background:#1E1B4B;"><i class="fa-solid fa-hard-hat"></i></div>
-                    <div class="stat-text">
-                        <h4>Workers Comp</h4>
-                        <p>Fully Compliant</p>
-                    </div>
-                </div>
-            </div>
-            
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="commercial-logo-wall section-py fade-up">
-        <div class="container">
-            
-            <div style="text-align:center; max-width: 650px; margin: 0 auto 60px;">
-                <span class="hero-badge"><i class="fa-solid fa-network-wired"></i> A-Rated Infrastructure</span>
-                <h2 style="font-size: 2.8rem; font-weight: 900; color: var(--alex-mid); line-height: 1.1; margin-bottom: 20px; letter-spacing: -1px;">
-                    Elite underwriting on demand.
-                </h2>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; font-weight: 500;">
-                    Access 42+ specialized commercial markets instantly through our intelligent platform. We only partner with A-rated carriers.
-                </p>
-            </div>
+<!-- ===== TRUST BAR ===== -->
+<section class="cm-trust-bar fade-up">
+    <div class="container cm-trust-inner">
+        <div class="cm-trust-stat"><div class="cm-ts-num">42+</div><div class="cm-ts-lbl">Elite commercial carriers</div></div>
+        <div class="cm-trust-div"></div>
+        <div class="cm-trust-stat"><div class="cm-ts-num">$0</div><div class="cm-ts-lbl">Broker fees ever</div></div>
+        <div class="cm-trust-div"></div>
+        <div class="cm-trust-stat"><div class="cm-ts-num">Instant</div><div class="cm-ts-lbl">COI generation</div></div>
+        <div class="cm-trust-div"></div>
+        <div class="cm-trust-stat"><div class="cm-ts-num">4.9 &#9733;</div><div class="cm-ts-lbl">Business owner rating</div></div>
+        <div class="cm-trust-div"></div>
+        <div class="cm-trust-stat"><div class="cm-ts-num">2 hrs</div><div class="cm-ts-lbl">Advisor response time</div></div>
+    </div>
+</section>
 
-            <div class="logo-wall-grid">
-                <div class="logo-item"><img src="./assets/logo-alchemy.png" alt="Alchemy" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-amtrust.png" alt="AmTrust" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-attune.png" alt="Attune" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-berxi.png" alt="Berxi" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-biberk.png" alt="biBerk" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-blitz.png" alt="Blitz" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-bristol-west.png" alt="Bristol West" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-chubb.png" alt="Chubb Commercial" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-colonial.png" alt="Colonial Surety" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-coterie.png" alt="Coterie" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-coverwhale.png" alt="Cover Whale" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-cowbell.png" alt="Cowbell" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-crosscover.png" alt="CrossCover" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-employers.png" alt="Employers" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-first.png" alt="First Insurance" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-foxquilt.png" alt="Foxquilt" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-great-american.png" alt="Great American" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-greenshield.png" alt="Green Shield Risk" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-hanover.png" alt="Hanover" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-hiscox.png" alt="Hiscox" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-insur-fi.png" alt="Insur-Fi" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-isc.png" alt="ISC" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-lio.png" alt="LIO" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-mgt.png" alt="MGT" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-neptune.png" alt="Neptune" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-ergo-next.png" alt="Ergo Next" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-nirvana.png" alt="Nirvana" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-palomar.png" alt="Palomar Specialty" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-pathpoint.png" alt="Pathpoint" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-pouch.png" alt="Pouch Insurance" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-propeller.png" alt="Propeller" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-rainbow.png" alt="Rainbow" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-rli.png" alt="RLI" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-rli-surety.png" alt="RLI Surety" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-ses.png" alt="SES Risk Solutions" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-simply.png" alt="Simply Business" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-skywatch.png" alt="Skywatch.ai" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-slice.png" alt="Slice" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-thimble.png" alt="Thimble" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-three.png" alt="THREE" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-tokiomarine.png" alt="Tokio Marine" class="carrier-logo-img"></div>
-                <div class="logo-item"><img src="./assets/logo-vacant-express.png" alt="Vacant Express" class="carrier-logo-img"></div>
-            </div>
-
+<!-- ===== HOW IT WORKS ===== -->
+<section class="section-py cm-how fade-up">
+    <div class="container">
+        <div class="cm-section-header">
+            <span class="hero-badge"><i class="fa-solid fa-map-signs"></i> Simple Process</span>
+            <h2 class="cm-section-title">From Application to Bound Policy Fast</h2>
+            <p class="cm-section-sub">Commercial insurance doesn't have to be a weeks-long ordeal. Our streamlined process gets you covered without the bureaucracy.</p>
         </div>
-    </section>
-
-    <section class="section-py container fade-up">
-        <span class="hero-badge"><i class="fa-solid fa-champagne-glasses"></i> Out With The Old, In With The New</span>
-
-        <h2 style="text-align:center; font-size:3.5rem; font-weight:900; margin-bottom:60px; color:var(--alex-mid);">From Chaos to Clarity</h2>
-        <div class="evo-grid">
-            
-            <div class="evo-old">
-                <div class="dirt-overlay"></div>
-                <div class="cracks-overlay"></div>
-                <div class="floating-dust"></div>
-                <div class="cobweb cobweb-left"></div>
-                <div class="cobweb cobweb-right"></div>
-                <div class="hanging-spider"><i class="fa-solid fa-spider"></i></div>
-
-                <div class="dino-visual-container">
-                    <i class="fa-solid fa-folder-open trash-item t-folder"></i>
-                    <i class="fa-solid fa-file-contract trash-item t-contract"></i>
-                    <i class="fa-solid fa-print trash-item t-floppy"></i> 
-                    <i class="fa-solid fa-scroll trash-item t-scroll"></i>
-                    <i class="fa-solid fa-bone trash-item t-bone-1"></i>
-                    <i class="fa-solid fa-bone trash-item t-bone-2"></i>
-
-                    <svg class="retro-dino-fossil" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M12 0h8v2h2v4h2v2h-2v2h-2v2h-4v-2h-2v2H8v-2H6v2H2v-2H0V6h2V4h2V2h8V0zm4 4h-2v2h2V4z M9 14h6v2H9v-2zm1 2h4v2h-4v-2zm-2 2h8v2H8v-2zm2 2h4v2h-4v-2z"/>
-                        <rect x="14" y="4" width="2" height="2" fill="rgba(0,0,0,0.4)"/>
-                        <rect x="20" y="8" width="2" height="2" fill="rgba(0,0,0,0.4)"/>
+        <div class="cm-steps">
+            <div class="cm-step">
+                <div class="cm-step-num">01</div>
+                <div class="cm-step-icon">
+                    <svg viewBox="0 0 80 80" fill="none">
+                        <circle cx="40" cy="40" r="36" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+                        <rect x="22" y="26" width="36" height="28" rx="5" fill="#6366F1" opacity="0.12" stroke="#6366F1" stroke-width="2"/>
+                        <rect x="28" y="33" width="10" height="2.5" rx="1.2" fill="#6366F1"/>
+                        <rect x="28" y="38" width="18" height="2.5" rx="1.2" fill="#6366F1" opacity="0.6"/>
+                        <rect x="28" y="43" width="14" height="2.5" rx="1.2" fill="#6366F1" opacity="0.4"/>
+                        <circle cx="57" cy="25" r="10" fill="#009CFF"/>
+                        <path d="M52 25 L56 29 L63 21" stroke="white" stroke-width="2" stroke-linecap="round"/>
                     </svg>
-
-                    <i class="fa-solid fa-box-archive trash-item t-archive"></i>
-                    <i class="fa-solid fa-fax trash-item t-fax"></i>
-                    <i class="fa-solid fa-hourglass-end trash-item t-clock"></i>
-                    <i class="fa-solid fa-pencil trash-item t-pencil"></i>
-                    <i class="fa-solid fa-paperclip trash-item t-clip"></i>
                 </div>
-                
-                <div style="position: relative; z-index: 5;">
-                    <h3 class="dino-title">The "Dinosaur" Way</h3>
-                    <ul class="dino-list">
-                        <li><i class="fa-solid fa-xmark"></i> Waiting days for a quote</li>
-                        <li><i class="fa-solid fa-xmark"></i> 20-page paper applications</li>
-                        <li><i class="fa-solid fa-xmark"></i> Calling agents for every COI</li>
-                        <li><i class="fa-solid fa-xmark"></i> Hidden 15% agency fees</li>
-                    </ul>
-                </div>
+                <h3>Submit Your Request</h3>
+                <p>Fill out the quick form with your business details. Your industry, coverage needs, and employee count help us pre-screen the right markets immediately.</p>
+                <div class="cm-step-pill">~3 minutes</div>
             </div>
-
-            <div class="evo-new">
-                <div class="pro-glow"></div>
-                <div class="image-container-pro">
-                    <img src="./assets/mock-up-2.png" alt="Alex APP" class="full-mockup-img">
+            <div class="cm-step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="cm-step cm-step-featured">
+                <div class="cm-step-num">02</div>
+                <div class="cm-step-icon">
+                    <svg viewBox="0 0 80 80" fill="none">
+                        <circle cx="40" cy="40" r="36" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5"/>
+                        <circle cx="40" cy="38" r="14" fill="none" stroke="#10B981" stroke-width="2"/>
+                        <circle cx="40" cy="38" r="6" fill="#10B981" opacity="0.25"/>
+                        <circle cx="40" cy="38" r="3" fill="#10B981"/>
+                        <path d="M26 22 L40 30 L54 22" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                        <path d="M14 38 L26 38" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                        <path d="M54 38 L66 38" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                    </svg>
                 </div>
-                <div style="position: relative; z-index: 2;">
-                    <h3 style="font-size:2.2rem; font-weight:900; margin-bottom:20px; text-shadow: 0 5px 15px rgba(0,0,0,0.2);">The Alex Standard</h3>
-                    <ul class="alex-list">
-                        <li><i class="fa-solid fa-circle-check"></i> Instant Digital Quotes</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Smart Form Onboarding</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Self-Serve COI Portal</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Transparent Wholesale Rates</li>
-                    </ul>
-                </div>
+                <div class="cm-featured-tag"><i class="fa-solid fa-user-tie"></i> Fiduciary Advisor</div>
+                <h3>Advisor Scans 42+ Markets</h3>
+                <p>Your dedicated commercial advisor reviews your risk profile across all 42+ carriers, identifies the best coverage structure, and contacts you within 2 business hours.</p>
+                <div class="cm-step-pill cm-step-pill-featured">Within 2 business hours</div>
             </div>
-            
-        </div>
-    </section>
-
-    <section class="neuro-section fade-up">
-        <div class="neuro-glow"></div>
-        
-        <div class="container" style="position: relative; z-index: 10;">
-            <div class="neuro-header text-center">
-            <span class="hero-badge"><i class="fa-solid fa-crown"></i> The Elite Advantage</span>
-                <h2 class="neuro-title" style="text-align:center">Business Insurance.<br>Without the Bureaucracy.</h2>
-                <p class="neuro-sub">We transformed the slow, painful process of commercial insurance into a fast, transparent, and highly optimized digital experience.</p>
-            </div>
-
-            <div class="neuro-grid">
-                
-                <div class="n-card">
-                    <div class="n-card-visual">
-                        <div class="radar-container">
-                            <div class="radar-grid"></div>
-                            <div class="radar-laser"></div>
-                            <div class="radar-dot d-1"></div>
-                            <div class="radar-dot d-2"></div>
-                            <div class="radar-dot d-3"></div>
-                        </div>
-                    </div>
-                    <div class="n-card-body">
-                        <h3>Full Stack Protection</h3>
-                        <p>From a standard Business Owner's Policy (BOP) and Workers Comp, to specialized Cyber Liability and Surety Bonds. We build a fortress around your operations.</p>
-                    </div>
+            <div class="cm-step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="cm-step">
+                <div class="cm-step-num">03</div>
+                <div class="cm-step-icon">
+                    <svg viewBox="0 0 80 80" fill="none">
+                        <circle cx="40" cy="40" r="36" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1.5"/>
+                        <rect x="24" y="26" width="32" height="28" rx="5" fill="#F97316" opacity="0.12" stroke="#F97316" stroke-width="2"/>
+                        <path d="M32 40 L37 45 L48 34" stroke="#F97316" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M30 33 L50 33" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                        <circle cx="58" cy="58" r="12" fill="#10B981"/>
+                        <path d="M52 58 L56 62 L64 54" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
                 </div>
-
-                <div class="n-card n-card-tall">
-                    <div class="n-card-visual visual-graph">
-                        <div class="graph-box">
-                            <div class="bar-group">
-                                <div class="bar-label">Brokers</div>
-                                <div class="bar bar-old">
-                                    <div class="fee-chunk">Agency Fees</div>
-                                </div>
-                            </div>
-                            <div class="bar-group">
-                                <div class="bar-label" style="color: var(--alex-blue);">Alex AI</div>
-                                <div class="bar bar-new"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="n-card-body">
-                        <h3>Zero Broker Fees</h3>
-                        <p>Commercial brokers are notorious for tacking on massive agency fees and hiding commissions. We offer radical transparency and charge $0 in broker fees. You get pure, wholesale rates.</p>
-                    </div>
-                </div>
-
-                <div class="n-card">
-                    <div class="n-card-visual visual-pulse">
-                        <div class="pulse-ring pr-1"></div>
-                        <div class="pulse-ring pr-2"></div>
-                        <div class="pulse-core"><i class="fa-solid fa-certificate"></i></div>
-                    </div>
-                    <div class="n-card-body">
-                        <h3>Instant COI Generation</h3>
-                        <p>Never lose out on a contract because you're waiting on your agent. Our digital platform allows you to generate and email Certificates of Insurance (COI) to your clients 24/7, instantly.</p>
-                    </div>
-                </div>
-
+                <h3>Bind &amp; Generate COIs</h3>
+                <p>Approve your policy digitally. The moment it binds, generate Certificates of Insurance on-demand — 24/7, with no agent required, directly to your clients.</p>
+                <div class="cm-step-pill">Instant COIs from day one</div>
             </div>
         </div>
-    </section>
-
-    <section class="section-py container fade-up">
-        <div style="text-align:center; max-width: 700px; margin: 0 auto 60px;">
-            <span class="hero-badge"><i class="fa-solid fa-code-compare"></i> The New Standard</span>
-            <h2 style="font-size:3.5rem; font-weight:900; margin-bottom:20px; color:var(--alex-mid); letter-spacing:-1px;">Night and Day.</h2>
-            <p style="font-size:1.1rem; color:var(--text-secondary); line-height:1.6; font-weight:500;">See why contractors, retailers, and tech startups in Arizona are switching to Alex Insurtech.</p>
-        </div>
-
-        <div class="matrix-container">
-            
-            <div class="matrix-header">
-                <div class="m-head-old">Traditional Agency</div>
-                <div class="m-head-new"><i class="fa-solid fa-building-shield"></i> Alex Commercial</div>
-            </div>
-
-            <div class="matrix-row">
-                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-certificate"></i></div> COI Issuance</div>
-                <div class="matrix-content">
-                    <div class="matrix-old">24-48 Hours</div>
-                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Instant / On-Demand</div>
-                </div>
-            </div>
-
-            <div class="matrix-row">
-                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-money-bill-wave"></i></div> Broker Fees</div>
-                <div class="matrix-content">
-                    <div class="matrix-old">Up to 20% + Fees</div>
-                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> $0.00 Forever*</div>
-                </div>
-            </div>
-
-            <div class="matrix-row">
-                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-file-pdf"></i></div> Application Process</div>
-                <div class="matrix-content">
-                    <div class="matrix-old">Long Paper PDFs</div>
-                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Streamlined Digital</div>
-                </div>
-            </div>
-
-            <div class="matrix-row">
-                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div> Market Access</div>
-                <div class="matrix-content">
-                    <div class="matrix-old">Limited (2-3 Carriers)</div>
-                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> 42+ Elite Carriers</div>
-                </div>
-            </div>
-
-            <div class="matrix-row">
-                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-user-tie"></i></div> Account Support</div>
-                <div class="matrix-content">
-                    <div class="matrix-old">9-5 Phone Calls</div>
-                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Dedicated Fiduciary</div>
-                </div>
-            </div>
-
-            <div class="matrix-cta-row">
-                <div class="matrix-label hide-mobile"></div>
-                <div class="matrix-content" style="background: transparent; border: none; box-shadow: none;">
-                    <div class="matrix-old hide-mobile" style="background: transparent; border: none;"></div>
-                    <div style="flex: 1.3; text-align: center; padding-top: 15px;">
-                        <button class="btn-main" onclick="document.getElementById('quoteForm').scrollIntoView({behavior:'smooth'})">Upgrade My Business <i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="matrix-disclaimer">
-                <p><strong>* The Self-Managed Guarantee:</strong> As long as you generate, manage, and purchase your policy digitally through the Alex platform, you will never pay an agency or broker fee. If you choose to finalize your policy through one of our licensed human partners for complex risk assessment, a standard broker fee may apply, clearly itemized on your final receipt.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="section-py container fade-up">
-        <span class="hero-badge"><i class="fa-solid fa-circle-question"></i> FAQ</span>
-        <h2 style="text-align:center; font-size:3.5rem; font-weight:900; margin-bottom:60px; color:var(--alex-mid);">Questions?</h2>
-        <div class="faq-box">
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">What is a BOP and do I need one? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-a">A Business Owner's Policy (BOP) combines General Liability and Commercial Property insurance into one package. It is usually the most cost-effective way for small to medium businesses to get broad protection against lawsuits, injuries, and property damage.</div>
-            </div>
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">Do you handle Workers Compensation in Arizona? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-a">Yes. We work with carriers like Employers and biBerk to provide fast, compliant Workers Compensation policies that protect your employees and meet all Arizona state legal requirements.</div>
-            </div>
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">How fast can I get a Certificate of Insurance (COI) for a job? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-a">Once your policy is bound, you can generate and email COIs instantly through our digital client portal, 24/7. You don't have to wait for an agent to open their office to secure your next contract.</div>
-            </div>
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">Do you cover independent contractors and freelancers? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-a">Absolutely. Whether you are an IT consultant needing Professional Liability (E&O), an artisan contractor needing General Liability, or a real estate investor managing properties, our massive network of 42+ carriers has a tailored solution for your specific risk.</div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="funnel-footer fade-up">
-        <div class="container footer-content">
-            <img src="./assets/logo-alex-main.png" alt="Alex AI Insurtech" class="footer-logo">
-            
-            <p class="footer-disclaimer">
-                Alex Insurtech is a licensed commercial insurance platform. Coverages, exclusions, and discounts vary by carrier, industry classification, and loss history.
-            </p>
-            
-            <div class="footer-legal-text">
-                <a href="https://alexai.cloud/privacy-policy/">Privacy Policy</a>
-                <span class="dot-separator">•</span>
-                <a href="https://alexai.cloud/terms-conditions/">Terms of Service</a>
-            </div>
-            
-            <p class="footer-copyright">&copy; 2026 Alex Insurtech. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <div class="modal-overlay" id="successModal" onclick="if(event.target===this)this.classList.remove('open')">
-        <div class="modal-content" style="max-width: 450px;">
-            <div class="close-btn" onclick="document.getElementById('successModal').classList.remove('open')">
-                <i class="fa-solid fa-xmark"></i>
-            </div>
-            
-            <div style="width:100px; height:100px; background:white; border-radius:28px; margin:0 auto 25px; display:flex; align-items:center; justify-content:center; box-shadow: 0 20px 50px -10px rgba(0, 156, 255, 0.3), 0 0 0 1px rgba(0,0,0,0.05);">
-                <img src="./assets/logo-alex-heart.png" alt="Alex AI Heart" style="width: 65px; height: auto; animation: pulse 2s infinite;">
-            </div>
-            
-            <h3 style="font-size:2rem; font-weight:900; color:var(--alex-mid); margin-bottom:15px; line-height: 1.2;">
-                Request Received!
-            </h3>
-            
-            <p style="color:var(--text-secondary); margin-bottom:35px; font-weight:500; font-size:1.05rem; line-height: 1.6;">
-                Thank you! Our underwriting system has received your business details. A dedicated commercial advisor will contact you shortly with your tailored market options.
-            </p>
-            
-            <button class="btn-main" style="padding: 15px; font-size: 1rem; width: 100%; box-shadow: 0 10px 25px rgba(0, 156, 255, 0.3);" onclick="document.getElementById('successModal').classList.remove('open')">
-                Got it, thanks!
+        <div class="cm-steps-cta">
+            <button class="btn-main cm-cta-btn" onclick="document.getElementById('quoteForm').scrollIntoView({behavior:'smooth'})">
+                Request My Quote <i class="fa-solid fa-briefcase"></i>
             </button>
         </div>
     </div>
+</section>
 
-    <script>
-        function openModal() {
-            // Reutilizamos el modal de éxito para el botón de Nav (Client Portal) como demostración
-            document.getElementById('successModal').classList.add('open');
-        }
+<!-- ===== COVERAGE PRODUCTS ===== -->
+<section class="cm-products-section fade-up">
+    <div class="container">
+        <div class="cm-section-header">
+            <span class="hero-badge"><i class="fa-solid fa-shield-halved"></i> Full-Stack Protection</span>
+            <h2 class="cm-section-title">Every Coverage Your Business Needs</h2>
+            <p class="cm-section-sub">From the basics every Arizona business must have, to specialized lines for complex risks. We build the right combination for your operation.</p>
+        </div>
+        <div class="cm-products-grid">
 
-        // Form Submission & Success Modal
-        document.getElementById('quoteForm').addEventListener('submit', (e) => {
-            e.preventDefault(); 
-            
-            let btn = document.querySelector('#quoteForm .btn-main');
-            let originalText = btn.innerHTML;
-            
-            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Preparing Market Match...';
-            btn.style.opacity = '0.8';
-            btn.style.pointerEvents = 'none'; 
-            
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.style.opacity = '1';
-                btn.style.pointerEvents = 'auto';
-                
-                document.getElementById('quoteForm').reset();
-                document.getElementById('successModal').classList.add('open');
-            }, 1800);
-        });
+            <div class="cm-product-card cm-featured-card">
+                <div class="cm-product-icon" style="background:linear-gradient(135deg,#10B981,#059669);">
+                    <i class="fa-solid fa-store" style="color:#fff;"></i>
+                </div>
+                <span class="cm-product-tag" style="background:rgba(16,185,129,0.15);color:#059669;">Most Popular</span>
+                <h4>Business Owner's Policy (BOP)</h4>
+                <p>The #1 most cost-effective policy for small &amp; medium businesses. Combines General Liability + Commercial Property into one package — the foundation every business needs.</p>
+                <div class="cm-product-who">
+                    <span class="cm-who-tag">Retailers</span>
+                    <span class="cm-who-tag">Restaurants</span>
+                    <span class="cm-who-tag">Offices</span>
+                    <span class="cm-who-tag">Service businesses</span>
+                </div>
+            </div>
 
-        // Scroll Reveal
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.15 });
-        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+            <div class="cm-product-card">
+                <div class="cm-product-icon" style="background:linear-gradient(135deg,#F59E0B,#D97706);">
+                    <i class="fa-solid fa-hard-hat" style="color:#fff;"></i>
+                </div>
+                <span class="cm-product-tag" style="background:rgba(245,158,11,0.1);color:#D97706;">Required by AZ Law</span>
+                <h4>Workers Compensation</h4>
+                <p>Legally required in Arizona for any business with employees. Covers medical bills and lost wages if an employee is injured on the job. Fast, compliant policies through Employers and biBerk.</p>
+                <div class="cm-product-who">
+                    <span class="cm-who-tag">Contractors</span>
+                    <span class="cm-who-tag">Landscapers</span>
+                    <span class="cm-who-tag">Restaurants</span>
+                    <span class="cm-who-tag">Any employer</span>
+                </div>
+            </div>
 
-        // =========================================
-        // SOCIAL PROOF: COMMERCIAL EDITION
-        // =========================================
-        function initSocialProof() {
-            if (document.getElementById('social-proof-container')) return;
+            <div class="cm-product-card">
+                <div class="cm-product-icon" style="background:linear-gradient(135deg,#3B82F6,#06B6D4);">
+                    <i class="fa-solid fa-server" style="color:#fff;"></i>
+                </div>
+                <span class="cm-product-tag" style="background:rgba(59,130,246,0.1);color:#2563EB;">Fast Growing</span>
+                <h4>Cyber Liability</h4>
+                <p>A data breach or ransomware attack can cost a small business $200K+. Cyber liability covers breach response, legal costs, regulatory fines, and business interruption. No longer optional.</p>
+                <div class="cm-product-who">
+                    <span class="cm-who-tag">Tech companies</span>
+                    <span class="cm-who-tag">Healthcare</span>
+                    <span class="cm-who-tag">Retail &amp; e-com</span>
+                    <span class="cm-who-tag">Any data holder</span>
+                </div>
+            </div>
 
-            const container = document.createElement('div');
-            container.id = 'social-proof-container';
-            document.body.appendChild(container);
+            <div class="cm-product-card">
+                <div class="cm-product-icon" style="background:linear-gradient(135deg,#8B5CF6,#7C3AED);">
+                    <i class="fa-solid fa-scale-balanced" style="color:#fff;"></i>
+                </div>
+                <span class="cm-product-tag" style="background:rgba(139,92,246,0.1);color:#7C3AED;">Professional Services</span>
+                <h4>Professional Liability (E&amp;O)</h4>
+                <p>If a client claims your advice or service caused them financial harm, E&amp;O covers your legal defense and settlements. Essential for anyone who sells expertise.</p>
+                <div class="cm-product-who">
+                    <span class="cm-who-tag">Consultants</span>
+                    <span class="cm-who-tag">IT / Developers</span>
+                    <span class="cm-who-tag">Real estate</span>
+                    <span class="cm-who-tag">Financial advisors</span>
+                </div>
+            </div>
 
-            const cities = ["Phoenix", "Scottsdale", "Mesa", "Chandler", "Gilbert", "Tucson", "Tempe", "Glendale"];
-            
-            // Foco en productos comerciales y negocios
-            const actions = [
-                { type: 'bop', icon: 'fa-store', color: 'linear-gradient(135deg, #10b981, #059669)', label: 'Retail Store Bound BOP' },
-                { type: 'wc', icon: 'fa-hard-hat', color: 'linear-gradient(135deg, #f59e0b, #d97706)', label: 'Contractor Secured W/C' },
-                { type: 'cyber', icon: 'fa-server', color: 'linear-gradient(135deg, #3b82f6, #06b6d4)', label: 'Tech Firm Added Cyber' },
-                { type: 'gl', icon: 'fa-shield', color: 'linear-gradient(135deg, #8b5cf6, #6d28d9)', label: 'Instant COI Generated' }
-            ];
+            <div class="cm-product-card">
+                <div class="cm-product-icon" style="background:linear-gradient(135deg,#EF4444,#DC2626);">
+                    <i class="fa-solid fa-truck" style="color:#fff;"></i>
+                </div>
+                <span class="cm-product-tag" style="background:rgba(239,68,68,0.1);color:#DC2626;">Fleet &amp; Vehicles</span>
+                <h4>Commercial Auto / Fleet</h4>
+                <p>Personal auto policies don't cover business use. If your employees drive for work — deliveries, client visits, job sites — you need commercial auto coverage on every vehicle.</p>
+                <div class="cm-product-who">
+                    <span class="cm-who-tag">Delivery businesses</span>
+                    <span class="cm-who-tag">Contractors</span>
+                    <span class="cm-who-tag">Food trucks</span>
+                    <span class="cm-who-tag">Fleets</span>
+                </div>
+            </div>
 
-            function getRandom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
-            function getNum(min, max) { return Math.floor(Math.random() * (max - min + 1) + min); }
+            <div class="cm-product-card">
+                <div class="cm-product-icon" style="background:linear-gradient(135deg,#6366F1,#4F46E5);">
+                    <i class="fa-solid fa-umbrella" style="color:#fff;"></i>
+                </div>
+                <span class="cm-product-tag" style="background:rgba(99,102,241,0.1);color:#4F46E5;">High Limit Protection</span>
+                <h4>Commercial Umbrella &amp; Surety</h4>
+                <p>When a major claim exceeds your policy limits, an umbrella kicks in. Surety bonds fulfill contract requirements — both show clients and general contractors you're serious.</p>
+                <div class="cm-product-who">
+                    <span class="cm-who-tag">GCs &amp; subs</span>
+                    <span class="cm-who-tag">Government contracts</span>
+                    <span class="cm-who-tag">High-revenue ops</span>
+                </div>
+            </div>
 
-            function createNotification() {
-                const item = getRandom(actions);
-                const city = getRandom(cities);
-                const savings = getNum(1200, 4500); 
-                const time = getNum(2, 20);
+        </div>
+        <div class="cm-products-cta">
+            <p>Not sure what your business needs? That's what your advisor is for.</p>
+            <button class="btn-main cm-cta-btn" onclick="document.getElementById('quoteForm').scrollIntoView({behavior:'smooth'})">
+                Talk to a Commercial Advisor <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
 
-                const toast = document.createElement('div');
-                toast.className = 'sp-card-tech';
-                
-                toast.innerHTML = `
-                    <div class="sp-aurora-border"></div>
-                    <div class="sp-shimmer-effect"></div>
-                    <div class="sp-glass-content">
-                        <div class="sp-icon-box" style="background: ${item.color}">
-                            <i class="fa-solid ${item.icon}"></i>
-                        </div>
-                        <div class="sp-info">
-                            <div class="sp-top-row">
-                                <span class="sp-type">${item.label}</span>
-                                <span class="sp-ago">${time}m ago</span>
-                            </div>
-                            <div class="sp-details">
-                                Protected in <strong>${city}, AZ</strong>
-                            </div>
-                            <div class="sp-saving-badge">
-                                <i class="fa-solid fa-arrow-trend-down"></i> Saved $${savings}/yr
-                            </div>
-                        </div>
-                        <button class="sp-close-btn" onclick="this.closest('.sp-card-tech').remove()"><i class="fa-solid fa-xmark"></i></button>
-                    </div>
-                `;
+<!-- ===== CARRIERS LOGO WALL ===== -->
+<section class="commercial-logo-wall section-py fade-up">
+    <div class="container">
+        <div style="text-align:center; max-width:650px; margin:0 auto 56px;">
+            <span class="hero-badge"><i class="fa-solid fa-network-wired"></i> A-Rated Infrastructure</span>
+            <h2 style="font-size:2.8rem;font-weight:900;color:var(--alex-mid);line-height:1.1;margin-bottom:18px;letter-spacing:-1px;">Elite underwriting on demand.</h2>
+            <p style="font-size:1.05rem;color:var(--text-secondary);line-height:1.6;font-weight:500;">Access 42+ specialized commercial markets instantly. We only partner with A-rated carriers — hover to reveal them.</p>
+        </div>
+        <div class="logo-wall-grid">
+            <div class="logo-item"><img src="./assets/logo-alchemy.png" alt="Alchemy" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-amtrust.png" alt="AmTrust" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-attune.png" alt="Attune" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-berxi.png" alt="Berxi" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-biberk.png" alt="biBerk" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-blitz.png" alt="Blitz" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-bristol-west.png" alt="Bristol West" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-chubb.png" alt="Chubb Commercial" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-colonial.png" alt="Colonial Surety" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-coterie.png" alt="Coterie" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-coverwhale.png" alt="Cover Whale" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-cowbell.png" alt="Cowbell" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-crosscover.png" alt="CrossCover" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-employers.png" alt="Employers" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-first.png" alt="First Insurance" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-foxquilt.png" alt="Foxquilt" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-great-american.png" alt="Great American" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-greenshield.png" alt="Green Shield Risk" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-hanover.png" alt="Hanover" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-hiscox.png" alt="Hiscox" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-insur-fi.png" alt="Insur-Fi" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-isc.png" alt="ISC" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-lio.png" alt="LIO" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-mgt.png" alt="MGT" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-neptune.png" alt="Neptune" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-ergo-next.png" alt="Ergo Next" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-nirvana.png" alt="Nirvana" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-palomar.png" alt="Palomar Specialty" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-pathpoint.png" alt="Pathpoint" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-pouch.png" alt="Pouch Insurance" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-propeller.png" alt="Propeller" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-rainbow.png" alt="Rainbow" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-rli.png" alt="RLI" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-rli-surety.png" alt="RLI Surety" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-ses.png" alt="SES Risk Solutions" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-simply.png" alt="Simply Business" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-skywatch.png" alt="Skywatch.ai" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-slice.png" alt="Slice" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-thimble.png" alt="Thimble" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-three.png" alt="THREE" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-tokiomarine.png" alt="Tokio Marine" class="carrier-logo-img"></div>
+            <div class="logo-item"><img src="./assets/logo-vacant-express.png" alt="Vacant Express" class="carrier-logo-img"></div>
+        </div>
+    </div>
+</section>
 
-                container.appendChild(toast);
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section-py cm-testimonials fade-up">
+    <div class="container">
+        <div class="cm-section-header">
+            <span class="hero-badge"><i class="fa-solid fa-heart"></i> Real Arizona Business Owners</span>
+            <h2 class="cm-section-title">Businesses That Made the Switch</h2>
+            <p class="cm-section-sub">From solo contractors to multi-location retailers — here's what Arizona business owners are saying.</p>
+        </div>
+        <div class="cm-testi-grid">
+            <div class="cm-testi-card cm-testi-featured">
+                <div class="cm-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="cm-testi-quote">"I run a 14-person landscaping company. My old broker was charging me a $600 agency fee on top of my Workers Comp and GL — every single renewal. Alex switched me to Employers and saved me $2,800 in year one. My advisor also caught a gap in my equipment coverage my old broker never mentioned. That's the difference between a salesperson and a fiduciary."</p>
+                <div class="cm-testi-author">
+                    <div class="cm-testi-avatar" style="background:linear-gradient(135deg,#10B981,#059669);">R</div>
+                    <div><strong>Ricardo M.</strong><span>Chandler, AZ &middot; Landscaping Co. (14 employees)</span></div>
+                </div>
+                <div class="cm-testi-badge"><i class="fa-solid fa-building-shield"></i> Verified Business Owner</div>
+            </div>
+            <div class="cm-testi-card">
+                <div class="cm-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="cm-testi-quote">"I need COIs constantly for general contractors. With my old agency I'd wait 24 hours every single time. Now I generate them myself in 30 seconds at 10pm. Game changer for my business."</p>
+                <div class="cm-testi-author">
+                    <div class="cm-testi-avatar" style="background:linear-gradient(135deg,#F97316,#EF4444);">S</div>
+                    <div><strong>Sara K.</strong><span>Phoenix, AZ &middot; Electrical Contractor</span></div>
+                </div>
+                <div class="cm-testi-badge"><i class="fa-solid fa-building-shield"></i> Verified Business Owner</div>
+            </div>
+            <div class="cm-testi-card">
+                <div class="cm-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="cm-testi-quote">"As an IT consultant, E&amp;O is non-negotiable. Alex found me Hiscox at a price three other brokers couldn't match, and the application took 20 minutes vs the three weeks I was quoted elsewhere."</p>
+                <div class="cm-testi-author">
+                    <div class="cm-testi-avatar" style="background:linear-gradient(135deg,#3B82F6,#06B6D4);">J</div>
+                    <div><strong>James T.</strong><span>Scottsdale, AZ &middot; IT Consultant</span></div>
+                </div>
+                <div class="cm-testi-badge"><i class="fa-solid fa-building-shield"></i> Verified Business Owner</div>
+            </div>
+            <div class="cm-testi-card">
+                <div class="cm-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="cm-testi-quote">"I have two food trucks and a catering operation. My previous agent didn't even know what commercial auto coverage I needed for food trucks. Alex knew immediately and had me properly covered in days."</p>
+                <div class="cm-testi-author">
+                    <div class="cm-testi-avatar" style="background:linear-gradient(135deg,#8B5CF6,#7C3AED);">M</div>
+                    <div><strong>Maria L.</strong><span>Tempe, AZ &middot; Food Truck &amp; Catering</span></div>
+                </div>
+                <div class="cm-testi-badge"><i class="fa-solid fa-building-shield"></i> Verified Business Owner</div>
+            </div>
+        </div>
+        <div class="cm-testi-agg">
+            <div class="cm-agg-score">4.9</div>
+            <div><div class="cm-agg-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="cm-agg-label">Based on 900+ verified Arizona business reviews</div></div>
+            <div class="cm-agg-sources">
+                <span><i class="fa-brands fa-google"></i> Google</span>
+                <span><i class="fa-solid fa-star"></i> Trustpilot</span>
+                <span><i class="fa-brands fa-apple"></i> App Store</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-                requestAnimationFrame(() => {
-                    toast.classList.add('visible');
-                });
+<!-- ===== COMPARISON MATRIX ===== -->
+<section class="section-py container fade-up">
+    <div style="text-align:center;max-width:700px;margin:0 auto 60px;">
+        <span class="hero-badge"><i class="fa-solid fa-code-compare"></i> The New Standard</span>
+        <h2 style="font-size:3.5rem;font-weight:900;margin-bottom:20px;color:var(--alex-mid);letter-spacing:-1px;">Night and Day.</h2>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;font-weight:500;">See why contractors, retailers, and tech startups in Arizona are switching to Alex Insurtech.</p>
+    </div>
+    <div class="matrix-container">
+        <div class="matrix-header"><div class="m-head-old">Traditional Agency</div><div class="m-head-new"><i class="fa-solid fa-building-shield"></i> Alex Commercial</div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-certificate"></i></div> COI Issuance</div><div class="matrix-content"><div class="matrix-old">24&ndash;48 Hours</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Instant / On-Demand</div></div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-money-bill-wave"></i></div> Broker Fees</div><div class="matrix-content"><div class="matrix-old">Up to 20% + Fees</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> $0.00 Forever*</div></div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-file-pdf"></i></div> Application Process</div><div class="matrix-content"><div class="matrix-old">Long Paper PDFs</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Streamlined Digital</div></div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div> Market Access</div><div class="matrix-content"><div class="matrix-old">Limited (2&ndash;3 Carriers)</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> 42+ Elite Carriers</div></div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-user-tie"></i></div> Account Support</div><div class="matrix-content"><div class="matrix-old">9&ndash;5 Phone Calls</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Dedicated Fiduciary</div></div></div>
+        <div class="matrix-cta-row"><div class="matrix-label hide-mobile"></div><div class="matrix-content" style="background:transparent;border:none;box-shadow:none;"><div class="matrix-old hide-mobile" style="background:transparent;border:none;"></div><div style="flex:1.3;text-align:center;padding-top:15px;"><button class="btn-main" onclick="document.getElementById('quoteForm').scrollIntoView({behavior:'smooth'})">Upgrade My Business <i class="fa-solid fa-arrow-right"></i></button></div></div></div>
+        <div class="matrix-disclaimer"><p><strong>* The Self-Managed Guarantee:</strong> As long as you generate, manage, and purchase your policy digitally through the Alex platform, you will never pay an agency or broker fee. If you choose to finalize your policy through one of our licensed human partners for complex risk assessment, a standard broker fee may apply, clearly itemized on your final receipt.</p></div>
+    </div>
+</section>
 
-                setTimeout(() => {
-                    toast.classList.remove('visible');
-                    setTimeout(() => toast.remove(), 600);
-                }, 7000); 
-            }
+<!-- ===== FAQ ===== -->
+<section class="section-py container fade-up">
+    <span class="hero-badge" style="display:table;margin:0 auto 15px;"><i class="fa-solid fa-circle-question"></i> FAQ</span>
+    <h2 style="text-align:center;font-size:3.5rem;font-weight:900;margin-bottom:60px;color:var(--alex-mid);">Questions?</h2>
+    <div class="faq-box">
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">What is a BOP and do I need one? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">A Business Owner's Policy (BOP) combines General Liability and Commercial Property insurance into one package. It's the most cost-effective way for small to medium businesses to get broad protection against lawsuits, injuries, and property damage. Most businesses with a physical location or client-facing operations need one.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">Do you handle Workers Compensation in Arizona? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Yes. Arizona requires Workers Comp for any business with at least one employee. We work with carriers like Employers and biBerk to provide fast, compliant policies. Penalties for non-compliance in Arizona can be severe, so we prioritize getting you covered quickly.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">How fast can I get a Certificate of Insurance (COI) for a job? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Once your policy is bound, you generate COIs yourself — instantly, 24/7, directly from our client portal. No waiting for an agent to open their office, no calling during business hours. You can email them directly to general contractors or clients in seconds.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">Do you cover independent contractors and freelancers? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Absolutely. Whether you're an IT consultant needing Professional Liability (E&O), an artisan contractor needing General Liability, or a real estate investor managing properties, our network of 42+ carriers has a tailored solution for your specific risk profile.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">My business is in a specialized or high-risk industry. Can you still help? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Yes — this is where our 42+ carrier network really shines. Specialty markets like Palomar, Pathpoint, and SES Risk Solutions handle risks that standard carriers decline. Older buildings, food trucks, cannabis-adjacent businesses, hard-to-place industries — bring them to us.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">What does the advisor consultation cost? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Nothing. The consultation is completely free, and as long as you bind your policy through our digital platform, there are no broker fees ever. Our advisors are paid by carriers, not by you — which is why they can act as true fiduciaries focused on your best interest.</div></div>
+    </div>
+</section>
 
-            function loop() {
-                setTimeout(() => {
-                    createNotification();
-                    loop();
-                }, getNum(8000, 16000));
-            }
-            
-            setTimeout(loop, 4000);
-        }
+<!-- ===== FINAL CTA ===== -->
+<section class="cm-final-cta fade-up">
+    <div class="container">
+        <div class="cm-fcta-card">
+            <div class="cm-fcta-glow"></div>
+            <div class="cm-fcta-content">
+                <div class="cm-fcta-badge"><i class="fa-solid fa-building-shield"></i> No Obligation</div>
+                <h2>Your Business Deserves a Better Broker. Zero Fee.</h2>
+                <p>Join hundreds of Arizona business owners who eliminated broker fees, unlocked 42+ markets, and got a fiduciary advisor who actually works for them.</p>
+                <div class="cm-fcta-features">
+                    <span><i class="fa-solid fa-check"></i> $0 broker fees</span>
+                    <span><i class="fa-solid fa-check"></i> 42+ elite carriers</span>
+                    <span><i class="fa-solid fa-check"></i> Instant COI generation</span>
+                    <span><i class="fa-solid fa-check"></i> Dedicated fiduciary advisor</span>
+                </div>
+                <div class="cm-fcta-actions">
+                    <button class="btn-main cm-cta-btn" onclick="document.getElementById('quoteForm').scrollIntoView({behavior:'smooth'})">
+                        Request My Quote <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <a href="tel:4806309630" class="cm-call-btn"><i class="fa-solid fa-phone"></i> 480-630-9630</a>
+                </div>
+                <div class="cm-fcta-security">
+                    <i class="fa-solid fa-shield-halved"></i> Licensed &amp; Regulated in AZ &nbsp;&middot;&nbsp;
+                    <i class="fa-solid fa-star"></i> 4.9/5 rated &nbsp;&middot;&nbsp;
+                    <i class="fa-solid fa-lock"></i> 256-bit encrypted
+                </div>
+            </div>
+            <div class="cm-fcta-visual">
+                <div class="cm-fcta-ring">
+                    <div class="cm-ring-label">Access to</div>
+                    <div class="cm-ring-num">42+<br>carriers</div>
+                    <div class="cm-ring-sub">$0 broker fees · Instant COIs</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        document.addEventListener('DOMContentLoaded', initSocialProof);
-    </script>
+<!-- FOOTER -->
+<footer class="funnel-footer fade-up">
+    <div class="container footer-content">
+        <img src="./assets/logo-alex-main.png" alt="Alex Insurtech" class="footer-logo">
+        <div class="cm-footer-links">
+            <a href="tel:4806309630"><i class="fa-solid fa-phone"></i> 480-630-9630</a>
+            <a href="https://alexai.cloud/privacy-policy/">Privacy Policy</a>
+            <span class="dot-separator">&bull;</span>
+            <a href="https://alexai.cloud/terms-conditions/">Terms of Service</a>
+        </div>
+        <p class="footer-disclaimer">Alex Insurtech is a licensed commercial insurance platform. Coverages, exclusions, and discounts vary by carrier, industry classification, and loss history.</p>
+        <p class="footer-copyright">&copy; 2026 Alex Insurtech. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" id="successModal" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="modal-content" style="max-width:450px;">
+        <div class="close-btn" onclick="document.getElementById('successModal').classList.remove('open')"><i class="fa-solid fa-xmark"></i></div>
+        <div class="cm-success-icon">
+            <img src="./assets/logo-alex-heart.png" alt="Alex AI Heart" style="width:65px;height:auto;animation:pulse 2s infinite;">
+        </div>
+        <h3 style="font-size:2rem;font-weight:900;color:var(--alex-mid);margin-bottom:14px;line-height:1.2;">Request Received!</h3>
+        <p style="color:var(--text-secondary);margin-bottom:34px;font-weight:500;font-size:1.05rem;line-height:1.6;">Thank you! A dedicated commercial advisor will review your business details and contact you within 2 business hours with tailored market options.</p>
+        <button class="btn-main" style="padding:15px;font-size:1rem;width:100%;box-shadow:0 10px 25px rgba(0,156,255,0.3);" onclick="document.getElementById('successModal').classList.remove('open')">Got it, thanks!</button>
+    </div>
+</div>
+
+<div id="social-proof-container"></div>
+<script src="./js/commercial.js"></script>
 </body>
 </html>
