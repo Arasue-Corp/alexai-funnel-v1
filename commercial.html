@@ -522,16 +522,79 @@
     </div>
 </footer>
 
-<!-- SUCCESS MODAL -->
-<div class="modal-overlay" id="successModal" onclick="if(event.target===this)this.classList.remove('open')">
-    <div class="modal-content" style="max-width:450px;">
-        <div class="close-btn" onclick="document.getElementById('successModal').classList.remove('open')"><i class="fa-solid fa-xmark"></i></div>
-        <div class="cm-success-icon">
-            <img src="./assets/logo-alex-heart.png" alt="Alex AI Heart" style="width:65px;height:auto;animation:pulse 2s infinite;">
+<div class="zlight-overlay" id="quote-processing-modal" style="display: none;">
+    <div class="zlight-card">
+        <div class="shimmer-effect"></div>
+        <div class="zlight-ambient-glow"></div>
+        <div class="zlight-content">
+            
+            <div class="zlight-header">
+                <div class="success-icon-animated">
+                    <div class="icon-circle-premium"><i class="fa-solid fa-award"></i></div>
+                    <div class="icon-ripple-premium"></div>
+                </div>
+                <h2 class="zlight-title">Application <span class="text-gradient-corp">Received</span></h2>
+                <p class="zlight-desc">
+                    Your request ID: <strong>#AX-COMMERCIAL-2026</strong>. We are finalizing your details.
+                </p>
+            </div>
+            
+            <div class="agent-assigned-box">
+                <div class="agent-avatar">
+                    <img src="./assets/Profile-stephanie.webp" alt="Agent">
+                    <div class="status-dot"></div>
+                </div>
+                <div class="agent-info">
+                    <span class="agent-label">Senior Agent Assigned</span>
+                    <strong class="agent-name">Stephanie M.</strong>
+                    <span class="agent-status">Reviewing your application...</span>
+                </div>
+                <div class="agent-action-icon">
+                    <i class="fa-solid fa-message"></i>
+                </div>
+            </div>
+
+            <div class="policy-timeline">
+                <div class="timeline-track"></div>
+                <div class="tl-node completed">
+                    <div class="node-dot"><i class="fa-solid fa-check"></i></div>
+                    <span class="node-label">Submitted</span>
+                </div>
+                <div class="tl-node active">
+                    <div class="node-dot"><i class="fa-solid fa-user-magnifying-glass"></i></div>
+                    <span class="node-label">Agent Review</span>
+                </div>
+                <div class="tl-node pending">
+                    <div class="node-dot"><i class="fa-solid fa-file-signature"></i></div>
+                    <span class="node-label">Issuance</span>
+                </div>
+            </div>
+
+            <div class="next-step-msg">
+                <i class="fa-regular fa-clock"></i> 
+                <span>Expect a verification call within <strong>10-15 minutes</strong>.</span>
+            </div>
+
+            <div class="zlight-actions">
+                <button id="btnGoHome" class="btn-corp-primary shimmer-btn" style="width: 100%;">
+                    Go to ALEXAI.CLOUD <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+            
+            <div class="zlight-footer">
+                <i class="fa-solid fa-envelope-open"></i> A confirmation email has been sent to you.
+            </div>
         </div>
-        <h3 style="font-size:2rem;font-weight:900;color:var(--alex-mid);margin-bottom:14px;line-height:1.2;">Request Received!</h3>
-        <p style="color:var(--text-secondary);margin-bottom:34px;font-weight:500;font-size:1.05rem;line-height:1.6;">Thank you! A dedicated commercial advisor will review your business details and contact you within 2 business hours with tailored market options.</p>
-        <button class="btn-main" style="padding:15px;font-size:1rem;width:100%;box-shadow:0 10px 25px rgba(0,156,255,0.3);" onclick="document.getElementById('successModal').classList.remove('open')">Got it, thanks!</button>
+    </div>
+</div>
+
+<div class="modal-overlay" id="appModal" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="modal-content">
+        <div class="close-btn" onclick="document.getElementById('appModal').classList.remove('open')"><i class="fa-solid fa-xmark"></i></div>
+        <div style="width:100px;height:100px;background:var(--brand-grad);border-radius:30px;margin:0 auto 25px;display:flex;align-items:center;justify-content:center;color:white;box-shadow:var(--shadow-glow);"><img src="./assets/logo-alex-heart-white.png" class="logo-heart" alt="Alex AI Logo"></div>
+        <h3 style="font-size:2.2rem;font-weight:900;color:var(--alex-deep);margin-bottom:10px;">Download Alex AI App</h3>
+        <p style="color:var(--text-secondary);margin-bottom:40px;font-weight:600;font-size:1.1rem;">Your entire policy in your pocket. 24/7 Support.</p>
+        <div class="store-grid"><a href="https://apps.apple.com/us/app/alex-ai-insurtech-app/id6752793999" class="store-btn"><i class="fa-brands fa-apple"></i> <span>App Store</span></a><a href="https://play.google.com/store/apps/details?id=cloud.alexai.movil&pcampaignid=web_share&pli=1" class="store-btn"><i class="fa-brands fa-google-play"></i> <span>Google Play</span></a></div>
     </div>
 </div>
 

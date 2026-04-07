@@ -3,590 +3,449 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <title>Alex Insurtech | Instant Renters Insurance</title>
+    <title>Alex Insurtech | Instant Renters Insurance Arizona</title>
     <meta name="description" content="Get your renters insurance in 90 seconds. Instant proof for your landlord, zero broker fees, fully digital in Arizona.">
-    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/renters.css">
 </head>
 <body>
 
-    <nav>
-        <div class="container nav-inner">
-            <a href="https://alexai.cloud/" class="logo"><img class="logo-main" src="./assets/logo-alex-main.png" alt="Alex AI"></a>
-            <div class="nav-actions">
-                <button class="btn-nav" onclick="openModal()">Get App</button>
+<nav>
+    <div class="container nav-inner">
+        <a href="https://alexai.cloud/" class="logo"><img class="logo-main" src="./assets/logo-alex-main.png" alt="Alex AI"></a>
+        <div class="nav-actions">
+            <div class="rt-price-pill">From <strong>$14/mo</strong></div>
+            <button class="btn-nav" onclick="openModal()">Get App</button>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="fade-up visible">
+            <div class="hero-badge"><i class="fa-solid fa-key"></i> Move-In Ready · 90 Seconds</div>
+            <h1 class="hero-title">Instant <span class="grad-text">Renters Insurance.</span></h1>
+            <p class="hero-sub">Protect your tech, furniture, and get proof of coverage for your landlord in 90 seconds. Starts at $14/month. 100% digital, zero broker fees.</p>
+            <div class="rt-trust-pills">
+                <div class="trust-pill"><i class="fa-solid fa-bolt"></i> 90-sec coverage</div>
+                <div class="trust-pill"><i class="fa-solid fa-file-pdf"></i> Instant landlord proof</div>
+                <div class="trust-pill"><i class="fa-solid fa-ban-dollar"></i> $0 broker fees</div>
+            </div>
+            <div class="quote-widget">
+                <h3>Get Covered &amp; Move In</h3>
+                <p class="rt-widget-sub">No phone calls. No paperwork. Just coverage.</p>
+                <form id="quoteForm">
+                    <button type="submit" class="btn-main">Start My Quote &mdash; It&apos;s Free <i class="fa-solid fa-bolt"></i></button>
+                </form>
+                <div class="rt-security-row">
+                    <span><i class="fa-solid fa-lock"></i> 256-bit encrypted</span>
+                    <span><i class="fa-solid fa-file-pdf"></i> Proof emailed instantly</span>
+                    <span><i class="fa-solid fa-star"></i> 4.9/5 rated</span>
+                </div>
             </div>
         </div>
-    </nav>
-
-    <section class="hero">
-        <div class="container hero-grid">
-            
-            <div class="fade-up visible">
-                <div class="hero-badge"><i class="fa-solid fa-key"></i> Move-In Ready</div>
-                <h1 class="hero-title">Instant <span class="grad-text">Renters Insurance.</span></h1>
-                <p class="hero-sub">Protect your tech, your furniture, and get instant proof of coverage for your landlord in 90 seconds. 100% digital, zero broker fees.</p>
-                
-                <div class="quote-widget">
-                    <h3>Get Covered & Move In</h3>
-                    <form id="quoteForm">                        
-                        <button type="submit" class="btn-main">Get a Quote<i class="fa-solid fa-bolt"></i></button>
-                    </form>
-                    <div style="text-align:center; font-size:0.8rem; color:var(--text-secondary); margin-top:15px; display:flex; align-items:center; justify-content:center; gap:6px; font-weight: 500;">
-                        <i class="fa-solid fa-file-pdf" style="color:var(--alex-blue); font-size: 1.1rem;"></i> Instant Proof Sent to Landlord
-                    </div>
-                </div>
+        <div class="visual-wrapper fade-up visible" style="transition-delay:0.2s;">
+            <div class="visual-bg-circle"></div>
+            <img src="./assets/render-renter.png" class="car-model" alt="Modern Apartment">
+            <div class="premium-scanner-card">
+                <div class="psc-header"><span class="psc-title">Coverage Check</span><i class="fa-solid fa-laptop psc-icon"></i></div>
+                <div class="psc-screen"><div class="psc-scan-line"></div>Securing Personal Property...</div>
+                <div class="psc-row"><span class="psc-label">With Broker Fees</span><span class="psc-strike">$35/mo</span></div>
+                <div class="psc-highlight"><span class="psc-hl-label">Alex Direct</span><span class="psc-hl-val">$14/mo</span></div>
             </div>
-            
-            <div class="visual-wrapper fade-up visible" style="transition-delay: 0.2s;">
-                <div class="visual-bg-circle"></div>
-                
-                <img src="./assets/render-renter.png" class="car-model" alt="Modern Apartment">
-                
-                <div class="premium-scanner-card">
-                    <div class="psc-header">
-                        <span class="psc-title">Coverage Check</span>
-                        <i class="fa-solid fa-laptop psc-icon"></i>
-                    </div>
-                    <div class="psc-screen">
-                        <div class="psc-scan-line"></div>
-                        Securing Personal Property...
-                    </div>
-                    <div class="psc-row">
-                        <span class="psc-label">With Broker Fees</span>
-                        <span class="psc-strike">$35/mo</span>
-                    </div>
-                    <div class="psc-highlight">
-                        <span class="psc-hl-label">Alex Direct</span>
-                        <span class="psc-hl-val">$14/mo</span>
-                    </div>
-                </div>
+            <div class="float-stat fs-1"><div class="stat-icon"><i class="fa-solid fa-check-double"></i></div><div class="stat-text"><h4>Landlord Approved</h4><p>Meets Lease Reqs</p></div></div>
+            <div class="float-stat fs-2"><div class="stat-icon"><i class="fa-solid fa-bicycle"></i></div><div class="stat-text"><h4>Theft Protection</h4><p>On &amp; Off Premises</p></div></div>
+        </div>
+    </div>
+</section>
 
-                <div class="float-stat fs-1">
-                    <div class="stat-icon"><i class="fa-solid fa-check-double"></i></div>
-                    <div class="stat-text">
-                        <h4>Landlord Approved</h4>
-                        <p>Meets Lease Reqs</p>
-                    </div>
+<section class="rt-price-bar fade-up">
+    <div class="container rt-price-inner">
+        <div class="rt-price-stat"><div class="rt-ps-num">$14<span>/mo</span></div><div class="rt-ps-lbl">Starting price</div></div>
+        <div class="rt-price-div"></div>
+        <div class="rt-price-stat"><div class="rt-ps-num">90<span>sec</span></div><div class="rt-ps-lbl">To get covered</div></div>
+        <div class="rt-price-div"></div>
+        <div class="rt-price-stat"><div class="rt-ps-num">$0</div><div class="rt-ps-lbl">Broker fees ever</div></div>
+        <div class="rt-price-div"></div>
+        <div class="rt-price-stat"><div class="rt-ps-num">4.9&#9733;</div><div class="rt-ps-lbl">Customer rating</div></div>
+        <div class="rt-price-div"></div>
+        <div class="rt-price-stat"><div class="rt-ps-num">Instant</div><div class="rt-ps-lbl">Landlord proof sent</div></div>
+    </div>
+</section>
+
+<section class="section-py rt-how fade-up">
+    <div class="container">
+        <div class="rt-section-header">
+            <span class="hero-badge"><i class="fa-solid fa-stopwatch"></i> Blazing Fast</span>
+            <h2 class="rt-section-title">Covered Before Your Coffee Gets Cold</h2>
+            <p class="rt-section-sub">From zero to covered with landlord proof in hand in under 2 minutes. Seriously.</p>
+        </div>
+        <div class="rt-steps">
+            <div class="rt-step">
+                <div class="rt-step-time">~30 sec</div>
+                <div class="rt-step-icon">
+                    <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="36" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/><rect x="26" y="24" width="28" height="36" rx="5" fill="#6366F1" opacity="0.12" stroke="#6366F1" stroke-width="2"/><rect x="32" y="31" width="16" height="3" rx="1.5" fill="#6366F1"/><rect x="32" y="37" width="12" height="3" rx="1.5" fill="#6366F1" opacity="0.6"/><rect x="32" y="43" width="10" height="3" rx="1.5" fill="#6366F1" opacity="0.4"/><circle cx="57" cy="25" r="10" fill="#009CFF"/><path d="M52 25 L56 29 L63 21" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
                 </div>
-                
-                <div class="float-stat fs-2">
-                    <div class="stat-icon"><i class="fa-solid fa-bicycle"></i></div>
-                    <div class="stat-text">
-                        <h4>Theft Protection</h4>
-                        <p>On & Off Premises</p>
-                    </div>
-                </div>
+                <div class="rt-step-num">01</div>
+                <h3>Enter Your Details</h3>
+                <p>Your zip code, apartment type, and how much stuff you own. No agent, no forms, no SSN required.</p>
             </div>
-            
-        </div>
-    </section>
-
-    <section class="partners-funnel fade-up">
-        <div class="container text-center">
-            <span class="hero-badge"><i class="fa-solid fa-handshake"></i> Top-Tier Partnerships</span>
-            <h2 class="pf-title">Elite carriers for modern living.</h2>
-            <p class="pf-sub">Whether you need basic lease compliance or high-limit protection for your tech gear, our AI matches you with the perfect specialized carrier.</p>
-        </div>
-
-        <div class="pf-track-container">
-            <div class="pf-track" style="animation: scrollScoutCards 40s linear infinite;"> <div class="pf-group">
-                    
-                    <div class="scout-card">
-                        <div class="scout-header">
-                            <span class="scout-tier tier-tech">PropTech</span>
-                            <i class="fa-solid fa-shield-check verified-icon"></i>
-                        </div>
-                        <div class="scout-logo-box"><img src="./assets/Carrier-epremium.png" class="scout-logo" alt="ePremium"></div>
-                        <div class="scout-stats">
-                            <div class="stat-line"><span>Market Focus</span> <strong>Property Management</strong></div>
-                            <div class="stat-line"><span>Superpower</span> <strong>Instant Lease Sync</strong></div>
-                        </div>
-                    </div>
-
-                    <div class="scout-card">
-                        <div class="scout-header">
-                            <span class="scout-tier tier-innovator">Innovator</span>
-                            <i class="fa-solid fa-shield-check verified-icon"></i>
-                        </div>
-                        <div class="scout-logo-box"><img src="./assets/Carrier-kanguro.png" class="scout-logo" alt="Kanguro"></div>
-                        <div class="scout-stats">
-                            <div class="stat-line"><span>App Experience</span> <strong>100% Digital</strong></div>
-                            <div class="stat-line"><span>Superpower</span> <strong>Pet-Friendly Coverage</strong></div>
-                        </div>
-                    </div>
-
-                    <div class="scout-card">
-                        <div class="scout-header">
-                            <span class="scout-tier tier-blue">Accessible</span>
-                            <i class="fa-solid fa-shield-check verified-icon"></i>
-                        </div>
-                        <div class="scout-logo-box"><img src="./assets/Carrier-assurance-america.png" class="scout-logo" alt="Assurance America"></div>
-                        <div class="scout-stats">
-                            <div class="stat-line"><span>Approval Speed</span> <strong>Instant</strong></div>
-                            <div class="stat-line"><span>Superpower</span> <strong>No Credit Hassles</strong></div>
-                        </div>
-                    </div>
-
-                    <div class="scout-card">
-                        <div class="scout-header">
-                            <span class="scout-tier tier-local">Regional</span>
-                            <i class="fa-solid fa-shield-check verified-icon"></i>
-                        </div>
-                        <div class="scout-logo-box"><img src="./assets/Carrier-commonwealth.jpg" class="scout-logo" alt="Commonwealth Casualty"></div>
-                        <div class="scout-stats">
-                            <div class="stat-line"><span>Focus Area</span> <strong>Southwest Drivers/Renters</strong></div>
-                            <div class="stat-line"><span>Superpower</span> <strong>Auto & Rent Bundles</strong></div>
-                        </div>
-                    </div>
-
-                    <div class="scout-card">
-                        <div class="scout-header">
-                            <span class="scout-tier tier-gold">Specialty</span>
-                            <i class="fa-solid fa-shield-check verified-icon"></i>
-                        </div>
-                        <div class="scout-logo-box"><img src="./assets/Carrier-aegis.png" class="scout-logo" alt="Aegis"></div>
-                        <div class="scout-stats">
-                            <div class="stat-line"><span>Coverage Type</span> <strong>High-Value Content</strong></div>
-                            <div class="stat-line"><span>Superpower</span> <strong>Unique Property Needs</strong></div>
-                        </div>
-                    </div>
-
+            <div class="rt-step-connector"><div class="rt-connector-line"></div><i class="fa-solid fa-chevron-right"></i></div>
+            <div class="rt-step rt-step-featured">
+                <div class="rt-step-time rt-time-fast">~45 sec</div>
+                <div class="rt-step-icon">
+                    <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="36" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5"/><path d="M22 40 L35 53 L58 27" stroke="#10B981" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-
-                <div class="pf-group" aria-hidden="true">
-                    
-                    <div class="scout-card">
-                        <div class="scout-header">
-                            <span class="scout-tier tier-tech">PropTech</span>
-                            <i class="fa-solid fa-shield-check verified-icon"></i>
-                        </div>
-                        <div class="scout-logo-box"><img src="./assets/Carrier-epremium.png" class="scout-logo" alt="ePremium"></div>
-                        <div class="scout-stats">
-                            <div class="stat-line"><span>Market Focus</span> <strong>Property Management</strong></div>
-                            <div class="stat-line"><span>Superpower</span> <strong>Instant Lease Sync</strong></div>
-                        </div>
-                    </div>
-
-                    <div class="scout-card">
-                        <div class="scout-header">
-                            <span class="scout-tier tier-innovator">Innovator</span>
-                            <i class="fa-solid fa-shield-check verified-icon"></i>
-                        </div>
-                        <div class="scout-logo-box"><img src="./assets/Carrier-kanguro.png" class="scout-logo" alt="Kanguro"></div>
-                        <div class="scout-stats">
-                            <div class="stat-line"><span>App Experience</span> <strong>100% Digital</strong></div>
-                            <div class="stat-line"><span>Superpower</span> <strong>Pet-Friendly Coverage</strong></div>
-                        </div>
-                    </div>
-
-                    <div class="scout-card">
-                        <div class="scout-header">
-                            <span class="scout-tier tier-blue">Accessible</span>
-                            <i class="fa-solid fa-shield-check verified-icon"></i>
-                        </div>
-                        <div class="scout-logo-box"><img src="./assets/Carrier-assurance-america.png" class="scout-logo" alt="Assurance America"></div>
-                        <div class="scout-stats">
-                            <div class="stat-line"><span>Approval Speed</span> <strong>Instant</strong></div>
-                            <div class="stat-line"><span>Superpower</span> <strong>No Credit Hassles</strong></div>
-                        </div>
-                    </div>
-
-                    <div class="scout-card">
-                        <div class="scout-header">
-                            <span class="scout-tier tier-local">Regional</span>
-                            <i class="fa-solid fa-shield-check verified-icon"></i>
-                        </div>
-                        <div class="scout-logo-box"><img src="./assets/Carrier-commonwealth.jpg" class="scout-logo" alt="Commonwealth Casualty"></div>
-                        <div class="scout-stats">
-                            <div class="stat-line"><span>Focus Area</span> <strong>Southwest Drivers/Renters</strong></div>
-                            <div class="stat-line"><span>Superpower</span> <strong>Auto & Rent Bundles</strong></div>
-                        </div>
-                    </div>
-
-                    <div class="scout-card">
-                        <div class="scout-header">
-                            <span class="scout-tier tier-gold">Specialty</span>
-                            <i class="fa-solid fa-shield-check verified-icon"></i>
-                        </div>
-                        <div class="scout-logo-box"><img src="./assets/Carrier-aegis.png" class="scout-logo" alt="Aegis"></div>
-                        <div class="scout-stats">
-                            <div class="stat-line"><span>Coverage Type</span> <strong>High-Value Content</strong></div>
-                            <div class="stat-line"><span>Superpower</span> <strong>Unique Property Needs</strong></div>
-                        </div>
-                    </div>
-
+                <div class="rt-step-num">02</div>
+                <div class="rt-featured-tag"><i class="fa-solid fa-bolt"></i> Instant AI Match</div>
+                <h3>Pick Your Plan</h3>
+                <p>We compare 5+ carriers and show your best price immediately. Pick your coverage limit and deductible.</p>
+            </div>
+            <div class="rt-step-connector"><div class="rt-connector-line"></div><i class="fa-solid fa-chevron-right"></i></div>
+            <div class="rt-step">
+                <div class="rt-step-time">~15 sec</div>
+                <div class="rt-step-icon">
+                    <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="36" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1.5"/><rect x="24" y="26" width="32" height="28" rx="4" fill="#F97316" opacity="0.12" stroke="#F97316" stroke-width="2"/><path d="M33 42 L38 47 L48 36" stroke="#F97316" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="57" cy="53" r="8" fill="#10B981"/><path d="M53 53 L56 56 L61 50" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>
                 </div>
-
+                <div class="rt-step-num">03</div>
+                <h3>Active. Proof Sent.</h3>
+                <p>Policy goes live immediately. Your Declarations Page is auto-emailed to you AND your property manager.</p>
             </div>
         </div>
-    </section>
-
-    <section class="section-py container fade-up">
-        <span class="hero-badge"><i class="fa-solid fa-champagne-glasses"></i> Out With The Old, In With The New</span>
-
-        <h2 style="text-align:center; font-size:3.5rem; font-weight:900; margin-bottom:60px; color:var(--alex-mid);">From Chaos to Clarity</h2>
-        <div class="evo-grid">
-            
-            <div class="evo-old">
-                <div class="dirt-overlay"></div>
-                <div class="cracks-overlay"></div>
-                <div class="floating-dust"></div>
-                <div class="cobweb cobweb-left"></div>
-                <div class="cobweb cobweb-right"></div>
-                <div class="hanging-spider"><i class="fa-solid fa-spider"></i></div>
-
-                <div class="dino-visual-container">
-                    <i class="fa-solid fa-folder-open trash-item t-folder"></i>
-                    <i class="fa-solid fa-file-contract trash-item t-contract"></i>
-                    <i class="fa-solid fa-print trash-item t-floppy"></i> 
-                    <i class="fa-solid fa-scroll trash-item t-scroll"></i>
-                    <i class="fa-solid fa-bone trash-item t-bone-1"></i>
-                    <i class="fa-solid fa-bone trash-item t-bone-2"></i>
-
-                    <svg class="retro-dino-fossil" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M12 0h8v2h2v4h2v2h-2v2h-2v2h-4v-2h-2v2H8v-2H6v2H2v-2H0V6h2V4h2V2h8V0zm4 4h-2v2h2V4z M9 14h6v2H9v-2zm1 2h4v2h-4v-2zm-2 2h8v2H8v-2zm2 2h4v2h-4v-2z"/>
-                        <rect x="14" y="4" width="2" height="2" fill="rgba(0,0,0,0.4)"/>
-                        <rect x="20" y="8" width="2" height="2" fill="rgba(0,0,0,0.4)"/>
-                    </svg>
-
-                    <i class="fa-solid fa-box-archive trash-item t-archive"></i>
-                    <i class="fa-solid fa-fax trash-item t-fax"></i>
-                    <i class="fa-solid fa-hourglass-end trash-item t-clock"></i>
-                    <i class="fa-solid fa-pencil trash-item t-pencil"></i>
-                    <i class="fa-solid fa-paperclip trash-item t-clip"></i>
-                </div>
-                
-                <div style="position: relative; z-index: 5;">
-                    <h3 class="dino-title">The "Dinosaur" Way</h3>
-                    <ul class="dino-list">
-                        <li><i class="fa-solid fa-xmark"></i> Long phone calls for a $15 policy</li>
-                        <li><i class="fa-solid fa-xmark"></i> $50 Broker Fees</li>
-                        <li><i class="fa-solid fa-xmark"></i> Mailing documents to landlord</li>
-                        <li><i class="fa-solid fa-xmark"></i> Endless paperwork</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="evo-new">
-                <div class="pro-glow"></div>
-                <div class="image-container-pro">
-                    <img src="./assets/mock-up-2.png" alt="Alex APP" class="full-mockup-img">
-                </div>
-                <div style="position: relative; z-index: 2;">
-                    <h3 style="font-size:2.2rem; font-weight:900; margin-bottom:20px; text-shadow: 0 5px 15px rgba(0,0,0,0.2);">The Alex Standard</h3>
-                    <ul class="alex-list">
-                        <li><i class="fa-solid fa-circle-check"></i> 90 Second Digital Setup</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Zero Broker Fees Forever</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Instantly Emailed to Landlord</li>
-                        <li><i class="fa-solid fa-circle-check"></i> 100% In-App Policy Control</li>
-                    </ul>
-                </div>
-            </div>
-            
+        <div class="rt-steps-cta">
+            <button class="btn-main rt-cta-btn" onclick="window.location.href='https://alexai.cloud/form-renters/'">Get My Quote Now <i class="fa-solid fa-arrow-right"></i></button>
+            <div class="rt-cta-note">No credit card &nbsp;&middot;&nbsp; No phone call &nbsp;&middot;&nbsp; No commitment</div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="neuro-section fade-up">
-        <div class="neuro-glow"></div>
-        
-        <div class="container" style="position: relative; z-index: 10;">
-            <div class="neuro-header text-center">
-            <span class="hero-badge"><i class="fa-solid fa-crown"></i> The Modern Advantage</span>
-                <h2 class="neuro-title" style="text-align:center">Built for your lifestyle.<br>Approved by your landlord.</h2>
-                <p class="neuro-sub">We digitized the entire renters insurance process. No phone calls, no hidden fees, just instant protection for the things that matter most.</p>
-            </div>
-
-            <div class="neuro-grid">
-                
-                <div class="n-card">
-                    <div class="n-card-visual">
-                        <div class="radar-container">
-                            <div class="radar-grid"></div>
-                            <div class="radar-laser"></div>
-                            <div class="radar-dot d-1"></div>
-                            <div class="radar-dot d-2"></div>
-                            <div class="radar-dot d-3"></div>
-                        </div>
-                    </div>
-                    <div class="n-card-body">
-                        <h3>Instant Property Sync</h3>
-                        <p>Moving in today? No problem. Our system instantly generates your Declarations Page and automatically emails the proof of insurance directly to your landlord or property manager.</p>
-                    </div>
-                </div>
-
-                <div class="n-card n-card-tall">
-                    <div class="n-card-visual visual-graph">
-                        <div class="graph-box">
-                            <div class="bar-group">
-                                <div class="bar-label">Them</div>
-                                <div class="bar bar-old">
-                                    <div class="fee-chunk">Broker Fee</div>
-                                </div>
-                            </div>
-                            <div class="bar-group">
-                                <div class="bar-label" style="color: var(--alex-blue);">Alex</div>
-                                <div class="bar bar-new"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="n-card-body">
-                        <h3>Zero-Fee Micro Premiums</h3>
-                        <p>Traditional brokers charge a $50-$100 fee just to write a policy that only costs $15/month. It makes no sense. We removed the broker fee entirely, giving you pure, direct-to-carrier pricing.</p>
-                    </div>
-                </div>
-
-                <div class="n-card">
-                    <div class="n-card-visual visual-pulse">
-                        <div class="pulse-ring pr-1"></div>
-                        <div class="pulse-ring pr-2"></div>
-                        <div class="pulse-core"><i class="fa-solid fa-laptop"></i></div>
-                    </div>
-                    <div class="n-card-body">
-                        <h3>Modern Lifestyle Protection</h3>
-                        <p>Your stuff is covered even when you're not home. From your laptop getting stolen at a coffee shop, to your e-bike, to liability if your dog bites someone at the park. We cover modern life.</p>
-                    </div>
-                </div>
-
-            </div>
+<section class="rt-coverage-section fade-up">
+    <div class="container">
+        <div class="rt-section-header">
+            <span class="hero-badge"><i class="fa-solid fa-shield-halved"></i> No Fine Print Surprises</span>
+            <h2 class="rt-section-title">What Renters Insurance Actually Covers</h2>
+            <p class="rt-section-sub">Most people have no idea how much a renters policy actually protects. Here's the real breakdown.</p>
         </div>
-    </section>
-
-    <section class="section-py container fade-up">
-        <div style="text-align:center; max-width: 700px; margin: 0 auto 60px;">
-            <span class="hero-badge"><i class="fa-solid fa-code-compare"></i> The New Standard</span>
-            <h2 style="font-size:3.5rem; font-weight:900; margin-bottom:20px; color:var(--alex-mid); letter-spacing:-1px;">Night and Day.</h2>
-            <p style="font-size:1.1rem; color:var(--text-secondary); line-height:1.6; font-weight:500;">See exactly why renters across Arizona are dropping their old agents for Alex AI.</p>
+        <div class="rt-cov-tabs">
+            <button class="rt-cov-tab active" data-tab="rt-covered"><i class="fa-solid fa-circle-check"></i> Covered</button>
+            <button class="rt-cov-tab" data-tab="rt-notcovered"><i class="fa-solid fa-circle-xmark"></i> Not Covered</button>
+            <button class="rt-cov-tab" data-tab="rt-scenarios"><i class="fa-solid fa-lightbulb"></i> Real Scenarios</button>
         </div>
 
-        <div class="matrix-container">
-            
-            <div class="matrix-header">
-                <div class="m-head-old">Traditional Broker</div>
-                <div class="m-head-new"><i class="fa-solid fa-bolt"></i> Alex Insurtech</div>
-            </div>
-
-            <div class="matrix-row">
-                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-money-bill-wave"></i></div> Agency Fees</div>
-                <div class="matrix-content">
-                    <div class="matrix-old">$50 - $100</div>
-                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> $0.00 Forever*</div>
+        <div class="rt-cov-panel active" id="rt-covered">
+            <div class="rt-cov-grid">
+                <div class="rt-cov-card rt-in">
+                    <div class="rt-cov-illo"><svg viewBox="0 0 100 80" fill="none"><rect x="15" y="22" width="30" height="22" rx="4" fill="#EEF2FF" stroke="#6366F1" stroke-width="1.5"/><rect x="20" y="27" width="20" height="12" rx="2" fill="#6366F1" opacity="0.3"/><rect x="55" y="18" width="28" height="18" rx="3" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/><rect x="14" y="44" width="28" height="18" rx="3" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/><circle cx="75" cy="58" r="14" fill="#10B981"/><path d="M69 58 L73 62 L81 54" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+                    <div class="rt-cov-check"><i class="fa-solid fa-check"></i></div>
+                    <h4>Tech &amp; Electronics</h4>
+                    <p>Laptop, phone, TV, gaming setup — covered against theft, fire, and accidental damage. Even away from home.</p>
                 </div>
-            </div>
-
-            <div class="matrix-row">
-                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-stopwatch"></i></div> Setup Speed</div>
-                <div class="matrix-content">
-                    <div class="matrix-old">24 Hours + Phone Call</div>
-                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> 90 Seconds</div>
+                <div class="rt-cov-card rt-in">
+                    <div class="rt-cov-illo"><svg viewBox="0 0 100 80" fill="none"><rect x="15" y="35" width="55" height="28" rx="4" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/><rect x="22" y="28" width="16" height="10" rx="3 3 0 0" fill="#10B981" opacity="0.3" stroke="#10B981" stroke-width="1.5"/><rect x="45" y="30" width="20" height="8" rx="2 2 0 0" fill="#10B981" opacity="0.2" stroke="#10B981" stroke-width="1.5"/><rect x="26" y="48" width="10" height="15" rx="2" fill="#10B981" opacity="0.5"/><circle cx="75" cy="22" r="14" fill="#10B981"/><path d="M69 22 L73 26 L81 18" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+                    <div class="rt-cov-check"><i class="fa-solid fa-check"></i></div>
+                    <h4>Furniture &amp; Belongings</h4>
+                    <p>Everything inside your apartment — couch, clothes, kitchen gear, mattress. Covered against fire, smoke, theft, and water damage.</p>
                 </div>
-            </div>
-
-            <div class="matrix-row">
-                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-file-export"></i></div> Landlord Proof</div>
-                <div class="matrix-content">
-                    <div class="matrix-old">You Print & Deliver</div>
-                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Auto-Emailed instantly</div>
+                <div class="rt-cov-card rt-in">
+                    <div class="rt-cov-illo"><svg viewBox="0 0 100 80" fill="none"><circle cx="40" cy="42" r="24" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/><path d="M40 24 L40 42 L52 42" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/><circle cx="40" cy="42" r="3" fill="#F59E0B"/><circle cx="76" cy="58" r="12" fill="#10B981"/><path d="M70 58 L74 62 L82 54" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div>
+                    <div class="rt-cov-check"><i class="fa-solid fa-check"></i></div>
+                    <h4>Temporary Housing (ALE)</h4>
+                    <p>If your apartment becomes uninhabitable after a fire or covered event, we cover hotel, meals, and temporary housing.</p>
                 </div>
-            </div>
-
-            <div class="matrix-row">
-                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-mobile-screen"></i></div> Add Roommates</div>
-                <div class="matrix-content">
-                    <div class="matrix-old">Requires New Quote</div>
-                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Tap to Add In-App</div>
+                <div class="rt-cov-card rt-in">
+                    <div class="rt-cov-illo"><svg viewBox="0 0 100 80" fill="none"><circle cx="35" cy="42" r="20" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/><path d="M26 42 L32 48 L44 36" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"/><rect x="58" y="24" width="24" height="30" rx="4" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/><path d="M63 37 L76 37 M63 42 L72 42 M63 31 L76 31" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                    <div class="rt-cov-check"><i class="fa-solid fa-check"></i></div>
+                    <h4>Liability Protection</h4>
+                    <p>Accidentally flood your downstairs neighbor? Someone trips in your unit? We cover legal costs and damages up to $100K+.</p>
                 </div>
-            </div>
-
-            <div class="matrix-row">
-                <div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-dog"></i></div> Pet Liability</div>
-                <div class="matrix-content">
-                    <div class="matrix-old">Often Excluded</div>
-                    <div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Pet-Friendly Options</div>
+                <div class="rt-cov-card rt-in">
+                    <div class="rt-cov-illo"><svg viewBox="0 0 100 80" fill="none"><circle cx="38" cy="38" r="20" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/><path d="M28 38 Q38 24 48 38" fill="#3B82F6" opacity="0.2"/><circle cx="38" cy="38" r="4" fill="#3B82F6"/><circle cx="64" cy="48" r="16" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/><path d="M57 48 L62 53 L71 44" stroke="#10B981" stroke-width="2" stroke-linecap="round"/></svg></div>
+                    <div class="rt-cov-check"><i class="fa-solid fa-check"></i></div>
+                    <h4>Theft Off-Premises</h4>
+                    <p>Laptop stolen at a cafe? Bike taken from outside the gym? Your stuff is protected even when it's not in your apartment.</p>
                 </div>
-            </div>
-
-            <div class="matrix-cta-row">
-                <div class="matrix-label hide-mobile"></div>
-                <div class="matrix-content" style="background: transparent; border: none; box-shadow: none;">
-                    <div class="matrix-old hide-mobile" style="background: transparent; border: none;"></div>
-                    <div style="flex: 1.3; text-align: center; padding-top: 15px;">
-                        <button class="btn-main" onclick="document.getElementById('quoteForm').scrollIntoView({behavior:'smooth'})">Get Covered Now <i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
+                <div class="rt-cov-card rt-in">
+                    <div class="rt-cov-illo"><svg viewBox="0 0 100 80" fill="none"><ellipse cx="45" cy="55" rx="22" ry="12" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/><path d="M30 55 Q38 36 45 34 Q52 36 60 55" fill="#FCD34D" opacity="0.5"/><circle cx="45" cy="34" r="4" fill="#F59E0B"/><rect x="62" y="22" width="22" height="28" rx="4" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/><path d="M67 35 L79 35 M67 40 L75 40" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                    <div class="rt-cov-check"><i class="fa-solid fa-check"></i></div>
+                    <h4>Pet Liability</h4>
+                    <p>Your dog bites someone at the park. Select carriers cover pet-related liability so you're protected from claims.</p>
                 </div>
-            </div>
-
-            <div class="matrix-disclaimer">
-                <p><strong>* The Self-Managed Guarantee:</strong> As long as you generate, manage, and purchase your policy digitally through the Alex platform, you will never pay an agency or broker fee. If you choose to finalize your policy through one of our licensed human partners for personalized assistance, a standard broker fee may apply. We believe in radical transparency: any fee will always be clearly itemized on your final receipt.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="section-py container fade-up">
-        <span class="hero-badge"><i class="fa-solid fa-circle-question"></i> FAQ</span>
-        <h2 style="text-align:center; font-size:3.5rem; font-weight:900; margin-bottom:60px; color:var(--alex-mid);">Questions?</h2>
-        <div class="faq-box">
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">Why does my landlord require renters insurance? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-a">Your landlord's insurance only covers the physical building. Renters insurance covers YOUR personal belongings inside the apartment, and provides liability coverage in case someone gets hurt inside your unit or if you accidentally cause damage (like a kitchen fire or bathtub leak).</div>
-            </div>
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">Does it cover my laptop if it's stolen from my car? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-a">Yes! Renters insurance typically includes "Off-Premises" coverage. This means your personal items (laptop, phone, bicycle) are protected against theft even when you are traveling, at a coffee shop, or if they are stolen out of your vehicle.</div>
-            </div>
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">How fast can I get the proof for my move-in? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-a">Instantly. As soon as you complete the 90-second checkout, your Declarations Page (Proof of Insurance) is generated. You can download it as a PDF immediately and we can auto-email it directly to your property manager.</div>
-            </div>
-            <div class="faq-item" onclick="this.classList.toggle('active')">
-                <div class="faq-q">Can I add my roommate to the policy? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-a">Yes, you can easily add a roommate or a partner to your policy during the quote process or later through the app, ensuring both of your belongings are fully protected.</div>
             </div>
         </div>
-    </section>
 
-    <footer class="funnel-footer fade-up">
-        <div class="container footer-content">
-            <img src="./assets/logo-alex-main.png" alt="Alex AI Insurtech" class="footer-logo">
-            
-            <p class="footer-disclaimer">
-                Alex Insurtech is a licensed property & casualty agency. Coverage and discounts vary by property profile, driving history, and local regulations in the state of Arizona.
-            </p>
-            
-            <div class="footer-legal-text">
-                <a href="https://alexai.cloud/privacy-policy/">Privacy Policy</a>
-                <span class="dot-separator">•</span>
-                <a href="https://alexai.cloud/terms-conditions/">Terms of Service</a>
+        <div class="rt-cov-panel" id="rt-notcovered">
+            <div class="rt-cov-grid">
+                <div class="rt-cov-card rt-out">
+                    <div class="rt-cov-illo"><svg viewBox="0 0 100 80" fill="none"><path d="M18 65 Q30 42 50 40 Q70 42 82 65" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" stroke-dasharray="5 3"/><path d="M30 40 L30 28 M50 38 L50 22 M70 40 L70 28" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" opacity="0.7"/><circle cx="75" cy="20" r="12" fill="#FEE2E2"/><path d="M69 20 L81 20 M75 14 L75 26" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+                    <div class="rt-cov-x"><i class="fa-solid fa-xmark"></i></div>
+                    <h4>Flood Damage</h4>
+                    <p>Standard renters policies exclude flooding. Arizona monsoons can flood ground-floor units — ask about a separate flood endorsement.</p>
+                </div>
+                <div class="rt-cov-card rt-out">
+                    <div class="rt-cov-illo"><svg viewBox="0 0 100 80" fill="none"><rect x="20" y="28" width="55" height="35" rx="6" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" stroke-dasharray="5 3"/><path d="M35 45 L45 35 M55 35 L65 45" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round"/><circle cx="72" cy="20" r="12" fill="#FEE2E2"/><path d="M66 20 L78 20 M72 14 L72 26" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/></svg></div>
+                    <div class="rt-cov-x"><i class="fa-solid fa-xmark"></i></div>
+                    <h4>Roommate's Stuff</h4>
+                    <p>Unless your roommate is listed on the policy, their belongings are NOT covered. They need their own policy — or add them in the app.</p>
+                </div>
+                <div class="rt-cov-card rt-out">
+                    <div class="rt-cov-illo"><svg viewBox="0 0 100 80" fill="none"><rect x="15" y="25" width="55" height="38" rx="5" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" stroke-dasharray="4 3"/><path d="M28 50 L38 38 L48 46 L60 34 L70 44" stroke="#EF4444" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/></svg></div>
+                    <div class="rt-cov-x"><i class="fa-solid fa-xmark"></i></div>
+                    <h4>Building Damage</h4>
+                    <p>Your landlord's policy covers the building. Renters insurance covers only YOUR property and liability — not the structure or shared areas.</p>
+                </div>
+                <div class="rt-cov-card rt-out">
+                    <div class="rt-cov-illo"><svg viewBox="0 0 100 80" fill="none"><circle cx="42" cy="42" r="24" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" stroke-dasharray="4 3"/><path d="M33 33 L51 51 M51 33 L33 51" stroke="#EF4444" stroke-width="3" stroke-linecap="round"/></svg></div>
+                    <div class="rt-cov-x"><i class="fa-solid fa-xmark"></i></div>
+                    <h4>Business Equipment</h4>
+                    <p>High-value business gear above your policy sub-limit may require a separate inland marine or business owners policy.</p>
+                </div>
+                <div class="rt-cov-card rt-out">
+                    <div class="rt-cov-illo"><svg viewBox="0 0 100 80" fill="none"><path d="M30 60 Q34 36 50 32 Q66 36 70 60" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" stroke-dasharray="4 3"/><line x1="20" y1="60" x2="80" y2="60" stroke="#EF4444" stroke-width="2"/><circle cx="72" cy="18" r="10" fill="#FEE2E2"/><path d="M66 18 L78 18 M72 12 L72 24" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/></svg></div>
+                    <div class="rt-cov-x"><i class="fa-solid fa-xmark"></i></div>
+                    <h4>Intentional Damage</h4>
+                    <p>Deliberate damage to your apartment or a neighbor's property isn't covered. Coverage applies to accidents and unexpected events only.</p>
+                </div>
+                <div class="rt-cov-card rt-out">
+                    <div class="rt-cov-illo"><svg viewBox="0 0 100 80" fill="none"><circle cx="42" cy="44" r="22" fill="#FEF2F2" stroke="#EF4444" stroke-width="2" stroke-dasharray="4 3"/><path d="M42 32 L42 46" stroke="#EF4444" stroke-width="3" stroke-linecap="round"/><circle cx="42" cy="52" r="2.5" fill="#EF4444"/></svg></div>
+                    <div class="rt-cov-x"><i class="fa-solid fa-xmark"></i></div>
+                    <h4>Motor Vehicles</h4>
+                    <p>Your car or motorcycle needs its own auto policy. Bicycles and e-bikes are typically covered by renters insurance though.</p>
+                </div>
             </div>
-            
-            <p class="footer-copyright">&copy; 2026 Alex Insurtech. All rights reserved.</p>
         </div>
-    </footer>
 
-    <div class="modal-overlay" id="appModal" onclick="if(event.target===this)this.classList.remove('open')">
-        <div class="modal-content">
-            <div class="close-btn" onclick="document.getElementById('appModal').classList.remove('open')"><i class="fa-solid fa-xmark"></i></div>
-            <div style="width:100px; height:100px; background:var(--brand-grad); border-radius:30px; margin:0 auto 25px; display:flex; align-items:center; justify-content:center; font-size:3rem; color:white; box-shadow:var(--shadow-glow);">
-                <img src="./assets/logo-alex-heart-white.png" class="logo-heart" alt="Alex AI Logo">
+        <div class="rt-cov-panel" id="rt-scenarios">
+            <div class="rt-scenarios-grid">
+                <div class="rt-scenario-card rt-sc-yes">
+                    <div class="rt-sc-verdict rt-sc-covered"><i class="fa-solid fa-circle-check"></i> Covered</div>
+                    <div class="rt-sc-icon"><i class="fa-solid fa-laptop"></i></div>
+                    <h4>"My laptop was stolen at a coffee shop"</h4>
+                    <p>Off-premises theft is covered. File a police report, submit a claim through the app, get reimbursed for the replacement value.</p>
+                    <div class="rt-sc-amount">Typical payout: $800&ndash;$2,000</div>
+                </div>
+                <div class="rt-scenario-card rt-sc-yes">
+                    <div class="rt-sc-verdict rt-sc-covered"><i class="fa-solid fa-circle-check"></i> Covered</div>
+                    <div class="rt-sc-icon"><i class="fa-solid fa-fire"></i></div>
+                    <h4>"Kitchen fire — I can't live there right now"</h4>
+                    <p>Property damage covered AND hotel and meals under Additional Living Expenses (ALE) while repairs happen.</p>
+                    <div class="rt-sc-amount">Typical payout: $5,000&ndash;$20,000</div>
+                </div>
+                <div class="rt-scenario-card rt-sc-yes">
+                    <div class="rt-sc-verdict rt-sc-covered"><i class="fa-solid fa-circle-check"></i> Covered</div>
+                    <div class="rt-sc-icon"><i class="fa-solid fa-droplet"></i></div>
+                    <h4>"I overflowed my tub and flooded the unit below"</h4>
+                    <p>Accidental water damage you cause to others is a liability claim. We cover repairs and legal costs for your neighbor's damages.</p>
+                    <div class="rt-sc-amount">Typical coverage: up to $100,000</div>
+                </div>
+                <div class="rt-scenario-card rt-sc-no">
+                    <div class="rt-sc-verdict rt-sc-excluded"><i class="fa-solid fa-circle-xmark"></i> Not Covered</div>
+                    <div class="rt-sc-icon" style="background:rgba(239,68,68,0.08);color:#EF4444;"><i class="fa-solid fa-cloud-rain"></i></div>
+                    <h4>"Monsoon rain flooded my ground floor apartment"</h4>
+                    <p>Standard renters policies exclude flood damage. For AZ ground-floor units, a separate flood endorsement is strongly recommended.</p>
+                    <div class="rt-sc-amount rt-sc-amount-no">Add flood coverage from ~$8/mo</div>
+                </div>
+                <div class="rt-scenario-card rt-sc-yes">
+                    <div class="rt-sc-verdict rt-sc-covered"><i class="fa-solid fa-circle-check"></i> Covered</div>
+                    <div class="rt-sc-icon"><i class="fa-solid fa-dog"></i></div>
+                    <h4>"My dog bit someone at the park"</h4>
+                    <p>Pet liability is covered under select policies. We make sure you choose a carrier that includes this if you're a dog owner.</p>
+                    <div class="rt-sc-amount">Typical coverage: up to $100,000</div>
+                </div>
+                <div class="rt-scenario-card rt-sc-yes">
+                    <div class="rt-sc-verdict rt-sc-covered"><i class="fa-solid fa-circle-check"></i> Covered</div>
+                    <div class="rt-sc-icon"><i class="fa-solid fa-bicycle"></i></div>
+                    <h4>"My bike was stolen outside my building"</h4>
+                    <p>Bicycles and e-bikes are covered as personal property, even when stored outside your apartment or locked to a street rack.</p>
+                    <div class="rt-sc-amount">Typical payout: $300&ndash;$3,000</div>
+                </div>
             </div>
-            <h3 style="font-size:2.2rem; font-weight:900; color:var(--alex-deep); margin-bottom:10px;">Download Alex</h3>
-            <p style="color:var(--text-secondary); margin-bottom:40px; font-weight:600; font-size:1.1rem;">Your renters policy in your pocket. 24/7 Support.</p>
-            <div class="store-grid">
-                <a href="#" class="store-btn"><i class="fa-brands fa-apple"></i> <span>App Store</span></a>
-                <a href="#" class="store-btn"><i class="fa-brands fa-google-play"></i> <span>Google Play</span></a>
+        </div>
+
+        <div class="rt-cov-disclaimer">
+            <i class="fa-solid fa-circle-info"></i>
+            Coverage details vary by carrier and policy selected. During your 90-second quote, you'll see exactly what each plan covers.
+            <a href="https://rater.alexai.cloud/quote-tool">See my options &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<section class="partners-funnel fade-up">
+    <div class="container text-center">
+        <span class="hero-badge"><i class="fa-solid fa-handshake"></i> Top-Tier Partnerships</span>
+        <h2 class="pf-title">Elite carriers for modern living.</h2>
+        <p class="pf-sub">Whether you need basic lease compliance or high-limit protection for your tech gear, we match you with the perfect specialized carrier.</p>
+    </div>
+    <div class="pf-track-container">
+        <div class="pf-track" style="animation: scrollScoutCards 40s linear infinite;">
+            <div class="pf-group">
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-tech">PropTech</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/carrier-epremium.png" class="scout-logo" alt="ePremium"></div><div class="scout-stats"><div class="stat-line"><span>Market Focus</span><strong>Property Management</strong></div><div class="stat-line"><span>Superpower</span><strong>Instant Lease Sync</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-innovator">Innovator</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/carrier-kanguro.png" class="scout-logo" alt="Kanguro"></div><div class="scout-stats"><div class="stat-line"><span>App Experience</span><strong>100% Digital</strong></div><div class="stat-line"><span>Superpower</span><strong>Pet-Friendly Coverage</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-blue">Accessible</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/Carrier-assurance-america.png" class="scout-logo" alt="Assurance America"></div><div class="scout-stats"><div class="stat-line"><span>Approval Speed</span><strong>Instant</strong></div><div class="stat-line"><span>Superpower</span><strong>No Credit Hassles</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-local">Regional</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/Carrier-commonwealth.jpg" class="scout-logo" alt="Commonwealth"></div><div class="scout-stats"><div class="stat-line"><span>Focus Area</span><strong>Southwest Renters</strong></div><div class="stat-line"><span>Superpower</span><strong>Auto &amp; Rent Bundles</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-gold">Specialty</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/Carrier-aegis.png" class="scout-logo" alt="Aegis"></div><div class="scout-stats"><div class="stat-line"><span>Coverage Type</span><strong>High-Value Content</strong></div><div class="stat-line"><span>Superpower</span><strong>Unique Property Needs</strong></div></div></div>
+            </div>
+            <div class="pf-group" aria-hidden="true">
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-tech">PropTech</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/carrier-epremium.png" class="scout-logo" alt="ePremium"></div><div class="scout-stats"><div class="stat-line"><span>Market Focus</span><strong>Property Management</strong></div><div class="stat-line"><span>Superpower</span><strong>Instant Lease Sync</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-innovator">Innovator</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/carrier-kanguro.png" class="scout-logo" alt="Kanguro"></div><div class="scout-stats"><div class="stat-line"><span>App Experience</span><strong>100% Digital</strong></div><div class="stat-line"><span>Superpower</span><strong>Pet-Friendly Coverage</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-blue">Accessible</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/Carrier-assurance-america.png" class="scout-logo" alt="Assurance America"></div><div class="scout-stats"><div class="stat-line"><span>Approval Speed</span><strong>Instant</strong></div><div class="stat-line"><span>Superpower</span><strong>No Credit Hassles</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-local">Regional</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/Carrier-commonwealth.jpg" class="scout-logo" alt="Commonwealth"></div><div class="scout-stats"><div class="stat-line"><span>Focus Area</span><strong>Southwest Renters</strong></div><div class="stat-line"><span>Superpower</span><strong>Auto &amp; Rent Bundles</strong></div></div></div>
+                <div class="scout-card"><div class="scout-header"><span class="scout-tier tier-gold">Specialty</span><i class="fa-solid fa-shield-check verified-icon"></i></div><div class="scout-logo-box"><img src="./assets/Carrier-aegis.png" class="scout-logo" alt="Aegis"></div><div class="scout-stats"><div class="stat-line"><span>Coverage Type</span><strong>High-Value Content</strong></div><div class="stat-line"><span>Superpower</span><strong>Unique Property Needs</strong></div></div></div>
             </div>
         </div>
     </div>
+</section>
 
-    <script>
-        function openModal() { document.getElementById('appModal').classList.add('open'); }
-        
-        // Quote Simulation
-        document.getElementById('quoteForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            let btn = document.querySelector('.btn-main');
-            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Generating Quote...';
-            btn.style.background = 'var(--text-main)';
-            setTimeout(() => {
-                btn.innerHTML = '<i class="fa-solid fa-check"></i> Redirecting...';
-                btn.style.background = '#10B981';
-                window.location.href = "https://rater.alexai.cloud/quote-tool"; // URL del cotizador de renters
-            }, 1200); // Más rápido porque es renters
-        });
+<section class="section-py rt-testimonials fade-up">
+    <div class="container">
+        <div class="rt-section-header">
+            <span class="hero-badge"><i class="fa-solid fa-heart"></i> Real Arizona Renters</span>
+            <h2 class="rt-section-title">They Got Covered. So Can You.</h2>
+            <p class="rt-section-sub">Real stories from Arizona renters who stopped procrastinating and got covered in minutes.</p>
+        </div>
+        <div class="rt-testi-grid">
+            <div class="rt-testi-card rt-testi-featured">
+                <div class="rt-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="rt-testi-quote">"My landlord required renters insurance to sign the lease. I was dreading it — imagined phone calls, paperwork, waiting. Alex took literally 3 minutes, I paid, and they emailed proof straight to my property manager. I didn't have to do anything. Best $16/month I spend."</p>
+                <div class="rt-testi-author">
+                    <div class="rt-testi-avatar" style="background:linear-gradient(135deg,#8B5CF6,#6D28D9);">K</div>
+                    <div><strong>Kayla M.</strong><span>Tempe, AZ &middot; ASU Area</span></div>
+                </div>
+                <div class="rt-testi-badge"><i class="fa-solid fa-key"></i> Verified Renter</div>
+            </div>
+            <div class="rt-testi-card">
+                <div class="rt-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="rt-testi-quote">"My laptop got stolen from my car. Alex renters insurance covered the full replacement — $1,400. Claim took 4 days start to finish. Absolutely worth it."</p>
+                <div class="rt-testi-author">
+                    <div class="rt-testi-avatar" style="background:linear-gradient(135deg,#3B82F6,#06B6D4);">D</div>
+                    <div><strong>David R.</strong><span>Downtown Phoenix, AZ</span></div>
+                </div>
+                <div class="rt-testi-badge"><i class="fa-solid fa-key"></i> Verified Renter</div>
+            </div>
+            <div class="rt-testi-card">
+                <div class="rt-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="rt-testi-quote">"I was paying $34/month at my old place. Switched to Alex and I'm at $14. Same coverage, no broker trying to upsell me, no phone call. Why didn't I do this sooner?"</p>
+                <div class="rt-testi-author">
+                    <div class="rt-testi-avatar" style="background:linear-gradient(135deg,#10B981,#059669);">A</div>
+                    <div><strong>Ana C.</strong><span>Scottsdale, AZ</span></div>
+                </div>
+                <div class="rt-testi-badge"><i class="fa-solid fa-key"></i> Verified Renter</div>
+            </div>
+            <div class="rt-testi-card">
+                <div class="rt-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="rt-testi-quote">"Added my girlfriend and our dog in 30 seconds from the app. Policy updated instantly, new proof sent to our landlord automatically. This is how everything should work."</p>
+                <div class="rt-testi-author">
+                    <div class="rt-testi-avatar" style="background:linear-gradient(135deg,#F97316,#EF4444);">J</div>
+                    <div><strong>Jordan T.</strong><span>Chandler, AZ</span></div>
+                </div>
+                <div class="rt-testi-badge"><i class="fa-solid fa-key"></i> Verified Renter</div>
+            </div>
+        </div>
+        <div class="rt-testi-agg">
+            <div class="rt-agg-score">4.9</div>
+            <div><div class="rt-agg-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="rt-agg-label">Based on 3,100+ verified renter reviews</div></div>
+            <div class="rt-agg-sources">
+                <span><i class="fa-brands fa-google"></i> Google</span>
+                <span><i class="fa-brands fa-apple"></i> App Store</span>
+                <span><i class="fa-brands fa-google-play"></i> Google Play</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-        // Scroll Reveal
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.15 });
-        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+<section class="section-py container fade-up">
+    <div style="text-align:center;max-width:700px;margin:0 auto 60px;">
+        <span class="hero-badge"><i class="fa-solid fa-code-compare"></i> The New Standard</span>
+        <h2 style="font-size:3.5rem;font-weight:900;margin-bottom:20px;color:var(--alex-mid);letter-spacing:-1px;">Night and Day.</h2>
+        <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.6;font-weight:500;">See exactly why renters across Arizona are dropping their old agents for Alex.</p>
+    </div>
+    <div class="matrix-container">
+        <div class="matrix-header"><div class="m-head-old">Traditional Broker</div><div class="m-head-new"><i class="fa-solid fa-bolt"></i> Alex Insurtech</div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-money-bill-wave"></i></div> Agency Fees</div><div class="matrix-content"><div class="matrix-old">$50 - $100</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> $0.00 Forever*</div></div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-stopwatch"></i></div> Setup Speed</div><div class="matrix-content"><div class="matrix-old">24 Hours + Phone Call</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> 90 Seconds</div></div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-file-export"></i></div> Landlord Proof</div><div class="matrix-content"><div class="matrix-old">You Print &amp; Deliver</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Auto-Emailed Instantly</div></div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-mobile-screen"></i></div> Add Roommates</div><div class="matrix-content"><div class="matrix-old">Requires New Quote</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Tap to Add In-App</div></div></div>
+        <div class="matrix-row"><div class="matrix-label"><div class="m-icon"><i class="fa-solid fa-dog"></i></div> Pet Liability</div><div class="matrix-content"><div class="matrix-old">Often Excluded</div><div class="matrix-new"><i class="fa-solid fa-check text-green"></i> Pet-Friendly Options</div></div></div>
+        <div class="matrix-cta-row"><div class="matrix-label hide-mobile"></div><div class="matrix-content" style="background:transparent;border:none;box-shadow:none;"><div class="matrix-old hide-mobile" style="background:transparent;border:none;"></div><div style="flex:1.3;text-align:center;padding-top:15px;"><button class="btn-main" onclick="window.location.href='https://alexai.cloud/form-renters/'">Get Covered Now <i class="fa-solid fa-arrow-right"></i></button></div></div></div>
+        <div class="matrix-disclaimer"><p><strong>* The Self-Managed Guarantee:</strong> As long as you generate, manage, and purchase your policy digitally through the Alex platform, you will never pay an agency or broker fee.</p></div>
+    </div>
+</section>
 
-        // =========================================
-        // SOCIAL PROOF: AURORA TECH EDITION (RENTERS FOCUSED)
-        // =========================================
-        function initSocialProof() {
-            if (document.getElementById('social-proof-container')) return;
+<section class="section-py container fade-up">
+    <span class="hero-badge" style="display:table;margin:0 auto 15px;"><i class="fa-solid fa-circle-question"></i> FAQ</span>
+    <h2 style="text-align:center;font-size:3.5rem;font-weight:900;margin-bottom:60px;color:var(--alex-mid);">Questions?</h2>
+    <div class="faq-box">
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">Why does my landlord require renters insurance? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Your landlord's insurance only covers the building. Renters insurance covers YOUR belongings and provides liability coverage if someone gets hurt in your unit or if you accidentally cause damage like a kitchen fire or bathtub overflow.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">Does it cover my laptop if it's stolen from my car? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Yes! Renters insurance includes "Off-Premises" coverage. Your personal items — laptop, phone, bicycle — are protected against theft even when at a coffee shop, gym, or stolen from your vehicle.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">How fast can I get proof for my move-in? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Instantly. As soon as you complete the 90-second checkout, your Declarations Page is generated. Download it as a PDF and we auto-email it directly to your property manager — they get it before you've closed your laptop.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">Can I add my roommate to the policy? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Yes. Add a roommate or partner during the quote process or anytime from the app. Their belongings and liability are covered under the same policy — no new quote required.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">What if I need to cancel or change my policy? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">100% digital — change your address, coverage limits, or cancel anytime from the app. Moving to a new apartment? Update your address in seconds and your new landlord gets updated proof automatically.</div></div>
+        <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q">Is $14/month really the real price? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-a">Yes. $14/month is a real starting price with zero broker fees. Your exact rate depends on your zip code, coverage limits, and deductible. Most Arizona renters land between $14–$25/month — you'll see your exact price in 90 seconds.</div></div>
+    </div>
+</section>
 
-            const container = document.createElement('div');
-            container.id = 'social-proof-container';
-            document.body.appendChild(container);
+<section class="rt-final-cta fade-up">
+    <div class="container">
+        <div class="rt-fcta-card">
+            <div class="rt-fcta-glow"></div>
+            <div class="rt-fcta-content">
+                <div class="rt-fcta-badge"><i class="fa-solid fa-bolt"></i> 90 Seconds Away</div>
+                <h2>Stop Putting It Off.<br>Get Covered Right Now.</h2>
+                <p>Your landlord is waiting. Your stuff isn't covered. It takes less time than making coffee — and starts at $14/month.</p>
+                <div class="rt-fcta-features">
+                    <span><i class="fa-solid fa-check"></i> From $14/month</span>
+                    <span><i class="fa-solid fa-check"></i> $0 broker fees</span>
+                    <span><i class="fa-solid fa-check"></i> Instant landlord proof</span>
+                    <span><i class="fa-solid fa-check"></i> Cancel anytime</span>
+                </div>
+                <button class="btn-main rt-cta-large" onclick="window.location.href='https://alexai.cloud/form-renters/'">
+                    Get My Quote &mdash; 90 Seconds <i class="fa-solid fa-bolt"></i>
+                </button>
+                <div class="rt-fcta-security">
+                    <i class="fa-solid fa-lock"></i> 256-bit encrypted &nbsp;&middot;&nbsp;
+                    <i class="fa-solid fa-star"></i> 4.9/5 rated &nbsp;&middot;&nbsp; No credit card required
+                </div>
+            </div>
+            <div class="rt-fcta-visual">
+                <div class="rt-price-ring">
+                    <div class="rt-ring-from">from</div>
+                    <div class="rt-ring-price">$14</div>
+                    <div class="rt-ring-mo">/month</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-            const cities = ["Tempe", "Downtown Phoenix", "Scottsdale", "Mesa", "Tucson", "Flagstaff", "Glendale"];
-            
-            // Foco en Renters
-            const actions = [
-                { type: 'renters', icon: 'fa-key', color: 'linear-gradient(135deg, #8b5cf6, #6d28d9)', label: 'Renters Policy Bound' },
-                { type: 'proof', icon: 'fa-file-pdf', color: 'linear-gradient(135deg, #10b981, #059669)', label: 'Proof Sent to Landlord' },
-                { type: 'tech', icon: 'fa-laptop', color: 'linear-gradient(135deg, #3b82f6, #06b6d4)', label: 'Tech & Gear Covered' }
-            ];
+<footer class="funnel-footer fade-up">
+    <div class="container footer-content">
+        <img src="./assets/logo-alex-main.png" alt="Alex Insurtech" class="footer-logo">
+        <div class="rt-footer-links">
+            <a href="https://alexai.cloud/privacy-policy/">Privacy Policy</a>
+            <span class="dot-separator">&bull;</span>
+            <a href="https://alexai.cloud/terms-conditions/">Terms of Service</a>
+        </div>
+        <p class="footer-disclaimer">Alex Insurtech is a licensed property &amp; casualty agency. Coverage and discounts vary by property profile and local regulations in the state of Arizona.</p>
+        <p class="footer-copyright">&copy; 2026 Alex Insurtech. All rights reserved.</p>
+    </div>
+</footer>
 
-            function getRandom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
-            function getNum(min, max) { return Math.floor(Math.random() * (max - min + 1) + min); }
+<div class="modal-overlay" id="appModal" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="modal-content">
+        <div class="close-btn" onclick="document.getElementById('appModal').classList.remove('open')"><i class="fa-solid fa-xmark"></i></div>
+        <div style="width:100px;height:100px;background:var(--brand-grad);border-radius:30px;margin:0 auto 25px;display:flex;align-items:center;justify-content:center;color:white;box-shadow:var(--shadow-glow);"><img src="./assets/logo-alex-heart-white.png" class="logo-heart" alt="Alex AI Logo"></div>
+        <h3 style="font-size:2.2rem;font-weight:900;color:var(--alex-deep);margin-bottom:10px;">Download Alex AI App</h3>
+        <p style="color:var(--text-secondary);margin-bottom:40px;font-weight:600;font-size:1.1rem;">Your entire policy in your pocket. 24/7 Support.</p>
+        <div class="store-grid">
+            <a href="https://apps.apple.com/us/app/alex-ai-insurtech-app/id6752793999" class="store-btn"><i class="fa-brands fa-apple"></i> <span>App Store</span></a>
+            <a href="https://play.google.com/store/apps/details?id=cloud.alexai.movil&pcampaignid=web_share&pli=1" class="store-btn"><i class="fa-brands fa-google-play"></i> <span>Google Play</span></a>
+        </div>
+    </div>
+</div>
 
-            function createNotification() {
-                const item = getRandom(actions);
-                const city = getRandom(cities);
-                const price = getNum(12, 22); // Precios mensuales bajos típicos de Renters
-                const time = getNum(1, 8);
-
-                const toast = document.createElement('div');
-                toast.className = 'sp-card-tech';
-                
-                toast.innerHTML = `
-                    <div class="sp-aurora-border"></div>
-                    <div class="sp-shimmer-effect"></div>
-                    <div class="sp-glass-content">
-                        <div class="sp-icon-box" style="background: ${item.color}">
-                            <i class="fa-solid ${item.icon}"></i>
-                        </div>
-                        <div class="sp-info">
-                            <div class="sp-top-row">
-                                <span class="sp-type">${item.label}</span>
-                                <span class="sp-ago">${time}m ago</span>
-                            </div>
-                            <div class="sp-details">
-                                Covered in <strong>${city}, AZ</strong>
-                            </div>
-                            <div class="sp-saving-badge">
-                                <i class="fa-solid fa-bolt"></i> Just $${price}/mo
-                            </div>
-                        </div>
-                        <button class="sp-close-btn" onclick="this.closest('.sp-card-tech').remove()"><i class="fa-solid fa-xmark"></i></button>
-                    </div>
-                `;
-
-                container.appendChild(toast);
-
-                requestAnimationFrame(() => {
-                    toast.classList.add('visible');
-                });
-
-                setTimeout(() => {
-                    toast.classList.remove('visible');
-                    setTimeout(() => toast.remove(), 600);
-                }, 5000); // Un poco más rápido para dar sensación de velocidad
-            }
-
-            function loop() {
-                setTimeout(() => {
-                    createNotification();
-                    loop();
-                }, getNum(7000, 12000));
-            }
-            
-            setTimeout(loop, 3000);
-        }
-
-        document.addEventListener('DOMContentLoaded', initSocialProof);
-    </script>
+<div id="social-proof-container"></div>
+<script src="./js/renters.js"></script>
 </body>
 </html>

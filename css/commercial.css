@@ -239,3 +239,187 @@
 .cm-footer-links a { color: rgba(255,255,255,0.72); text-decoration: none; transition: color 0.2s; display: flex; align-items: center; gap: 6px; }
 .cm-footer-links a:hover { color: #fff; }
 .cm-footer-links i { color: var(--alex-blue); }
+
+/* MODAL CONFIRMATION */
+/* =========================================
+   AURORA ZENITH LIGHT (Corporate Premium Modal)
+   ========================================= */
+
+/* Overlay oscuro con blur de fondo */
+.zlight-overlay {
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(8px) !important;
+    z-index: 2147483647 !important;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+/* Tarjeta Principal Animada */
+.zlight-card {
+    background: #F8FAFC !important;
+    position: relative;
+    z-index: 2147483648;
+    max-width: 440px;
+    width: 90%;
+    transform: scale(0.9);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
+    overflow: hidden !important;
+}
+
+.zlight-overlay[style*="display: flex"] .zlight-card {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: scale(1) !important;
+}
+
+/* Brillo de fondo sutil */
+.zlight-ambient-glow {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15), rgba(59, 130, 246, 0.1), transparent 70%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.zlight-content {
+    position: relative;
+    z-index: 1;
+    padding: 40px 32px;
+    text-align: center;
+}
+
+/* --- Ícono de Éxito Animado --- */
+.success-icon-animated {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle-premium {
+    width: 70px;
+    height: 70px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 30px -5px rgba(59, 130, 246, 0.2);
+    border: 3px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(135deg, #10B981, #3B82F6);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.icon-circle-premium i {
+    background: linear-gradient(135deg, #10B981, #3B82F6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 4px rgba(59, 130, 246, 0.3));
+}
+
+.icon-ripple-premium {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #3B82F6;
+    animation: rippleSuccessPremium 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+    z-index: 1;
+}
+
+@keyframes rippleSuccessPremium {
+    0% { transform: scale(1); opacity: 0.6; border-width: 3px; }
+    100% { transform: scale(1.8); opacity: 0; border-width: 1px; }
+}
+
+/* --- Textos Generales --- */
+.zlight-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0F172A;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.5px;
+}
+.text-gradient-corp {
+    background: linear-gradient(135deg, #10B981, #3B82F6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.zlight-desc {
+    font-size: 0.95rem;
+    color: #64748B;
+    margin: 0;
+}
+
+/* --- Caja de Agente Asignado --- */
+.agent-assigned-box {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+    margin: 25px 0;
+}
+.agent-avatar { position: relative; width: 50px; height: 50px; flex-shrink: 0; }
+.agent-avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 2px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.status-dot { position: absolute; bottom: 2px; right: 2px; width: 12px; height: 12px; background: #10B981; border: 2px solid white; border-radius: 50%; }
+.agent-info { flex-grow: 1; display: flex; flex-direction: column; }
+.agent-label { font-size: 0.7rem; font-weight: 800; color: #10B981; text-transform: uppercase; letter-spacing: 0.5px; }
+.agent-name { font-size: 1.05rem; color: #0F172A; margin: 2px 0; }
+.agent-status { font-size: 0.8rem; color: #3B82F6; font-weight: 500; }
+.agent-action-icon { width: 36px; height: 36px; background: white; border-radius: 10px; color: #3B82F6; display: flex; align-items: center; justify-content: center; border: 1px solid #E2E8F0; }
+
+/* --- Línea de Tiempo (Timeline) --- */
+.policy-timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 25px;
+    padding: 0 10px;
+}
+.timeline-track { position: absolute; top: 15px; left: 25px; right: 25px; height: 2px; background: #E2E8F0; z-index: 0; }
+.tl-node { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; }
+.node-dot { width: 32px; height: 32px; border-radius: 50%; background: #F1F5F9; color: #94A3B8; border: 3px solid #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: all 0.3s; }
+.node-label { font-size: 0.75rem; color: #94A3B8; font-weight: 600; }
+.tl-node.completed .node-dot { background: #10B981; color: white; }
+.tl-node.completed .node-label { color: #10B981; }
+.tl-node.active .node-dot { background: #0F172A; color: white; box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.1); }
+.tl-node.active .node-label { color: #0F172A; font-weight: 700; }
+
+/* --- Mensaje y Acciones --- */
+.next-step-msg {
+    background: #FFFBEB;
+    color: #B45309;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #FEF3C7;
+}
+.zlight-actions { display: flex; flex-direction: column; gap: 12px; }
+.btn-corp-primary { width: 100%; padding: 14px; background: linear-gradient(135deg, #009cff 0%, #514690 100%); color: white; border: none; border-radius: 12px; font-size: 1rem; font-weight: 600; cursor: pointer; box-shadow: 0 4px 15px rgba(15, 23, 42, 0.2); transition: all 0.2s; }
+.btn-corp-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(15, 23, 42, 0.3); }
+.zlight-footer { margin-top: 20px; padding-top: 15px; border-top: 1px dashed #E2E8F0; font-size: 0.8rem; color: #94A3B8; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px; }

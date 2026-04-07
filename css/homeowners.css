@@ -14,16 +14,37 @@
 .hw-nav-phone i { color: var(--alex-blue); }
 @media (max-width: 600px) { .hw-nav-phone { display: none; } }
 
-/* ---- HERO REVERSED ---- */
-.hw-hero-reversed { grid-template-columns: 1.1fr 1fr; }
-.hw-scanner-flip { left: auto; right: -10px; }
-.hw-fs1 { right: auto; left: 0; }
-.hw-fs2 { left: auto; right: 10px; }
+/* ---- HERO REVERSED (image left, CTA right) ---- */
+.hero-grid-reversed {
+    grid-template-columns: 1.1fr 1fr;
+}
+/* Mirror the scanner card to the right side */
+.hero-grid-reversed .premium-scanner-card {
+    left: auto;
+    right: -10px;
+}
+/* Adjust floating badges for left-side visual */
+.hero-grid-reversed .fs-1 {
+    right: auto;
+    left: 0px;
+}
+.hero-grid-reversed .fs-2 {
+    left: auto;
+    right: 10px;
+}
 @media (max-width: 900px) {
-    .hw-hero-reversed { grid-template-columns: 1fr; }
-    .hw-scanner-flip { left: 50%; right: auto; transform: translateX(-50%); animation: none; }
-    .hw-fs1 { left: 0; right: auto; }
-    .hw-fs2 { right: 0; left: auto; }
+    .hero-grid-reversed {
+        grid-template-columns: 1fr;
+    }
+    /* On mobile, visual goes back on top naturally */
+    .hero-grid-reversed .premium-scanner-card {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        animation: none;
+    }
+    .hero-grid-reversed .fs-1 { left: 0; right: auto; }
+    .hero-grid-reversed .fs-2 { right: 0; left: auto; }
 }
 
 /* ---- HERO FORM ---- */
